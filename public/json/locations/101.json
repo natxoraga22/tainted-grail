@@ -1,0 +1,55 @@
+{
+	"name": "Cuanacht",
+	"introduction": "<p>Un profundo sentimiento de pérdida invade todo Cuanacht, desde los asentamientos en ruinas hasta los ojos hundidos de los que han permanecido en la ciudad. El menhir del mercado casi se ha apagado y todo aquel lo suficientemente valiente o ingenioso se ha marchado para encontrar una solución.</p>",
+	"actions": [
+		{ 
+			"action": "Visitas a las familias de los campeones de la primera expedición",
+			"description": "Si quieres encontrarlos, podría serte útil saber más de ellos"
+		},
+		{
+			"action": "Pides a los lugareños que te ayuden a prepararte"
+		},
+		{
+			"action": "Pasas el día descansando en tu propia casa"
+		},
+		{
+			"action": "Paseas por los callejones dominados por la Rareza"
+		}
+	],
+	"verses": {
+		"1": {
+			"text": "<p>En este largo invierno, casi todos aquí han perdido a un amigo o a un miembro de la familia. Primero, por la falta de comida. Luego, por enfermedad. Y, por último, los cinco pilares restantes de la comunidad, los únicos héroes que esta tierra había conocido jamás, se marcharon de repente. Ahora, al mirar a los distantes ojos de los últimos residentes, te das cuenta de que quieren olvidar.</p>",
+			"actions": [
+				{
+					"action": "Haces que hablen con hidromiel",
+					"description": "Hay una antigua costumbre: aquellos que viajan lejos de su hogar deben pasar la noche en vela al volver. Mantener la tradición en honor de todos los que se fueron con la expedición y no volverán no será barato"
+				},
+				{
+					"action": "Les pides que compartan sus problemas",
+					"requirements": [
+						{
+							"attribute": "Empatía",
+							"level": 1
+						}
+					]
+				}
+			]
+		},
+		"2": {
+			"text": "<p>Se necesita tiempo para romper el silencio de la gente afligida, pero, una vez conseguido, las historias de separaciones y partidas te inundan como una lluvia torrencial. Tratas de recordar cada detalle. El color del caballo palafrén que la sacerdotisa del pueblo, Neante, montaba. El adorno en la cota de malla que el joven Lord Yvain llevaba. El extraño cuerno para beber que Erfyr, el herrero, solía llevar a todas partes. La marca de nacimiento de Fael, el maestro cazador. La capa bordada de Aubert, el experimentado viajero que había visto todas las partes de la isla. ¿Quién sabe qué detalle puede ayudarte por el camino?</p>",
+			"rewards": [
+				{
+					"status": "El destino de la expedición",
+					"part": 1
+				}
+			],
+			"endExploration": true
+		}
+	},
+	"dream": {
+		"text": "<p>En tu inquieto sueño, una pálida dama emerge del agua, sus ojos del colores de la leche y la piel dañada por la podredumbre. Te susurra algo al oído. Su aliento huele a sal, a alga marina y a pescado podrido. Apenas recuerdas las palabras. Dijo algo sobre tres enigmas, uno escondido bajo la isla de los muertos, otro preso por manos y brazos quemados y otro enterrado en un túmulo cubierto de niebla. Pero, ¿qué podría significar?</p>"
+	},
+	"nightmare": {
+		"text": "<p>En tu sueño, una sierpe del tamaño de una montaña se eleva desde el oeste, con la piel brillando con todos los colores del arcoíris. Se acerca, abriendo sus mandíbulas como si estuviera a punto de tragarse el asentamiento entero. Extrañamente, la gente en las calles de Cuanacht ni siquiera mira a la criatura. Te están mirando A TI, con tristeza y desilusión.</p><p>«Nos dijiste que todo iría bien...», llora una niña pequeña.</p><p>Te despiertas y no logras volver a dormirte hasta el amanecer.</p>"
+	}
+}

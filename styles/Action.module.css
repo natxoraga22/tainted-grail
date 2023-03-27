@@ -1,0 +1,14 @@
+
+.actionContainer {
+	font-family: Palatino;
+	font-size: 11pt;
+	margin-bottom: 5pt;
+}
+
+.action {
+	font-weight: bold;
+}
+
+.description {
+	font-style: italic;
+}

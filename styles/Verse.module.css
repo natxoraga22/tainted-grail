@@ -1,0 +1,14 @@
+
+.verse {
+    margin-bottom: 20pt;
+}
+
+.text {
+    font-family: Palatino;
+	font-style: italic;
+	font-size: 11pt;
+}
+
+.text p {
+    margin-bottom: 5pt;
+}

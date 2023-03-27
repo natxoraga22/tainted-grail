@@ -1,0 +1,32 @@
+{
+	"name": "Lago del Espejo Desecado",
+    "introduction": "<p>Durante siglos, la gente de toda la isla peregrinó al Lago del Espejo, rogándole a la Dama Pálida sanación, favores o simplemente consuelo. Ahora, las reflectantes aguas han desaparecido, absorbidas por el suelo agrietado.</p><p>Esta es la consecuencia más grave y desafortunada de los problemas que Ávalon ha experimentado hasta ahora. Lo más inquietante es que la falta de agua ha revelado un secreto escondido bajo el Lago del Espejo desde al antigüedad: una solitaria torre de rarapiedra, cuya cúspide formaba hasta ahora la isla en medio del lago.</p>",
+	"actions": [
+		{ 
+			"action": "Desciendes al fondo del lago",
+			"description": "Está resbaladizo y es peligroso"
+		},
+		{
+			"action": "Cazas en los alrededores del lago",
+			"description": "Ya no hay agua, pero los animales salvajes siguen viniendo al lago. Puede que sea una buena oportunidad para reabastecerte"
+		}
+	],
+	"verses": {
+		"1": {
+			"testOutcomes": {
+				"1-6": "Pisas una piedra cubierta de algas y resbalas hacia las profundidades del embalse. Medio minuto de terror después, terminas en el fondo del lago, abatido y agotado.",
+				"7+": "El barro y las algas cubren la pendiente, pero tus agudos ojos te salvan de hacerte daño."
+			}
+		},
+        "2": "",
+        "3": "<p>Esta estructura no fue pensada para acceder desde abajo, pues la entrada cuelga a quince metros sobre el lodo seco del lecho del lago. Por suerte, la rarapiedra cubierta de alga marina tiene muchos puntos de apoyo para manos y pies.</p><p>Dentro, el aire es húmedo y fétido, y del techo cuelgan peces podridos, que se amontonan en las esquinas, flotando en charcos de agua. Exploras la torre y llamas a la Dama, pero no la encuentras por ninguna parte. Al final, te vas, perturbado y con las manos vacías.</p>",
+        "4": "<p>Esta estructura no fue pensada para acceder desde abajo, pues la entrada cuelga a quince metros sobre el lodo seco del lecho del lago. Por suerte, la rarapiedra cubierta de alga marina tiene muchos puntos de apoyo para manos y pies.</p><p>Pronto, entras en el laberinto de la torre. Atravesando habitaciones para propósitos desconocidos y pasillos serpenteantes, finalmente llegas al santuario interior. La Dama espera, recostada sobre un trozo de rarapiedra que refleja perfectamente su forma. Está más pálida que antes y, al darte la bienvenida, sus palabras tardan más en convertirse en un idioma que entiendes.</p>",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": "",
+        "10": "Estas al pie de una antigua torre hecha de rarapiedra",
+        "11": ""
+    }
+}

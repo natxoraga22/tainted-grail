@@ -1,0 +1,43 @@
+
+.questContainer {
+	margin-top: 60pt;
+}
+
+.title {
+	font-family: Helvetica Neue;
+	font-weight: bold;
+	font-size: 14pt;
+	margin-bottom: 12pt;
+}
+
+.description {
+	font-family: Palatino;
+	font-style: italic;
+	font-size: 11pt;
+	margin-bottom: 10pt;
+}
+
+.quest, .success {
+	font-family: Palatino;
+	font-size: 11pt;
+	margin-bottom: 10pt;
+}
+
+.html {
+	font-family: Palatino;
+	font-size: 11pt;
+	margin-bottom: 10pt;
+}
+
+.html p {
+	margin-bottom: 5pt;
+}
+
+.imageContainer {
+	text-align: center;
+}
+
+.image {
+	width: 12cm;
+	border: 2pt solid black;
+}
