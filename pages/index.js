@@ -1,15 +1,16 @@
-import { getQuests, getLocations, getBookOfSecrets } from "@/lib/backend";
+import { getChapters, getQuests, getLocations, getBookOfSecrets } from "@/lib/backend";
 
-import Chapter01 from "@/components/chapters/chapter01";
-import Chapter11 from "@/components/chapters/chapter11";
+import Chapter from "@/components/chapter";
 
 
 export async function getStaticProps() {
+	const chapters = getChapters();
 	const quests = getQuests();
 	const locations = getLocations();
 	const bookOfSecrets = getBookOfSecrets();
 	return {
 		props: {
+			chapters,
 			quests,
 			locations,
 			bookOfSecrets
@@ -17,11 +18,19 @@ export async function getStaticProps() {
 	};
 }
 
-export default function Home({ quests, locations }) {
+export default function Home({ chapters, quests, locations, bookOfSecrets }) {
 	return (
 		<div className="container">
-			<Chapter01 quests={quests} locations={locations} bookOfSecrets={bookOfSecrets}/>
-			<Chapter11 locations={locations}/>
+			{['01'].map((chapterId) => {
+				return (
+					<Chapter 
+						key={chapterId}
+						chapter={chapters.find(chapter => chapter.id === chapterId)} 
+						quests={quests} 
+						locations={locations} 
+						bookOfSecrets={bookOfSecrets}/>
+				);
+			})}
 		</div>
 	);
 }

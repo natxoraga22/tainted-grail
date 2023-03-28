@@ -1,0 +1,13 @@
+
+.endExploration {
+    font-family: Palatino;
+    font-size: 11pt;
+}
+
+.endExploration hr {
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+
+    border-width: 1pt;
+    border-style: dashed;
+}

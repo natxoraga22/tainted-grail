@@ -2,10 +2,10 @@ import Action from '@/components/action';
 import Verse from '@/components/verse';
 
 
-export default function Dream({ dreamData }) {
+export default function Dream({ dreamType, dreamData }) {
 	return (
 		<>
-			<Action actionData={{ action: "Sueño", requirements: dreamData.requirements }} first/>
+			<Action actionData={{ action: dreamType, ...dreamData }} first/>
 			<Verse verseData={dreamData}/>
 		</>
 	);

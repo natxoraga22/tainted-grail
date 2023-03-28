@@ -5,7 +5,7 @@
 		{
 			"requirements": [
 				{
-					"secret": { "id": "66", "name": "Marca Roja" }
+					"secret": { "id": 66, "name": "Marca Roja" }
 				}
 			]
 		},
@@ -30,6 +30,51 @@
 		}
 	],
 	"verses": {
-	
+		"6": {
+			"text": "<p>Ahora estás prisionero en el Asilo. Pasas los días escuchando a los demás agonizando y preguntándote cuándo llegará tu hora. Los reclusos te cuentan que a lo largo de los años algunos valientes lograron escapar de este lugar. La verdadera pregunta es: ¿debes hacer lo mismo y extender la epidemia?</p>",
+			"rewards": [
+				{
+					"secret": { "id": 66, "name": "Marca Roja" }
+				}
+			],
+			"actions": [
+				{
+					"action": "Renuncias a tu vida y te quedas en el Asilo",
+					"rewards": [
+						{
+							"custom": "Tu personaje muere."
+						}
+					],
+					"endExploration": true
+				},
+				{
+					"action": "Intentas escapar"
+				}
+			]
+		},
+		"9": {
+			"text": "<p>Antes de que puedas explicar el motivo de tu visita, uno de los sacerdotes te agarra la mano y te sube la manga. Hay una pequeña y putrefacta herida allí, no muy diferente a las muchas que has acumulado a lo largo de tu viaje y quizás solo un poco más rojiza. El sacerdote grita: «¡Un portador de la epidemia! ¡Guardias!».</p><p>Tratas de volver al barco a refugiarte, pero los sacerdotes y sus ayudantes son demasiado numerosos.</p>",
+			"actions": [
+				{
+					"requirements": [
+						{
+							"chapter": { "number": 11, "min": true },
+							"not": true
+						}
+					]
+				}
+			]
+		},
+		"12": {
+			"testResults": {
+				"1-4": {
+					"text": "<p><strong>1-4</strong> - Ninguno de tus planes funciona y el tiempo pasa.</p>"
+				},
+				"5+": {
+					"text": "<p><strong>5+</strong> - Al fin consigues forzar las cerraduras, engañar a los guardias y huir.</p>",
+					"endExploration": true
+				}
+			}
+		}
 	}
 }

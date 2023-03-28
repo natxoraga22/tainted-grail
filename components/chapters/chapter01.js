@@ -27,7 +27,7 @@ export default function Chapter11({ quests, locations, bookOfSecrets }) {
 
 			{/* Cuanacht (101) */}
 			<Location locationData={location101}>
-				<Action actionData={location101.actions[0]} first/>
+				<Action actionData={location101.actions[2]} first/>
 				<Verse verseData={location101.verses['1']}/>
 				<Action actionData={location101.verses['1'].actions[1]}/>
 				<Verse verseData={location101.verses['2']}/>
@@ -55,8 +55,21 @@ export default function Chapter11({ quests, locations, bookOfSecrets }) {
 			{/* Asilo de la Isla (109) */}
 			<Location locationData={location109}>
 				<Action actionData={location109.actions[1]} first/>
-				<Verse verseData={bookOfSecrets['147']}/>
+				<Verse verseData={bookOfSecrets['147']} bosVerseNumber={147}/>
+				<Action actionData={location109.actions[3]} first/>
+				<Verse verseData={bookOfSecrets['161']} bosVerseNumber={161}/>
+				<Verse verseData={bookOfSecrets['313']} bosVerseNumber={313}/>
+				<Action actionData={bookOfSecrets['313'].actions[0]}/>
+				<Action actionData={location109.actions[0]} first/>
+				<Verse verseData={location109.verses['9']}/>
+				<Verse verseData={location109.verses['6']}/>
+				<Action actionData={location109.verses['6'].actions[1]}/>
+				<Verse verseData={location109.verses['12']} testResult='5+' last/>
 			</Location>
+
+			<Personal>
+				<p>Mientras Ailei vive todas estas aventuras, Arev se dirige al sur, a las Espadas Olvidadas.</p>
+			</Personal>
 
 			{/* Espadas Olvidadas (105) */}
 			<Location locationData={location105}>

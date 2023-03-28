@@ -3,6 +3,14 @@
     margin-bottom: 20pt;
 }
 
+.bosVerseNumber {
+    margin-top: 10pt;
+    margin-bottom: 5pt;
+    font-family: Palatino;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
 .text {
     margin-bottom: 10pt;
     font-family: Palatino;
@@ -14,30 +22,14 @@
     margin-bottom: 5pt;
 }
 
-.rewards {
+.encounter {
+    margin-bottom: 5pt;
     font-family: Palatino;
     font-size: 11pt;
-}
-
-.rewards div {
-    margin-bottom: 5pt;
 }
 
 .task {
     margin-bottom: 5pt;
     font-family: Palatino;
     font-size: 11pt;
-}
-
-.endExploration {
-    font-family: Palatino;
-    font-size: 11pt;
-}
-
-.endExploration hr {
-    margin-top: 20pt;
-    margin-bottom: 20pt;
-
-    border-width: 1pt;
-    border-style: dashed;
 }

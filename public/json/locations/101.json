@@ -2,18 +2,43 @@
 	"name": "Cuanacht",
 	"introduction": "<p>Un profundo sentimiento de pérdida invade todo Cuanacht, desde los asentamientos en ruinas hasta los ojos hundidos de los que han permanecido en la ciudad. El menhir del mercado casi se ha apagado y todo aquel lo suficientemente valiente o ingenioso se ha marchado para encontrar una solución.</p>",
 	"actions": [
+		{
+			"requirements": [
+				{
+					"secret": { "id": 66, "name": "Marca Roja" }
+				}
+			],
+			"goToVerse": "4"
+		},
+		{
+			"requirements": [
+				{
+					"status": { "name": "La marca del cazador" }
+				}
+			],
+			"goToVerse": "6"
+		},
 		{ 
 			"action": "Visitas a las familias de los campeones de la primera expedición",
-			"description": "Si quieres encontrarlos, podría serte útil saber más de ellos"
+			"description": "Si quieres encontrarlos, podría serte útil saber más de ellos",
+			"goToVerse": "1"
 		},
 		{
-			"action": "Pides a los lugareños que te ayuden a prepararte"
+			"action": "Pides a los lugareños que te ayuden a prepararte",
+			"goToVerse": "3"
 		},
 		{
-			"action": "Pasas el día descansando en tu propia casa"
+			"action": "Pasas el día descansando en tu propia casa",
+			"goToVerse": "5"
 		},
 		{
-			"action": "Paseas por los callejones dominados por la Rareza"
+			"action": "Paseas por los callejones dominados por la Rareza",
+			"requirements": [
+				{
+					"custom": "No hay menhir"
+				}
+			],
+			"goToVerse": "9"
 		}
 	],
 	"verses": {
@@ -22,7 +47,8 @@
 			"actions": [
 				{
 					"action": "Haces que hablen con hidromiel",
-					"description": "Hay una antigua costumbre: aquellos que viajan lejos de su hogar deben pasar la noche en vela al volver. Mantener la tradición en honor de todos los que se fueron con la expedición y no volverán no será barato"
+					"description": "Hay una antigua costumbre: aquellos que viajan lejos de su hogar deben pasar la noche en vela al volver. Mantener la tradición en honor de todos los que se fueron con la expedición y no volverán no será barato",
+					"goToVerse": "2"
 				},
 				{
 					"action": "Les pides que compartan sus problemas",
@@ -30,7 +56,8 @@
 						{
 							"attribute": { "name": "Empatía", "level": 1 }
 						}
-					]
+					],
+					"goToVerse": "2"
 				}
 			]
 		},
@@ -46,6 +73,9 @@
 		"3": {
 			"text": "<p>Aunque les queda poco, comparten contigo las últimas provisiones que les quedan. De algún modo, esto parece indigno de un héroe, pero ahora que todos los verdaderos héroes han caído, ¿quién se atreverá a cuestionar tus métodos?</p>",
 			"endExploration": true
+		},
+		"4": {
+			
 		}
 	},
 	"dream": {

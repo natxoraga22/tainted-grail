@@ -1,0 +1,70 @@
+{
+	"sections": [
+		{
+			"quest": "1-1"
+		},
+		{
+			"personal": "<p>Arev y Ailei empiezan su aventura en su pueblo natal, Cuanacht. Su primer objetivo es aprender el ritual para volver a encender el menhir.</p>"
+		},
+		{
+			"location": {
+				"id": "101",
+				"actions": [
+					{ "action": 2 },
+					{ "verse": "1", "action": 1 },
+					{ "action": "dream" }
+				]
+			}
+		},
+		{
+			"personal": "<p>El sueño les da a Arev y Ailei la pista que necesitan: los «Rituales de Menhir» se pueden conseguir en tres localizaciones: el Asilo de la Isla, el Cónclave Calcinado y los Túmulos de los Primeros Moradores. Deben explorar más para descubrir esas localizaciones.</p><p>Ailei se dirige al norte, a la Arboleda del Cazador.</p>"
+		},
+		{
+			"location": {
+				"id": "102"
+			}
+		},
+		{
+			"personal": "<p>Ailei decide ayudar a la arquera (y de paso explorar una de las localizaciones donde se pueden encontrar los «Rituales de Menhir») y se dirige al sureste, al Asilo de la Isla.</p>"
+		},
+		{
+			"location": {
+				"id": "109"
+			}
+		},
+		{
+			"personal": "<p>Mientras Ailei vive todas estas aventuras, Arev se dirige al sur, a las Espadas Olvidadas.</p>"
+		},
+		{
+			"location": {
+				"id": "105"
+			}
+		},
+		{
+			"location": {
+				"id": "106"
+			}
+		},
+		{
+			"location": {
+				"id": "104"
+			}
+		},
+		{
+			"location": {
+				"id": "101"
+			}
+		},
+		{
+			"location": {
+				"id": "104"
+			}
+		},
+		{
+			"quest": "1-5"
+		},
+		{
+			"quest": "1-6"
+		}
+	]
+}
