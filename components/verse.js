@@ -4,11 +4,15 @@ import styles from '@/styles/Verse.module.css';
 
 
 export default function Verse({ verseData, locationData, bosVerseNumber, testResult, last = false }) {
-	if (testResult) verseData = verseData.testResults[testResult];
+	let text = verseData.text;
+	if (testResult) {
+		verseData = verseData.testResults[testResult];
+		text = '<p><strong>' + testResult + '</strong> - ' + verseData.text + '</p>';
+	}
 
 	return (
 		<>
-			<div className={styles.verse}>
+			<div className={!verseData.testResults && styles.verseMargin}>
 				{/* Book of Secrets */}
 				{bosVerseNumber &&
 					<div className={styles.bosVerseNumber}>
@@ -17,8 +21,8 @@ export default function Verse({ verseData, locationData, bosVerseNumber, testRes
 				}
 
 				{/* Text */}
-				{verseData.text &&
-					<div className={styles.text} dangerouslySetInnerHTML={{ __html: verseData.text }}></div>
+				{text &&
+					<div className={styles.text} dangerouslySetInnerHTML={{ __html: text }}></div>
 				}
 
 				{/* Encounters */}

@@ -75,7 +75,24 @@
 			"endExploration": true
 		},
 		"4": {
-			
+			"text": "<p>Algunas personas de Cuanacht no se lo toman muy bien.</p>",
+			"testResults": {
+				"1-3": {
+					"text": "Los palos y las piedras duelen, pero que tu propia gente se haya vuelto en tu contra es aún más doloroso.",
+					"endExploration": true
+				},
+				"4-5": {
+					"text": "Consigues salir y escapar.",
+					"endExploration": true
+				},
+				"6+": {
+					"text": "Les das una buena lección. Tal vez demasiado buena: no dejas de golpearlos hasta que uno cae muerto en un charco de sangre.",
+					"endExploration": true
+				}
+			}
+		},
+		"5": {
+			"text": "<p>Muchos se negarían a llamar «hogar» ... TODO!!!"
 		}
 	},
 	"dream": {

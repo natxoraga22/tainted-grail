@@ -2,7 +2,7 @@ import Quest from '@/components/quest';
 import Personal from '@/components/personal';
 import Location from '@/components/location';
 import Action from '@/components/action';
-//import Verse from '@/components/verse';
+import Verse from '@/components/verse';
 import Dream from '@/components/dream';
 
 
@@ -32,7 +32,6 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 							<Location locationData={locationData}>
 								{chapterSection.location.actions &&
 								chapterSection.location.actions.map((locationAction, index) => {
-
 									/* Dream / nightmare */
 									if (locationAction.action === 'dream' || locationAction.action === 'nightmare') {
 										const dreamType = locationAction.action === 'dream' ? 'Sueño' : 'Pesadilla';
@@ -42,6 +41,17 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 												key={index}
 												dreamType={dreamType}
 												dreamData={dreamData}
+											/>
+										);
+									}
+									/* Test result */
+									else if (locationAction.testResult) {
+										return (
+											<Verse
+												key={index}
+												verseData={locationData.verses[locationAction.verse]}
+												locationData={locationData}
+												testResult={locationAction.testResult}
 											/>
 										);
 									}
