@@ -1,6 +1,7 @@
 
 .questContainer {
-	margin-top: 60pt;
+	margin-top: 80pt;
+	margin-bottom: 60pt;
 }
 
 .title {
@@ -38,6 +39,6 @@
 }
 
 .image {
-	width: 12cm;
+	width: 10cm;
 	border: 2pt solid black;
 }

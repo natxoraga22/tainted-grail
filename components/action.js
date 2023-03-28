@@ -8,10 +8,12 @@ export default function Action({ actionData, first = false }) {
 	return (
 		<div className={styles.actionContainer}>
 			{/* Icon */}
-			<FontAwesomeIcon icon={first ? faCircle : faPlay} size="2xs" className="me-1"/>
+			<FontAwesomeIcon icon={first ? faCircle : faPlay} size="2xs" className={styles.icon}/>
 
 			{/* Action */}
-			<span className={styles.action}>{actionData.action}</span>
+			{actionData.action &&
+				<span className={styles.action}>{actionData.action}</span>
+			}
 			{actionData.description && 
 				<span className={styles.description}> - {actionData.description}</span>
 			}
@@ -30,18 +32,21 @@ export default function Action({ actionData, first = false }) {
 export function Requirements({ requirementsData }) {
 	return (
 		<>
-			{requirementsData.map((requirementData, index) => {
+			{requirementsData.map((requirementData) => {
+				const background = requirementData.not ? 'bg-danger' : 'bg-success';
 				return (
-					<span className="badge bg-success align-middle ms-1">{requirementData.level} {requirementData.attribute}</span>
-
-					/*
-					<span key={index} className={styles.requirement}>
-						{requirementData.requirement}
-						{requirementData.description && 
-							<span className={styles.description}> - {requirementData.description}</span>
+					<>
+						{requirementData.attribute &&
+							<span className={'badge ' + background + ' align-middle ms-1'}>
+								{requirementData.level} {requirementData.attribute}
+							</span>
 						}
-					</span>
-					*/
+						{requirementData.status &&
+							<span className={'badge ' + background + ' align-middle ms-1'}>
+								Estado «{requirementData.status}»
+							</span>
+						}
+					</>
 				);
 			})}
 		</>

@@ -1,4 +1,34 @@
 {
 	"name": "Arboleda del Cazador",
-    "introduction": "<p>Aún sigue aquí, como siempre. Enormes y vacías cavidades oculares empiezan a observarte en cuanto desciendes a la cuenca cubierta de musgo. Los cuernos, tan anchos como un barco, son ahora el hogar de numerosas aves. En el interior del cráneo se encuentra un silencioso santuario iluminado por velas, con colchones de paja esparcidos.</p><p>Los cazadores locales llaman a esta antigua calavera «Ciervo Padre» y dejan amuletos y ofrendas a su alrededor. Cuenta la leyenda que se lleva a los soñadores que pasan allí la noche para que se unan a él en la Gran Cacería.</p>"
+	"introduction": "<p>Aún sigue aquí, como siempre. Enormes y vacías cavidades oculares empiezan a observarte en cuanto desciendes a la cuenca cubierta de musgo. Los cuernos, tan anchos como un barco, son ahora el hogar de numerosas aves. En el interior del cráneo se encuentra un silencioso santuario iluminado por velas, con colchones de paja esparcidos.</p><p>Los cazadores locales llaman a esta antigua calavera «Ciervo Padre» y dejan amuletos y ofrendas a su alrededor. Cuenta la leyenda que se lleva a los soñadores que pasan allí la noche para que se unan a él en la Gran Cacería.</p>",
+	"actions": [
+		{ 
+			"requirements": [
+				{
+					"status": "Rastreador",
+					"not": true
+				}
+			]
+		},
+		{
+			"action": "Duermes en el santuario"
+		},
+		{
+			"action": "Rebuscas en las ofrendas"
+		},
+		{
+			"action": "Destrozas el santuario y dejas una nota para otros cazadores",
+			"requirements": [
+				{
+					"status": "Canción de luto",
+					"part": 1
+				},
+				{
+					"status": "Canción de luto",
+					"part": 2,
+					"not": true
+				}
+			]
+		}
+	]
 }

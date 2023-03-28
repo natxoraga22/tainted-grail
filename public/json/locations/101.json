@@ -44,6 +44,10 @@
 				}
 			],
 			"endExploration": true
+		},
+		"3": {
+			"text": "<p>Aunque les queda poco, comparten contigo las últimas provisiones que les quedan. De algún modo, esto parece indigno de un héroe, pero ahora que todos los verdaderos héroes han caído, ¿quién se atreverá a cuestionar tus métodos?</p>",
+			"endExploration": true
 		}
 	},
 	"dream": {

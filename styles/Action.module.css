@@ -5,6 +5,11 @@
 	margin-bottom: 5pt;
 }
 
+.icon {
+	margin-right: 4pt;
+	font-size: 6pt;
+}
+
 .action {
 	font-weight: bold;
 }

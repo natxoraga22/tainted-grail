@@ -4,6 +4,7 @@
 }
 
 .text {
+    margin-bottom: 10pt;
     font-family: Palatino;
 	font-style: italic;
 	font-size: 11pt;
@@ -11,4 +12,26 @@
 
 .text p {
     margin-bottom: 5pt;
+}
+
+.rewards {
+    font-family: Palatino;
+    font-size: 11pt;
+}
+
+.rewards div {
+    margin-bottom: 5pt;
+}
+
+.endExploration {
+    font-family: Palatino;
+    font-size: 11pt;
+}
+
+.endExploration hr {
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+
+    border-width: 1pt;
+    border-style: dashed;
 }
