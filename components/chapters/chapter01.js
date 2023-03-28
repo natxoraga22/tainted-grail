@@ -6,7 +6,7 @@ import Dream from '@/components/dream';
 import Personal from '@/components/personal';
 
 
-export default function Chapter11({ quests, locations }) {
+export default function Chapter11({ quests, locations, bookOfSecrets }) {
 	const quest1_1 = quests.find(quest => quest.id === '1-1');
 	const quest1_5 = quests.find(quest => quest.id === '1-5');
 	const quest1_6 = quests.find(quest => quest.id === '1-6');
@@ -25,6 +25,7 @@ export default function Chapter11({ quests, locations }) {
 				<p>Arev y Ailei empiezan su aventura en su pueblo natal, Cuanacht. Su primer objetivo es aprender el ritual para volver a encender el menhir.</p>
 			</Personal>
 
+			{/* Cuanacht (101) */}
 			<Location locationData={location101}>
 				<Action actionData={location101.actions[0]} first/>
 				<Verse verseData={location101.verses['1']}/>
@@ -38,25 +39,42 @@ export default function Chapter11({ quests, locations }) {
 				<p>Ailei se dirige al norte, a la Arboleda del Cazador.</p>
 			</Personal>
 
+			{/* Arboleda del Cazador (102) */}
 			<Location locationData={location102}>
 				<Action actionData={location102.actions[0]} first/>
+				<Verse verseData={location102.verses['3']}/>
+				<Action actionData={location102.verses['3'].actions[0]}/>
+				<Verse verseData={location102.verses['5']}/>
+				<Dream dreamData={location102.dream}/>
 			</Location>
 
+			<Personal>
+				<p>Ailei decide ayudar a la arquera (y de paso explorar una de las localizaciones donde se pueden encontrar los «Rituales de Menhir») y se dirige al sureste, al Asilo de la Isla.</p>
+			</Personal>
+
+			{/* Asilo de la Isla (109) */}
 			<Location locationData={location109}>
+				<Action actionData={location109.actions[1]} first/>
+				<Verse verseData={bookOfSecrets['147']}/>
 			</Location>
 
+			{/* Espadas Olvidadas (105) */}
 			<Location locationData={location105}>
 			</Location>
 
+			{/* Túmulos de los Primeros Moradores (106) */}
 			<Location locationData={location106}>
 			</Location>
 
+			{/* Cónclave Calcinado (104) */}
 			<Location locationData={location104}>
 			</Location>
 
+			{/* Espadas Olvidadas (101) */}
 			<Location locationData={location105} visitCount={2}>
 			</Location>
 
+			{/* Cónclave Calcinado (104) */}
 			<Location locationData={location104} visitCount={2}>
 			</Location>
 

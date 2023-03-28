@@ -28,8 +28,7 @@
 					"action": "Les pides que compartan sus problemas",
 					"requirements": [
 						{
-							"attribute": "Empatía",
-							"level": 1
+							"attribute": { "name": "Empatía", "level": 1 }
 						}
 					]
 				}
@@ -39,8 +38,7 @@
 			"text": "<p>Se necesita tiempo para romper el silencio de la gente afligida, pero, una vez conseguido, las historias de separaciones y partidas te inundan como una lluvia torrencial. Tratas de recordar cada detalle. El color del caballo palafrén que la sacerdotisa del pueblo, Neante, montaba. El adorno en la cota de malla que el joven Lord Yvain llevaba. El extraño cuerno para beber que Erfyr, el herrero, solía llevar a todas partes. La marca de nacimiento de Fael, el maestro cazador. La capa bordada de Aubert, el experimentado viajero que había visto todas las partes de la isla. ¿Quién sabe qué detalle puede ayudarte por el camino?</p>",
 			"rewards": [
 				{
-					"status": "El destino de la expedición",
-					"part": 1
+					"status": { "name": "El destino de la expedición", "part": 1 }
 				}
 			],
 			"endExploration": true

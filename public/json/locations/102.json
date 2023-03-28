@@ -5,7 +5,7 @@
 		{ 
 			"requirements": [
 				{
-					"status": "Rastreador",
+					"status": { "name": "Rastreador" },
 					"not": true
 				}
 			]
@@ -20,15 +20,80 @@
 			"action": "Destrozas el santuario y dejas una nota para otros cazadores",
 			"requirements": [
 				{
-					"status": "Canción de luto",
-					"part": 1
+					"status": { "name": "Canción de luto", "part": 1 }
 				},
 				{
-					"status": "Canción de luto",
-					"part": 2,
+					"status": { "name": "Canción de luto", "part": 2 },
 					"not": true
 				}
 			]
 		}
-	]
+	],
+	"verses": {
+		"1": {
+			"text": "<p>Te acuestas sobre uno de los colchones de paja y observas que el interior del cráneo está marcado con bastas pinturas rojas que representan escenas de la cacería.</p>",
+			"endExploration": true
+		},
+		"2": {
+			"text": "<p>El enorme cráneo arde como una pira funeraria. Las aves del bosque escapan de sus nidos construidos en los enormes cuernos. Las llamas se extienden rápidamente, envolviendo la arboleda, mientras contemplas el incendio, de pie, sobre el cuerpo de una bestia derrotada.</p><p>Para bien o para mal, nadie más podrá unirse a la Gran Cacería.</p>",
+			"rewards": [
+				{
+					"status": { "name": "Canción de luto", "part": 2 }
+				}
+			],
+			"endExploration": true
+		},
+		"3": {
+			"text": "<p>No es inusual ver un rastro de sangre y ramas rotas en el bosque sagrado del Gran Cazador. Pasas casi sin percatarte, pero la huella de una mano ensangrentada en la corteza de un abedul blanco te llama la atención.</p><p>Sin duda, esta presa no era un animal...</p>",
+			"rewards": [
+				{
+					"status": { "name": "Rastreador" }
+				}
+			],
+			"actions": [
+				{
+					"action": "Sigues el rastro"
+				}
+			]
+		},
+		"4": {
+			"text": "<p>Es evidente que, si dejaron sus monedas aquí, es que ya no las querían, ¿cierto?</p>",
+			"rewards": [
+				{
+					"status": { "name": "Saqueador", "part": 5 }
+				}
+			],
+			"endExploration": true
+		},
+		"5": {
+			"text": "<p>Una arquera de pelo enmarañado yace escondida en lo más profundo de los brezos, apretando con las manos su vientre perforado. Parece que la cazadora se convirtió en presa.</p><p>A juzgar por los siseos y las maldiciones que profiere la arquera, aún le quedan fuerzas para luchar. Te acercas, a pesar de todo. Su herida escapa a tus conocimientos de curación. Solo hay un lugar donde pueden atender estas lesiones: el Asilo de la Isla, en la costa sur. Pero es un largo viaje para salvar a una sierva sedienta de sangre del Ciervo Padre.</p>",
+			"task": "Lleva a la arquera herida al Asilo de la Isla y Explora el Asilo para encontrar ayuda.",
+			"endExploration": true
+		},
+		"6": {
+			"text": "<p>Vuelves a la arboleda y te detienes frente al antiguo Ciervo Padre con el corazón enfurecido y una antorcha encendida en tu mano. La incertidumbre llena tu mente en este último instante. ¿Podría todo esto ser una coincidencia? Hay pocos poderes aliados en esta isla: ¿deberías destruir uno de ellos?</p><p>Finalmente, das un paso al frente y acercas la antorcha a uno de los colchones de paja. Un rugido a tus espaldas hace que se te acelere el corazón. Te giras y frente a ti ves una bestia acercándose. ¿La ha atraído el fuego? ¿O es la venganza del Ciervo Padre?</p>",
+			"actions": [
+				{
+					"action": "Si ganas"
+				},
+				{
+					"action": "Si pierdes"
+				}
+			]
+		}
+	},
+	"dream": {
+		"requirements": [
+			{
+				"status": { "name": "Canción de luto", "part": 2 },
+				"not": true
+			}
+		],
+		"text": "<p>Bajo esta constelación pintada de ocre, te adentras en un agitado sueño en el que persigues a un cervatillo en las colinas a las afueras de Cuanacht.</p><p>Te despiertas temprano, envuelto en un sudor frío y con varios cortes recientes. La boca te sabe a sangre. Junto a ti, ves trozos de carne cruda cuidadosamente envueltos en hojas.</p>",
+		"rewards": [
+			{
+				"status": { "name": "La marca del cazador" }
+			}
+		]
+	}
 }

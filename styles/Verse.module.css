@@ -23,6 +23,12 @@
     margin-bottom: 5pt;
 }
 
+.task {
+    margin-bottom: 5pt;
+    font-family: Palatino;
+    font-size: 11pt;
+}
+
 .endExploration {
     font-family: Palatino;
     font-size: 11pt;

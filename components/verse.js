@@ -12,6 +12,13 @@ export default function Verse({ verseData }) {
 				<Rewards rewardsData={verseData.rewards}/>
 			}
 
+			{/* Task */}
+			{verseData.task &&
+				<div className={styles.task}>
+					<strong>TAREA:</strong> {verseData.task}
+				</div>
+			}
+
 			{/* End exploration */}
 			{verseData.endExploration &&
 				<div className={styles.endExploration}>
@@ -30,7 +37,11 @@ export function Rewards({ rewardsData }) {
 			{rewardsData.map((rewardData) => {
 				return (
 					<div>
-						Obtienes la parte {rewardData.part} del Estado <strong>«{rewardData.status}»</strong>.
+						{rewardData.status.part ?
+							<span>Obtienes la parte {rewardData.status.part} del Estado</span> :
+							<span>Obtienes el Estado</span>
+						}
+						<strong> «{rewardData.status.name}»</strong>.
 					</div>
 				);
 			})}

@@ -38,12 +38,20 @@ export function Requirements({ requirementsData }) {
 					<>
 						{requirementData.attribute &&
 							<span className={'badge ' + background + ' align-middle ms-1'}>
-								{requirementData.level} {requirementData.attribute}
+								{requirementData.attribute.level} {requirementData.attribute.name}
 							</span>
 						}
 						{requirementData.status &&
 							<span className={'badge ' + background + ' align-middle ms-1'}>
-								Estado «{requirementData.status}»
+								Estado «{requirementData.status.name}»
+								{requirementData.status.part && 
+									<span> {requirementData.status.part}</span>
+								}
+							</span>
+						}
+						{requirementData.custom &&
+							<span className={'badge ' + background + ' align-middle ms-1'}>
+								{requirementData.custom}
 							</span>
 						}
 					</>
