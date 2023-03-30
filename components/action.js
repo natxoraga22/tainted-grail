@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle, faPlay } from '@fortawesome/free-solid-svg-icons';
 
 
-export default function Action({ actionData, locationData, bookOfSecrets, first = false }) {
+export default function Action({ actionData, locationData, bookOfSecrets, first = false, last = false }) {
 	return (
 		<>
 			<div className={styles.actionContainer}>
@@ -37,7 +37,7 @@ export default function Action({ actionData, locationData, bookOfSecrets, first 
 
 			{/* End exploration */}
 			{actionData.endExploration &&
-				<EndExploration/>
+				<EndExploration last={last}/>
 			}
 
 			{/* Verse */}
@@ -46,6 +46,7 @@ export default function Action({ actionData, locationData, bookOfSecrets, first 
 					verseData={locationData.verses[actionData.goToVerse]}
 					locationData={locationData}
 					bookOfSecrets={bookOfSecrets}
+					last={last}
 				/>
 			}
 
@@ -56,6 +57,7 @@ export default function Action({ actionData, locationData, bookOfSecrets, first 
 					locationData={locationData}
 					bookOfSecrets={bookOfSecrets}
 					bosVerseNumber={actionData.goToBosVerse}
+					last={last}
 				/>
 			}
 		</>
@@ -70,6 +72,13 @@ export function Requirements({ requirementsData }) {
 				const background = requirementData.not ? 'bg-danger' : 'bg-success';
 				return (
 					<span key={index}>
+						{/* Character */}
+						{requirementData.character &&
+							<span className={'badge ' + background + ' align-middle ms-1'}>
+								{requirementData.character}
+							</span>
+						}
+
 						{/* Attribute */}
 						{requirementData.attribute &&
 							<span className={'badge ' + background + ' align-middle ms-1'}>

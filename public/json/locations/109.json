@@ -46,10 +46,72 @@
 			]
 		},
 		"2": {
-			"text": "<p>«¡Escúchame!», dice el druida. «Deberíamos dejaros morir a todos por lo que nos hicisteis, asquerosos desagradecidos. Pero el conocimiento del Círculo no puede morir conmigo. Tienes que escuchar. ¡Tienes que recordar!».</p>"
+			"text": "<p>«¡Escúchame!», dice el druida. «Deberíamos dejaros morir a todos por lo que nos hicisteis, asquerosos desagradecidos. Pero el conocimiento del Círculo no puede morir conmigo. Tienes que escuchar. ¡Tienes que recordar!».</p>",
+			"rewards": [
+				{ "status": { "name": "Sueños y profecías", "part": 5 } },
+				{ "secret": { "id": 11, "name": "Rituales de Menhir" } },
+				{ "custom": "<strong>¡ENHORABUENA!</strong> Has cumplido tu primera misión." }
+			],
+			"task": "Ve a una Localización con un icono de Menhir y actívalo antes de que el tiempo se agote."
+		},
+		"3": {
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Sueños y profecías", "part": 5 } }
+					],
+					"goToVerse": "8"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Sueños y profecías", "part": 5 }, "not": true }
+					],
+					"goToVerse": "3a"
+				}
+			]
+		},
+		"3a": {
+			"text": "<p>El archidruida Wyrmtoe está en una de las celdas más profundas, sobreviviendo desesperadamente gracias a su magia. Las últimas tiras de piel que quedan en su cuerpo parecen las escamas de un pez medio despellejado, pero su mente parece estar en buena forma. No tarda mucho en darse cuenta de que eres un extraño y te mira duramente.</p>",
+			"actions": [
+				{
+					"requirements": [
+						{ "character": "Gusano" }
+					],
+					"goToVerse": "3b"
+				},
+				{
+					"requirements": [
+						{ "resource": { "type": "Magia", "amount": 0 } }
+					],
+					"goToVerse": "3b"
+				},
+				{
+					"requirements": [
+						{ "character": "Gusano", "not": true },
+						{ "resource": { "type": "Magia", "amount": 1 } }
+					],
+					"goToVerse": "2"
+				}
+			]
 		},
 		"4": {
 			"goToBosVerse": "161"
+		},
+		"5": {
+			"testResults": {
+				"1-2": {
+					"text": "<p>Un grupo de pacientes locos te acorrala en un pasillo sin salida.</p>",
+					"goToBosVerse": "313"
+				},
+				"3-4": {
+					"text": "<p>Unos sacerdotes te pillan fisgoneando por los pasillos de los enfermos. Ahora no pueden dejarte salir de la isla...</p>",
+					"goToVerse": "6"
+				},
+				"5+": {
+					"text": "<p>Logras penetrar desapercibido en los profundos pasillos.</p>",
+					"goToVerse": "3"
+				}
+			}
 		},
 		"6": {
 			"text": "<p>Ahora estás prisionero en el Asilo. Pasas los días escuchando a los demás agonizando y preguntándote cuándo llegará tu hora. Los reclusos te cuentan que a lo largo de los años algunos valientes lograron escapar de este lugar. La verdadera pregunta es: ¿debes hacer lo mismo y extender la epidemia?</p>",
@@ -70,6 +132,27 @@
 				}
 			]
 		},
+		"7": {
+			"text": "<p>Los monjes, algunos de los cuales tienen heridas recién vendadas, se niegan a recibirte. Su prior te dice: «Hace poco vino aquí un hombre como tú. Dijo que quería ayudar, pero solo vino para liberar a su esposa infectada. Ahora, dos de nuestros hermanos están muertos y la chica enferma está libre, extendiendo la Muerte Roja...».</p><p>Te retiras al muelle, sopesando tus otras opciones.</p>",
+			"actions": [
+				{
+					"action": "Visitas los monumentos de la isla",
+					"goToVerse": "4"
+				},
+				{
+					"action": "Te cuelas en las profundidades prohibidas del Asilo",
+					"goToVerse": "5"
+				},
+				{
+					"action": "Te vas",
+					"endExploration": true
+				}
+			]
+		},
+		"8": {
+			"text": "<p>Wyrmtoe está demasiado débil como para hablar o moverse. Un vistazo a su rojo, demacrado e hinchado despojo de cuerpo es suficiente para avivar tus pesadillas por mucho tiempo.</p>",
+			"endExploration": true
+		},
 		"9": {
 			"text": "<p>Antes de que puedas explicar el motivo de tu visita, uno de los sacerdotes te agarra la mano y te sube la manga. Hay una pequeña y putrefacta herida allí, no muy diferente a las muchas que has acumulado a lo largo de tu viaje y quizás solo un poco más rojiza. El sacerdote grita: «¡Un portador de la epidemia! ¡Guardias!».</p><p>Tratas de volver al barco a refugiarte, pero los sacerdotes y sus ayudantes son demasiado numerosos.</p>",
 			"actions": [
@@ -87,19 +170,48 @@
 				}
 			]
 		},
+		"10": {
+			"text": "<p>Al cuidar a los enfermos, eres testigo por primera vez de las fases finales de la enfermedad. La piel se agrieta, separándose en trozos por anchas franjas rojas en carne viva. Los ojos inyectados en sangre sobresalen del cráneo. Los labios, orejas y nariz se caen. El dolor es inimaginable y dura días.</p><p>Aunque los sacerdotes te aseguran que la Muerte Roja solo se propaga por contacto directo, después de cada hora de trabajo te lavas y frotas las manos hasta casi llegar al hueso.</p>",
+			"actions": [
+				{
+					"requirements": [
+						{ "attribute": { "name": "Empatía", "level": 2 } }
+					],
+					"endExploration": true
+				},
+				{
+					"requirements": [
+						{ "attribute": { "name": "Empatía", "level": 2 }, "not": true }
+					],
+					"goToVerse": "13"
+				}
+			]
+		},
 		"11": {
 			"goToBosVerse": "147"
 		},
 		"12": {
 			"testResults": {
 				"1-4": {
-					"text": "Ninguno de tus planes funciona y el tiempo pasa."
+					"text": "Ninguno de tus planes funciona y el tiempo pasa.",
+					"endExploration": true
 				},
 				"5+": {
 					"text": "Al fin consigues forzar las cerraduras, engañar a los guardias y huir.",
 					"endExploration": true
 				}
 			}
+		},
+		"13": {
+			"text": "<p>No sabes cómo, pero has sido capaz de superar un día entero de trabajo. El sueldo es escaso: una ración diaria de comida. Al menos has oído algo interesante de uno de los sacerdotes. Parece ser que hay unos calabozos para los infectados más violentos y peligrosos en lo más profundo del Asilo, donde uno de los pacientes no es otro que Wyrmtoe el Sabio, el legendario archidruida del Círculo.</p><p>Al final, ni siquiera él pudo engañar a la Muerte Roja.</p>",
+			"endExploration": true
+		},
+		"14": {
+			"text": "<p>¡Esos ingenous idiotas pensaban que podía encerrarte! A ti, que viajaste a Tuathán y regresaste. Al no conocer tu verdadero propósito, lo único que han conseguido ha sido acercarte a sus archivos.</p><p>Al llegar la noche, te escabulles de tu celda y te diriges a la biblioteca. Tras horas de búsqueda, encuentras finalmente algo esperanzador: hubo un hombre que decía haberse curado de la Muerte Roja. Sus heridas se cerraron y cicatrizaron, pero los monjes decidieron mantenerlo aislado de todos modos. Sin embargo, él escapó. Había unas notas que decían que había sido visto en algún lugar al norte de Falfuar, pero los monjes no tomaron ninguna medida para encontrarlo, debido a la falta de fondos y a la insuficiente mano de obra.</p><p>Con esta nueva información, escapas del Asilo.</p>",
+			"rewards": [
+				{ "status": { "name": "Caldero negro", "part": 1 } }
+			],
+			"endExploration": true
 		}
 	}
 }

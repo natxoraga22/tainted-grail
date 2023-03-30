@@ -1,4 +1,63 @@
 {
 	"name": "Espadas Olvidadas",
-    "introduction": "<p>Descansas un rato a la sombra de las titánicas espadas, y su olor oxidado te provoca un cosquilleo en la nariz. A unos cien metros, un viejo herrero trabaja duro, rompiendo el filo dentado de una gigantesca arma. El martillo que utiliza para quebrar este acero ancestral parece muy extraño, al igual que el sonido que hace.</p>"
+	"introduction": "<p>Descansas un rato a la sombra de las titánicas espadas, y su olor oxidado te provoca un cosquilleo en la nariz. A unos cien metros, un viejo herrero trabaja duro, rompiendo el filo dentado de una gigantesca arma. El martillo que utiliza para quebrar este acero ancestral parece muy extraño, al igual que el sonido que hace.</p>",
+	"actions": [
+		{
+			"action": "Intentas subirte a una de las espadas",
+			"description": "¿Es oro lo que ves arriba en su pomo?",
+			"goToVerse": "1"
+		},
+		{
+			"action": "Intentas hablar con el herrero",
+			"goToVerse": "2"
+		},
+		{
+			"action": "Descansas a la sombra de la espada",
+			"goToVerse": "5"
+		}
+	],
+	"verses": {
+		"2": {
+			"actions": [
+				{
+					"requirements": [
+						{ "character": "Beor" }
+					],
+					"goToVerse": "4"
+				},
+				{
+					"requirements": [
+						{ "character": "Beor", "not": true }
+					],
+					"goToVerse": "2a"
+				}
+			]
+		},
+		"2a": {
+			"text": "<p>Al herrero no le gustan los invitados inesperados ni la gente que quiere observar sus métodos. Solo logras vislumbrar el extraño y ornamentado martillo mientras lo esconde con cautela y te dice que te vayas en un tono nada amable.</p>",
+			"actions": [
+				{
+					"action": "Lo tranquilizas",
+					"requirements": [
+						{ "attribute": { "name": "Empatía", "level": 2 } }
+					],
+					"goToVerse": "4"
+				},
+				{
+					"action": "Te niegas a marcharte",
+					"goToVerse": "3"
+				},
+				{
+					"action": "Te vas",
+					"endExploration": true
+				}
+			]
+		},
+		"5": {
+			"text": "<p>Caes en un ligero sueño.</p>"
+		}
+	},
+	"dream": {
+		"text": "<p>El ejército de hombres formó una línea defensiva de espaldas al mar: un último y desesperado intento. Pero los Primeros Moradores no atacaron. Enviaron gigantes para que hicieran el trabajo sucio.</p><p>A medida que los titanes comenzaron a avanzar, los hombres se escondieron detrás de sus escudos y los caballos entraron en pánico. Solo Arturo mantuvo su posición. Sabía que los gigantes vendrían; contaba con ello. Solo, salió a su encuentro, extendiendo los brazos.</p><p>Media hora más tarde, los gigantes se arrodillaron ante el rey humano y clavaron profundamente sus armas en la colina, jurando que nunca las empuñarían contra los humanos.</p>"
+	}
 }

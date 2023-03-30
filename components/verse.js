@@ -66,6 +66,7 @@ export default function Verse({ verseData, locationData, bookOfSecrets, bosVerse
 					verseData={locationData.verses[verseData.goToVerse]}
 					locationData={locationData}
 					bookOfSecrets={bookOfSecrets}
+					last={last}
 				/>
 			}
 
@@ -76,6 +77,7 @@ export default function Verse({ verseData, locationData, bookOfSecrets, bosVerse
 					locationData={locationData}
 					bookOfSecrets={bookOfSecrets}
 					bosVerseNumber={verseData.goToBosVerse}
+					last={last}
 				/>
 			}
 		</>

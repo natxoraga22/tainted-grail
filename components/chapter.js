@@ -32,6 +32,8 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 							<Location locationData={locationData}>
 								{chapterSection.location.actions &&
 								chapterSection.location.actions.map((locationAction, index) => {
+									const lastAction = index === chapterSection.location.actions.length - 1;
+
 									/* Dream / nightmare */
 									if (locationAction.action === 'dream' || locationAction.action === 'nightmare') {
 										const dreamType = locationAction.action === 'dream' ? 'Sueño' : 'Pesadilla';
@@ -41,6 +43,7 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 												key={index}
 												dreamType={dreamType}
 												dreamData={dreamData}
+												first={locationAction.first}
 											/>
 										);
 									}
@@ -53,6 +56,7 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 												locationData={locationData}
 												bookOfSecrets={bookOfSecrets}
 												testResult={locationAction.testResult}
+												last={lastAction}
 											/>
 										);
 									}
@@ -74,6 +78,7 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 												locationData={locationData}
 												bookOfSecrets={bookOfSecrets}
 												first={!locationAction.verse && !locationAction.bosVerse}
+												last={lastAction}
 											/>
 										);
 									}

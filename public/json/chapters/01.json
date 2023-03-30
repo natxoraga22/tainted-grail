@@ -51,13 +51,33 @@
 		},
 		{
 			"location": {
-				"id": "105"
+				"id": "105",
+				"actions": [
+					{ "action": 1 },
+					{ "verse": "2", "action": 1 },
+					{ "verse": "2a", "action": 2 },
+					{ "action": 2 },
+					{ "action": "dream", "first": false }
+				]
 			}
 		},
 		{
+			"personal": "<p>Lo mejor seria tranquilizar al herrero, pero requiere de 2 puntos de empatía (Arev no los tiene, deberá esperar a Ailei o buscar otra solución).</p><p>Viendo que no sacará nada del herrero, Arev se dirige al noroeste, a los Túmulos de los Primeros Moradores (una de las localizaciones donde se pueden conseguir los «Rituales de Menhir»).</p>"
+		},
+		{
 			"location": {
-				"id": "106"
+				"id": "106",
+				"actions": [
+					{ "action": 1 },
+					{ "action": 0 },
+					{ "verse": "1", "action": 2 },
+					{ "verse": "8", "testResult": "6+" },
+					{ "verse": "3", "action": 3 }
+				]
 			}
+		},
+		{
+			"personal": "<p>El portón solamente se puede abrir con la carta de Secreto «Martillo de Viejoacero» (27) o 2 puntos de agresividad. Arev no cumple ninguno de los requisitos.</p><p>Arev y Ailei ya han explorado dos de las localizaciones donde se pueden conseguir los «Rituales de Menhir» sin éxito. Solamente les falta el Cónclave Calcinado.</p>"
 		},
 		{
 			"location": {
