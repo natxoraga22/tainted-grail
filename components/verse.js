@@ -3,7 +3,7 @@ import EndExploration from '@/components/endExploration';
 import styles from '@/styles/Verse.module.css';
 
 
-export default function Verse({ verseData, locationData, bosVerseNumber, testResult, last = false }) {
+export default function Verse({ verseData, locationData, bookOfSecrets, bosVerseNumber, testResult, last = false }) {
 	let text = verseData.text;
 	if (testResult) {
 		verseData = verseData.testResults[testResult];
@@ -60,7 +60,21 @@ export default function Verse({ verseData, locationData, bosVerseNumber, testRes
 
 			{/* Verse */}
 			{verseData.goToVerse &&
-				<Verse verseData={locationData.verses[verseData.goToVerse]}/>
+				<Verse
+					verseData={locationData.verses[verseData.goToVerse]}
+					locationData={locationData}
+					bookOfSecrets={bookOfSecrets}
+				/>
+			}
+
+			{/* Book of Secrets */}
+			{verseData.goToBosVerse &&
+				<Verse
+					verseData={bookOfSecrets[verseData.goToBosVerse]}
+					locationData={locationData}
+					bookOfSecrets={bookOfSecrets}
+					bosVerseNumber={verseData.goToBosVerse}
+				/>
 			}
 		</>
 	);

@@ -4,32 +4,50 @@
 	"actions": [
 		{
 			"requirements": [
-				{
-					"secret": { "id": 66, "name": "Marca Roja" }
-				}
-			]
+				{ "secret": { "id": 66, "name": "Marca Roja" } }
+			],
+			"goToVerse": "9"
 		},
 		{
 			"requirements": [
-				{
-					"status": { "name": "Rastreador" }
-				},
-				{
-					"custom": "Arquera sigue viva"
-				}
-			]
+				{ "status": { "name": "Rastreador" } },
+				{ "custom": "Arquera sigue viva" }
+			],
+			"goToVerse": "11"
 		},
 		{
-			"action": "Te ofreces como asistente"
+			"action": "Te ofreces como asistente",
+			"goToVerse": "1"
 		},
 		{
-			"action": "Visitas los monumentos de la isla"
+			"action": "Visitas los monumentos de la isla",
+			"goToVerse": "4"
 		},
 		{
-			"action": "Te cuelas en las profundidades prohibidas del Asilo"
+			"action": "Te cuelas en las profundidades prohibidas del Asilo",
+			"goToVerse": "5"
 		}
 	],
 	"verses": {
+		"1": {
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Mano amiga", "part": 1 } }
+					],
+					"goToVerse": "7"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Mano amiga", "part": 1 }, "not": true }
+					],
+					"goToVerse": "10"
+				}
+			]
+		},
+		"2": {
+			"text": "<p>«¡Escúchame!», dice el druida. «Deberíamos dejaros morir a todos por lo que nos hicisteis, asquerosos desagradecidos. Pero el conocimiento del Círculo no puede morir conmigo. Tienes que escuchar. ¡Tienes que recordar!».</p>"
+		},
 		"6": {
 			"text": "<p>Ahora estás prisionero en el Asilo. Pasas los días escuchando a los demás agonizando y preguntándote cuándo llegará tu hora. Los reclusos te cuentan que a lo largo de los años algunos valientes lograron escapar de este lugar. La verdadera pregunta es: ¿debes hacer lo mismo y extender la epidemia?</p>",
 			"rewards": [
@@ -64,6 +82,9 @@
 					]
 				}
 			]
+		},
+		"11": {
+			"goToBosVerse": "147"
 		},
 		"12": {
 			"testResults": {

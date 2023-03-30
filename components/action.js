@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle, faPlay } from '@fortawesome/free-solid-svg-icons';
 
 
-export default function Action({ actionData, locationData, first = false }) {
+export default function Action({ actionData, locationData, bookOfSecrets, first = false }) {
 	return (
 		<>
 			<div className={styles.actionContainer}>
@@ -42,7 +42,21 @@ export default function Action({ actionData, locationData, first = false }) {
 
 			{/* Verse */}
 			{actionData.goToVerse &&
-				<Verse verseData={locationData.verses[actionData.goToVerse]}/>
+				<Verse
+					verseData={locationData.verses[actionData.goToVerse]}
+					locationData={locationData}
+					bookOfSecrets={bookOfSecrets}
+				/>
+			}
+
+			{/* Book of Secrets */}
+			{actionData.goToBosVerse &&
+				<Verse
+					verseData={bookOfSecrets[actionData.goToBosVerse]}
+					locationData={locationData}
+					bookOfSecrets={bookOfSecrets}
+					bosVerseNumber={actionData.goToBosVerse}
+				/>
 			}
 		</>
 	);

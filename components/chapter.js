@@ -51,6 +51,7 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 												key={index}
 												verseData={locationData.verses[locationAction.verse]}
 												locationData={locationData}
+												bookOfSecrets={bookOfSecrets}
 												testResult={locationAction.testResult}
 											/>
 										);
@@ -65,6 +66,7 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 												key={index}
 												actionData={actionData}
 												locationData={locationData}
+												bookOfSecrets={bookOfSecrets}
 												first={!locationAction.verse}
 											/>
 										);

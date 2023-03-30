@@ -4,17 +4,13 @@
 	"actions": [
 		{
 			"requirements": [
-				{
-					"secret": { "id": 66, "name": "Marca Roja" }
-				}
+				{ "secret": { "id": 66, "name": "Marca Roja" } }
 			],
 			"goToVerse": "4"
 		},
 		{
 			"requirements": [
-				{
-					"status": { "name": "La marca del cazador" }
-				}
+				{ "status": { "name": "La marca del cazador" } }
 			],
 			"goToVerse": "6"
 		},
@@ -34,9 +30,7 @@
 		{
 			"action": "Paseas por los callejones dominados por la Rareza",
 			"requirements": [
-				{
-					"custom": "No hay menhir"
-				}
+				{ "custom": "No hay menhir" }
 			],
 			"goToVerse": "9"
 		}
@@ -53,9 +47,7 @@
 				{
 					"action": "Les pides que compartan sus problemas",
 					"requirements": [
-						{
-							"attribute": { "name": "Empatía", "level": 1 }
-						}
+						{ "attribute": { "name": "Empatía", "level": 1 } }
 					],
 					"goToVerse": "2"
 				}
@@ -64,9 +56,7 @@
 		"2": {
 			"text": "<p>Se necesita tiempo para romper el silencio de la gente afligida, pero, una vez conseguido, las historias de separaciones y partidas te inundan como una lluvia torrencial. Tratas de recordar cada detalle. El color del caballo palafrén que la sacerdotisa del pueblo, Neante, montaba. El adorno en la cota de malla que el joven Lord Yvain llevaba. El extraño cuerno para beber que Erfyr, el herrero, solía llevar a todas partes. La marca de nacimiento de Fael, el maestro cazador. La capa bordada de Aubert, el experimentado viajero que había visto todas las partes de la isla. ¿Quién sabe qué detalle puede ayudarte por el camino?</p>",
 			"rewards": [
-				{
-					"status": { "name": "El destino de la expedición", "part": 1 }
-				}
+				{ "status": { "name": "El destino de la expedición", "part": 1 } }
 			],
 			"endExploration": true
 		},
@@ -92,7 +82,52 @@
 			}
 		},
 		"5": {
-			"text": "<p>Muchos se negarían a llamar «hogar» ... TODO!!!"
+			"text": "<p>Muchos se negarían a llamar «hogar» a este sitio, pero el entorno familiar te brinda la serenidad que tanto necesitas. Mientras descansas en tu cama, no puedes evitar preguntarte si es la última noche que pasarás bajo este techo.</p>",
+			"endExploration": true
+		},
+		"6": {
+			"text": "<p>Tres mujeres lloran frente a una larga sala. Una de ellas ha perdido recientemente a su hija de ocho años, descuartizada como un animal en las colinas a las afueras de Cuanacht.</p><p>Sientes cómo tus piernas se debilitan. Los vagos recuerdos de la cacería nocturna te queman ahora la mente como hierro candente. Te tropiezas, tratando de no mirar las caras de los que visten el luto.</p>",
+			"rewards": [
+				{ "status": { "name": "Canción de luto", "part": 1 } }
+			],
+			"actions": [
+				{ 
+					"action": "Visitas a las familias de los campeones de la primera expedición",
+					"goToVerse": "1"
+				},
+				{
+					"action": "Pides a los lugareños que te ayuden a prepararte",
+					"goToVerse": "3"
+				},
+				{
+					"action": "Pasas el día descansando en tu propia casa",
+					"goToVerse": "5"
+				},
+				{
+					"action": "Paseas por los callejones dominados por la Rareza",
+					"requirements": [
+						{ "custom": "No hay menhir" }
+					],
+					"goToVerse": "9"
+				},
+				{
+					"action": "Te vas",
+					"endExploration": true
+				}
+			]
+		},
+		"9": {
+			"text": "<p>La estatua del mercado se ha apagado. Las calles cambian lentamente de posición. Las casas que recuerdas desde tu infancia desaparecen o se alejan. Extrañas figuras vagan en la oscuridad. Los días y las noches se funden y se entremezclan.</p><p>Tras seis siglos, esta tierra vuelve finalmente a la Rareza y se lleva a todos con ella. Algunos habitantes de la ciudad se escondieron en los más profundo que pudieron y los demás se marcharon aterrados en busca de otro menhir. No te queda mucho tiempo hasta que la locura y los horrores sobrenaturales se apoderen de ti.</p>",
+			"actions": [
+				{
+					"action": "Te vas del asentamiento",
+					"endExploration": true
+				},
+				{
+					"action": "Sigues deambulando por sus calles",
+					"goToBosVerse": "215"
+				}
+			]
 		}
 	},
 	"dream": {

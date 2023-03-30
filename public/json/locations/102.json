@@ -4,29 +4,25 @@
 	"actions": [
 		{ 
 			"requirements": [
-				{
-					"status": { "name": "Rastreador" },
-					"not": true
-				}
-			]
+				{ "status": { "name": "Rastreador" }, "not": true }
+			],
+			"goToVerse": "3"
 		},
 		{
-			"action": "Duermes en el santuario"
+			"action": "Duermes en el santuario",
+			"goToVerse": "1"
 		},
 		{
-			"action": "Rebuscas en las ofrendas"
+			"action": "Rebuscas en las ofrendas",
+			"goToVerse": "4"
 		},
 		{
 			"action": "Destrozas el santuario y dejas una nota para otros cazadores",
 			"requirements": [
-				{
-					"status": { "name": "Canción de luto", "part": 1 }
-				},
-				{
-					"status": { "name": "Canción de luto", "part": 2 },
-					"not": true
-				}
-			]
+				{ "status": { "name": "Canción de luto", "part": 1 } },
+				{ "status": { "name": "Canción de luto", "part": 2 }, "not": true }
+			],
+			"goToVerse": "6"
 		}
 	],
 	"verses": {
@@ -37,31 +33,29 @@
 		"2": {
 			"text": "<p>El enorme cráneo arde como una pira funeraria. Las aves del bosque escapan de sus nidos construidos en los enormes cuernos. Las llamas se extienden rápidamente, envolviendo la arboleda, mientras contemplas el incendio, de pie, sobre el cuerpo de una bestia derrotada.</p><p>Para bien o para mal, nadie más podrá unirse a la Gran Cacería.</p>",
 			"rewards": [
-				{
-					"status": { "name": "Canción de luto", "part": 2 }
-				}
+				{ "status": { "name": "Canción de luto", "part": 2 } }
 			],
 			"endExploration": true
 		},
 		"3": {
 			"text": "<p>No es inusual ver un rastro de sangre y ramas rotas en el bosque sagrado del Gran Cazador. Pasas casi sin percatarte, pero la huella de una mano ensangrentada en la corteza de un abedul blanco te llama la atención.</p><p>Sin duda, esta presa no era un animal...</p>",
 			"rewards": [
-				{
-					"status": { "name": "Rastreador" }
-				}
+				{ "status": { "name": "Rastreador" } }
 			],
 			"actions": [
 				{
-					"action": "Sigues el rastro"
+					"action": "Sigues el rastro",
+					"goToVerse": "5"
+				},
+				{
+					"action": "Continúas tu camino"
 				}
 			]
 		},
 		"4": {
 			"text": "<p>Es evidente que, si dejaron sus monedas aquí, es que ya no las querían, ¿cierto?</p>",
 			"rewards": [
-				{
-					"status": { "name": "Saqueador", "part": 5 }
-				}
+				{ "status": { "name": "Saqueador", "part": 5 } }
 			],
 			"endExploration": true
 		},
@@ -74,26 +68,23 @@
 			"text": "<p>Vuelves a la arboleda y te detienes frente al antiguo Ciervo Padre con el corazón enfurecido y una antorcha encendida en tu mano. La incertidumbre llena tu mente en este último instante. ¿Podría todo esto ser una coincidencia? Hay pocos poderes aliados en esta isla: ¿deberías destruir uno de ellos?</p><p>Finalmente, das un paso al frente y acercas la antorcha a uno de los colchones de paja. Un rugido a tus espaldas hace que se te acelere el corazón. Te giras y frente a ti ves una bestia acercándose. ¿La ha atraído el fuego? ¿O es la venganza del Ciervo Padre?</p>",
 			"actions": [
 				{
-					"action": "Si ganas"
+					"action": "Si ganas",
+					"goToVerse": "2"
 				},
 				{
-					"action": "Si pierdes"
+					"action": "Si pierdes",
+					"endExploration": true
 				}
 			]
 		}
 	},
 	"dream": {
 		"requirements": [
-			{
-				"status": { "name": "Canción de luto", "part": 2 },
-				"not": true
-			}
+			{ "status": { "name": "Canción de luto", "part": 2 }, "not": true }
 		],
 		"text": "<p>Bajo esta constelación pintada de ocre, te adentras en un agitado sueño en el que persigues a un cervatillo en las colinas a las afueras de Cuanacht.</p><p>Te despiertas temprano, envuelto en un sudor frío y con varios cortes recientes. La boca te sabe a sangre. Junto a ti, ves trozos de carne cruda cuidadosamente envueltos en hojas.</p>",
 		"rewards": [
-			{
-				"status": { "name": "La marca del cazador" }
-			}
+			{ "status": { "name": "La marca del cazador" } }
 		]
 	}
 }

@@ -21,7 +21,12 @@
 		},
 		{
 			"location": {
-				"id": "102"
+				"id": "102",
+				"actions": [
+					{ "action": 0 },
+					{ "verse": "3", "action": 0 },
+					{ "action": "dream" }
+				]
 			}
 		},
 		{
@@ -29,7 +34,10 @@
 		},
 		{
 			"location": {
-				"id": "109"
+				"id": "109",
+				"actions": [
+					{ "action": 1 }
+				]
 			}
 		},
 		{

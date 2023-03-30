@@ -5,7 +5,7 @@ import Verse from '@/components/verse';
 export default function Dream({ dreamType, dreamData }) {
 	return (
 		<>
-			<Action actionData={{ action: dreamType, ...dreamData }} first/>
+			<Action actionData={{ action: dreamType, requirements: dreamData.requirements }} first/>
 			<Verse verseData={dreamData}/>
 		</>
 	);
