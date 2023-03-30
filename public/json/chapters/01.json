@@ -36,7 +36,13 @@
 			"location": {
 				"id": "109",
 				"actions": [
-					{ "action": 1 }
+					{ "action": 1 },
+					{ "action": 3 },
+					{ "bosVerse": "313", "action": 0 },
+					{ "action": 0 },
+					{ "verse": "9", "action": 1 },
+					{ "verse": "6", "action": 1 },
+					{ "verse": "12", "testResult": "5+" }
 				]
 			}
 		},

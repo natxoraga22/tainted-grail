@@ -48,25 +48,25 @@
 		"2": {
 			"text": "<p>«¡Escúchame!», dice el druida. «Deberíamos dejaros morir a todos por lo que nos hicisteis, asquerosos desagradecidos. Pero el conocimiento del Círculo no puede morir conmigo. Tienes que escuchar. ¡Tienes que recordar!».</p>"
 		},
+		"4": {
+			"goToBosVerse": "161"
+		},
 		"6": {
 			"text": "<p>Ahora estás prisionero en el Asilo. Pasas los días escuchando a los demás agonizando y preguntándote cuándo llegará tu hora. Los reclusos te cuentan que a lo largo de los años algunos valientes lograron escapar de este lugar. La verdadera pregunta es: ¿debes hacer lo mismo y extender la epidemia?</p>",
 			"rewards": [
-				{
-					"secret": { "id": 66, "name": "Marca Roja" }
-				}
+				{ "secret": { "id": 66, "name": "Marca Roja" } }
 			],
 			"actions": [
 				{
 					"action": "Renuncias a tu vida y te quedas en el Asilo",
 					"rewards": [
-						{
-							"custom": "Tu personaje muere."
-						}
+						{ "custom": "Tu personaje muere." }
 					],
 					"endExploration": true
 				},
 				{
-					"action": "Intentas escapar"
+					"action": "Intentas escapar",
+					"goToVerse": "12"
 				}
 			]
 		},
@@ -75,11 +75,15 @@
 			"actions": [
 				{
 					"requirements": [
-						{
-							"chapter": { "number": 11, "min": true },
-							"not": true
-						}
-					]
+						{ "chapter": { "number": 11, "min": true } }
+					],
+					"goToVerse": "14"
+				},
+				{
+					"requirements": [
+						{ "chapter": { "number": 11, "min": true }, "not": true }
+					],
+					"goToVerse": "6"
 				}
 			]
 		},
@@ -89,10 +93,10 @@
 		"12": {
 			"testResults": {
 				"1-4": {
-					"text": "<p><strong>1-4</strong> - Ninguno de tus planes funciona y el tiempo pasa.</p>"
+					"text": "Ninguno de tus planes funciona y el tiempo pasa."
 				},
 				"5+": {
-					"text": "<p><strong>5+</strong> - Al fin consigues forzar las cerraduras, engañar a los guardias y huir.</p>",
+					"text": "Al fin consigues forzar las cerraduras, engañar a los guardias y huir.",
 					"endExploration": true
 				}
 			}

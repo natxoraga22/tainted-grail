@@ -59,15 +59,21 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 									/* Action */
 									else {
 										let actionData;
-										if (!locationAction.verse) actionData = locationData.actions[locationAction.action];
-										else actionData = locationData.verses[locationAction.verse].actions[locationAction.action];
+										if (locationAction.verse) {
+											actionData = locationData.verses[locationAction.verse].actions[locationAction.action];
+										}
+										else if (locationAction.bosVerse) {
+											actionData = bookOfSecrets[locationAction.bosVerse].actions[locationAction.action];
+										}
+										else actionData = locationData.actions[locationAction.action];
+
 										return (
 											<Action 
 												key={index}
 												actionData={actionData}
 												locationData={locationData}
 												bookOfSecrets={bookOfSecrets}
-												first={!locationAction.verse}
+												first={!locationAction.verse && !locationAction.bosVerse}
 											/>
 										);
 									}
