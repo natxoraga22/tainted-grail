@@ -1,0 +1,10 @@
+
+.tableOfContents {
+	padding-top: 20pt;
+	top: 56px;
+	z-index: 990;
+}
+
+.section {
+	font-size: 10pt;
+}

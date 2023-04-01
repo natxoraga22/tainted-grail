@@ -1,14 +1,16 @@
 
 .location {
-	margin-top: 80pt;
 	margin-bottom: 60pt;
 }
 
 .title {
+	padding-top: calc(20pt + 56px);
+	margin-top: -56px;
+	margin-bottom: 12pt;
+
 	font-family: Helvetica Neue;
 	font-weight: bold;
 	font-size: 12pt;
-	margin-bottom: 12pt;
 }
 
 .introduction {

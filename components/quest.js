@@ -7,7 +7,9 @@ export default function Quest({ questData }) {
 	return (
 		<div className={styles.questContainer}>
 			{/* Title */}
-			<h2 className={styles.title}>{questData.title}</h2>
+			<h2 id={`quest_${questData.id}`} className={styles.title}>
+				{questData.title}
+			</h2>
 			
 			{/* Description */}
 			{questData.description && 

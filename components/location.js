@@ -5,7 +5,7 @@ export default function Location({ locationData, visitCount = 1, children }) {
 	return (
 		<div className={styles.location}>
 			{/* Title */}
-			<h3 className={styles.title}>
+			<h3 id={`location_${locationData.id}`} className={styles.title}>
 				Exploración de {locationData.name} ({locationData.id})
 				{visitCount > 1 && <span> - {visitCount}ª visita</span>}
 			</h3>

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 
 export default function Layout({ children }) {
@@ -19,31 +20,54 @@ export default function Layout({ children }) {
 
 
 export function Navbar() {
+	const router = useRouter();
+	const currentRoute = router.pathname;
+
+	const chapters = ['01', '02', '03B', '03A', '04A', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15'];
+
 	return (
-		<nav className="navbar navbar-expand bg-light">
+		<nav className="navbar navbar-expand bg-light sticky-top">
 			<div className="container">
 				<span className="navbar-brand h1 mb-0">Tainted Grail</span>
 
 				<div className="navbar-collapse">
 					<div className="navbar-nav">
-						<Link className="nav-link" href="/full-story">Historia completa</Link>
+						{/* Full story */}
+						<Link className={'nav-link' + (currentRoute == '/full-story' ? ' active' : '')} href="/full-story">
+							Historia completa
+						</Link>
 
+						{/* Chapters */}
 						<div className="nav-item dropdown">
-							<a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Capítulos</a>
+							<a className={'nav-link dropdown-toggle' + (currentRoute.startsWith('/chapters/') ? ' active' : '')} 
+							   href="#" role="button" data-bs-toggle="dropdown">
+								Capítulos
+							</a>
 							<div className="dropdown-menu">
-								<Link className="dropdown-item" href="/chapters/01">Capítulo 1</Link>
-								<Link className="dropdown-item" href="/chapters/02">Capítulo 2</Link>
-								<Link className="dropdown-item" href="/chapters/03">Capítulo 3</Link>
+								{chapters.map((chapterId) => {
+									return (
+										<Link
+											key={chapterId}
+											className={'dropdown-item' + (currentRoute == `/chapters/${chapterId}` ? ' active' : '')}
+											href={`/chapters/${chapterId}`}
+										>
+											Capítulo {chapterId.replace(/^0+/, '')}
+										</Link>
+									);
+								})}
 							</div>
 						</div>
 
+						{/* Appendices */}
 						<div className="nav-item dropdown">
 							<a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Apéndices</a>
 							<div className="dropdown-menu">
-								<Link className="dropdown-item" href="/">Historia principal</Link>
-								<Link className="dropdown-item" href="/">Tareas</Link>
-								<Link className="dropdown-item" href="/">Los héroes de Cuanacht</Link>
-								<Link className="dropdown-item" href="/">Los caballeros de la Mesa Redonda</Link>
+								{/*
+								<NavLink className="dropdown-item" activeClassName="active" to="/">Historia principal</NavLink>
+								<NavLink className="dropdown-item" activeClassName="active" to="/">Tareas</NavLink>
+								<NavLink className="dropdown-item" activeClassName="active" to="/">Los héroes de Cuanacht</NavLink>
+								<NavLink className="dropdown-item" activeClassName="active" to="/">Los caballeros de la Mesa Redonda</NavLink>
+								*/}
 							</div>
 						</div>
 					</div>
