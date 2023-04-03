@@ -1,32 +1,175 @@
 {
+	"status": "IN PROGRESS",
+
 	"name": "Lago del Espejo Desecado",
     "introduction": "<p>Durante siglos, la gente de toda la isla peregrinó al Lago del Espejo, rogándole a la Dama Pálida sanación, favores o simplemente consuelo. Ahora, las reflectantes aguas han desaparecido, absorbidas por el suelo agrietado.</p><p>Esta es la consecuencia más grave y desafortunada de los problemas que Ávalon ha experimentado hasta ahora. Lo más inquietante es que la falta de agua ha revelado un secreto escondido bajo el Lago del Espejo desde al antigüedad: una solitaria torre de rarapiedra, cuya cúspide formaba hasta ahora la isla en medio del lago.</p>",
 	"actions": [
 		{ 
 			"action": "Desciendes al fondo del lago",
-			"description": "Está resbaladizo y es peligroso"
+			"description": "Está resbaladizo y es peligroso",
+			"goToVerse": "1"
 		},
 		{
 			"action": "Cazas en los alrededores del lago",
-			"description": "Ya no hay agua, pero los animales salvajes siguen viniendo al lago. Puede que sea una buena oportunidad para reabastecerte"
+			"description": "Ya no hay agua, pero los animales salvajes siguen viniendo al lago. Puede que sea una buena oportunidad para reabastecerte",
+			"goToVerse": "2"
 		}
 	],
 	"verses": {
 		"1": {
-			"testOutcomes": {
-				"1-6": "Pisas una piedra cubierta de algas y resbalas hacia las profundidades del embalse. Medio minuto de terror después, terminas en el fondo del lago, abatido y agotado.",
-				"7+": "El barro y las algas cubren la pendiente, pero tus agudos ojos te salvan de hacerte daño."
+			"testResults": {
+				"1-6": {
+					"text": "Pisas una piedra cubierta de algas y resbalas hacia las profundidades del embalse. Medio minuto de terror después, terminas en el fondo del lago, abatido y agotado.",
+					"goToVerse": "10"
+				},
+				"7+": {
+					"text": "El barro y las algas cubren la pendiente, pero tus agudos ojos te salvan de hacerte daño.",
+					"goToVerse": "10"
+				}
 			}
 		},
-        "2": "",
-        "3": "<p>Esta estructura no fue pensada para acceder desde abajo, pues la entrada cuelga a quince metros sobre el lodo seco del lecho del lago. Por suerte, la rarapiedra cubierta de alga marina tiene muchos puntos de apoyo para manos y pies.</p><p>Dentro, el aire es húmedo y fétido, y del techo cuelgan peces podridos, que se amontonan en las esquinas, flotando en charcos de agua. Exploras la torre y llamas a la Dama, pero no la encuentras por ninguna parte. Al final, te vas, perturbado y con las manos vacías.</p>",
-        "4": "<p>Esta estructura no fue pensada para acceder desde abajo, pues la entrada cuelga a quince metros sobre el lodo seco del lecho del lago. Por suerte, la rarapiedra cubierta de alga marina tiene muchos puntos de apoyo para manos y pies.</p><p>Pronto, entras en el laberinto de la torre. Atravesando habitaciones para propósitos desconocidos y pasillos serpenteantes, finalmente llegas al santuario interior. La Dama espera, recostada sobre un trozo de rarapiedra que refleja perfectamente su forma. Está más pálida que antes y, al darte la bienvenida, sus palabras tardan más en convertirse en un idioma que entiendes.</p>",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "Estas al pie de una antigua torre hecha de rarapiedra",
-        "11": ""
-    }
+        "2": {
+			"testResults": {
+				"1-2": {
+					"text": "Buscas huellas o señales de actividad animal, pero no encuentras nada. Solo has perdido el tiempo.",
+					"endExploration": true
+				},
+				"3-4": {
+					"text": "Oyes un crujido detrás de ti. No estás seguro de si ahora eres cazador o presa.",
+					"endExploration": true
+				},
+				"5-6": {
+					"text": "Unos trozos de pelo marrón te llevan a una guarida.",
+					"encounters": [
+						{ "name": "Liebre de los Claros", "color": "verde", "level": 1 }
+					],
+					"endExploration": true
+				},
+				"7+": {
+					"text": "Uno de los árboles pequeños está recién mordido. ¿Hay algún ciervo cerca?",
+					"encounters": [
+						{ "name": "Alce Real", "color": "verde", "level": 1 }
+					],
+					"endExploration": true
+				}
+			}
+		},
+        "3": {
+			"text": "<p>Esta estructura no fue pensada para acceder desde abajo, pues la entrada cuelga a quince metros sobre el lodo seco del lecho del lago. Por suerte, la rarapiedra cubierta de alga marina tiene muchos puntos de apoyo para manos y pies.</p><p>Dentro, el aire es húmedo y fétido, y del techo cuelgan peces podridos, que se amontonan en las esquinas, flotando en charcos de agua. Exploras la torre y llamas a la Dama, pero no la encuentras por ninguna parte. Al final, te vas, perturbado y con las manos vacías.</p>",
+			"endExploration": true
+		},
+        "4": {
+			"actions": [
+				{
+					"requirements": [
+						{ "chapter": { "numbers": [5, 6, 7] } }
+					],
+					"endExploration": true
+				},
+				{
+					"requirements": [
+						{ "chapter": { "numbers": [5, 6, 7] }, "not": true }
+					],
+					"goToVerse": "4a"
+				}
+			]
+		},
+		"4a": {
+			"text": "<p>Esta estructura no fue pensada para acceder desde abajo, pues la entrada cuelga a quince metros sobre el lodo seco del lecho del lago. Por suerte, la rarapiedra cubierta de alga marina tiene muchos puntos de apoyo para manos y pies.</p><p>Pronto, entras en el laberinto de la torre. Atravesando habitaciones para propósitos desconocidos y pasillos serpenteantes, finalmente llegas al santuario interior. La Dama espera, recostada sobre un trozo de rarapiedra que refleja perfectamente su forma. Está más pálida que antes y, al darte la bienvenida, sus palabras tardan más en convertirse en un idioma que entiendes.</p>",
+			"actions": [
+				{
+					"requirements": [
+						{ "secret": { "id": 7, "name": "Grial Verdadero" } }
+					],
+					"goToVerse": "6"
+				},
+				{
+					"action": "Le cuentas lo ocurrido en Tuathán",
+					"goToVerse": "7"
+				},
+				{
+					"action": "Le preguntas sobre ella",
+					"goToVerse": "9"
+				},
+				{
+					"action": "Le preguntas por los dos talismanes",
+					"requirements": [
+						{ "secret": { "id": 21, "name": "Talismán Deslucido" } },
+						{ "secret": { "id": 22, "name": "Talismán Brillante" } }
+					],
+					"goToVerse": "11"
+				},
+				{
+					"action": "Le preguntas si hay algún lugar a salvo de la Rareza",
+					"requirements": [
+						{ "chapter": { "numbers": [13] } }
+					],
+					"goToVerse": "8"
+				},
+				{
+					"action": "Le preguntas por la cura para la Muerte Roja",
+					"requirements": [
+						{ "secret": { "id": 66, "name": "Marca Roja" } }
+					],
+					"goToVerse": "5"
+				},
+				{
+					"action": "Te vas",
+					"endExploration": true
+				}
+			]
+		},		
+        "5": {
+			"text": "«Hace ya tiempo, un hombre cubierto de cicatrices acudió a mí. Dijo que las heridas eran un recuerdo de la Muerte Roja. No pude ayudarlo, así que se instaló en un lugar apartado al norte, lejos de la gente que todavía lo trataba como una amenaza. Creo que se fue al Mar Verde».",
+			"rewards": [
+				{ "status": { "name": "Caldero negro", "part": 1 } }
+			]
+		},
+        "6": {
+			"text": "<p>Al ver que aún tienes la copa en tu poder, la Dama Pálida se pone de pie, hinchándose de furia. De pronto, ya no parece ni la mitad de humana ni la mitad de débil que hace unos minutos.</p><p>«¡Necio insolente! Ya dije lo que pasaría», ruge, alzándose sobre ti con los cuatro brazos extendidos. «¿Por qué has traído esta maldita cosa de vuelta? ¿Qué creías que iba a pasar? ¡YA BASTA! ¡MÁRCHATE, ALIMAÑA!».</p><p>Sus últimas palabras se convierten en una fuerza invisible que te lanza rápidamente fuera de la habitación y de la torre. Por suerte, el lecho fangoso del lago amortigua tu caída.</p>",
+			"endExploration": true
+		},
+        "7": {
+			"text": "<p>Te escucha atentamente, palideciendo con cada palabra.</p><p>«Así que, al final, volvió para expiar su mayor error. ¿O fue MI mayor error?».</p><p>Suspira y luego continúa:</p><p>«Verás... lo de la ciudadela del revés fue mi culpa. Le enseñé a Arturo los secretos de mi gente, cómo le damos forma a la Rareza con el pensamiento y el canto. Primero usó ese conocimiento para convertirse en un feroz guerrero y, luego, para desafiar a Tuathán. Pero su sueño iba más allá... Quería recuperar lo que perdió en sus Tierras Natales, una sede del poder humano y el santuario de la caballería: Nueva Camelot.</p><p>Llegó a Tuathán con su ejército y penetró en el núcleo de la ciudad, donde la Rareza era más espesa y llena de posibilidades. Allí, trató de conjurar una Nueva Camelot a partir de Rareza pura y recuerdos desvanecidos. Si lo hubiera conseguido, habría reemplazado el núcleo de Tuathán por su nuevo imperio. Pero a menudo los recuerdos nos juegan malas pasadas y la Rareza retuerce incluso las mentes humanas más agudas. Esta nueva Nueva Camelot se formó mal. Arturo regresó finalmente al este y comenzó a erigir otro castillo, esta vez de piedra y fruto del esfuerzo humano. Sin embargo, el lugar que viste permaneció en Tuathán durante siglos, una espina en el territorio de mi gente. Lo que hiciste allí hará que mi gente sea menos vengativa»."
+		},
+        "8": {
+			"text": "<p>«Hay algunos lugares a lo largo de la costa en los que la Rareza nunca ha tenido mucho poder», dice. «El lugar donde Arturo desembarcó hace seis siglos es uno, pero hay otros».</p><p>Con cierta reticencia, habla de la estatua gigante que los hombres llaman el Rostro Sereno. Fue creada por Primeros Moradores adoradores de la muerte, que pretendían abrir las puertas del más allá, donde los Primeros Moradores difuntos viven como seres inferiores. Se descubrió el culto y sus planes se frustraron, pero el propio Rostro era demasiado bello como para que el pueblo de la Dama Pálida lo destruyera. En vez de eso, acabaron con el verdadero poder de este lugar y colocaron sobre él un poderoso encantamiento que repele a los Primeros Moradores.</p><p>«Podrías usarlo a tu favor. Si consigues penetrar en el núcleo del Rostro, te protegerá de la Rareza. Ninguno de los míos podrá seguirte hasta allí, aunque, por desgracia, esto me incluye a mí. Debes romper el encantamiento tú mismo y, para ello, te servirá saber algo sobre el raroacero y tener las herramientas adecuadas».",
+			"rewards": [
+				{ "status": { "name": "Sueños y profecías", "part": 1 } }
+			],
+			"task": "Convierte Rostro Sereno en un refugio para los humanos."
+		},
+        "9": {
+			"text": "<p>La Dama sacude la cabeza.</p><p>«Contar esa historia solo me volvería más rencorosa y débil justo cuando más necesito mi fuerza. Pero si quieres aprender, en este lugar los sueños a menudo son ventanas al pasado».</p>"
+		},
+        "10": {
+			"text": "Estas al pie de una antigua torre hecha de rarapiedra.",
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Matricida" } }
+					],
+					"goToVerse": "3"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Matricida" }, "not": true }
+					],
+					"goToVerse": "4"
+				}
+			]
+
+		},
+        "11": {
+			"text": "<p>Abordas a la Dama, mostrándole tanto el talismán que encontraste en el cadáver desecado como el que descubriste en el cuerpo de Lord Yvain.</p><p>Se hace una larga pausa. Con una tristeza penetrante en su voz, la Dama dice: «Sí, tienes razón. Tuve muchos campeones a lo largo de los años, todos fueron a Tuathán y casi todos murieron. Cada día me arrepiento de ello, cada día sus rostros y nombres vuelven a mí, pero no había otra manera... Tus amigos fueron los primeros en lograrlo. Encontraron la forma de entrar en Tuathán y regresaron con el Grial, pero ahora, sabiendo el mal uso que se ha hecho de la copa y la sangre que ha derramado, creo que sería mejor que siguiera estando oculta. Tú aún puedes hacer lo que ellos no pudieron: salvar a la gente de esta tierra».</p><p>Luego, te obsequia con un regalo.</p>",
+			"rewards": [
+				{ "status": { "name": "El destino de la expedición", "part": 5 } },
+				{ "item": { "name": "Espada Rúnica" }}
+			],
+			"endExploration": true
+		}
+    },
+	"dream": {
+		"text": "Todo está oscuro; la única luz es alta, tenue y fría. Nadas por dentro de la torre y merodeas por sus pasillos vacíos, comiendo pescado crudo y esperando que algo suceda: que los tuyos ganen la guerra contra los humanos y te castiguen; que los humanos maten a los tuyos; que tu hijo, asesinado a traición por sus enemigos y atrapado en un ciclo interminable de vida y muerte, se reencarne por fin en un ser inferior. Pasan los siglos y sigues ahí, en el agua fría y oscura, sola, abandonada, casi olvidada, esperando."
+	}
 }

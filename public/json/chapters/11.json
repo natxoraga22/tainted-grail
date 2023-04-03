@@ -1,0 +1,29 @@
+{
+	"sections": [
+		{
+			"quest": "11-1"
+		},
+		{
+			"quest": "11-2"
+		},
+		{
+			"personal": "<p>La enfermedad de Ailei empeora por momentos, por lo que ella y Arev deciden ir a pedir consejo a la Dama Pálida. Confían en que la dama haya vuelto al Lago del Espejo, por lo que se dirigen hacia allí haciendo uso de su nuevo menhir.</p>"
+		},
+		{
+			"location": {
+				"id": "122",
+				"actions": [
+					{ "action": 0 },
+					{ "verse": "1", "testResult": "7+" },
+					{ "verse": "10", "action": 1 },
+					{ "verse": "4", "action": 1 },
+					{ "verse": "4a", "action": 2 },
+					{ "verse": "4a", "action": 1 },
+					{ "verse": "4a", "action": 5 },
+					{ "verse": "4a", "action": 3 },
+					{ "action": "dream" }
+				]
+			}
+		}
+	]
+}

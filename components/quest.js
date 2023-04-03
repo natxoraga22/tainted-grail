@@ -13,14 +13,12 @@ export default function Quest({ questData }) {
 			
 			{/* Description */}
 			{questData.description && 
-				<div className={styles.description}>{questData.description}</div>
+				<div className={styles.description} dangerouslySetInnerHTML={{ __html: questData.description }}></div>
 			}
 			
 			{/* Quest */}
 			{questData.quest &&
-				<div className={styles.quest}>
-					<strong>MISIÓN:</strong> {questData.quest}
-				</div>
+				<div className={styles.quest} dangerouslySetInnerHTML={{ __html: questData.quest }}></div>
 			}
 			
 			{/* Success */}

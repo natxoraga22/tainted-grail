@@ -1,0 +1,48 @@
+{
+	"name": "Location name",
+	"introduction": "Exploration introduction",
+	"actions": [
+		{
+			"action": "Bold text, the text of the action",
+			"description": "Italic text, the text giving more context to the action",
+			"requirements": [
+				{ "chapter": { "numbers": [1, 2, 3] }, "min": true },
+				{ "character": "Character name (Arev)" },
+				{ "attribute": { "name": "Attribute name (Empatía)", "level": 2 } },
+				{ "status": { "name": "Status name (Matricida)", "parts": [1, 2, 3] } },
+				{ "secret": { "id": 66, "name": "Secret name" } },
+				{ "custom": "Just some text to display if no other requirement structure applies" }
+			],
+			"rewards": [
+				{ "status": "SAME AS actions.requirements.status" },
+				{ "secret": "SAME AS actions.requirements.secret" },
+				{ "custom": "Just some text to display if no other reward structure applies" }
+			],
+			"endExploration": true,
+			"goToVerse": "Verse number to go",
+			"goToBosVerse": "Book of Secrets verse number to go"
+		},
+		{
+			"action": "..."
+		}
+	],
+	"verses": {
+		"1": {
+			
+		},
+		"2": {
+			"testResults": {
+				"1-2": { "README": "Same estructure as a verse (text, actions, rewards, etc.)" },
+				"3-4": { "README": "Same estructure as a verse (text, actions, rewards, etc.)" },
+				"6+": { "README": "Same estructure as a verse (text, actions, rewards, etc.)" }
+			}
+		},
+		"3": "..."
+	},
+	"dream": {
+		"README": "Same estructure as a verse (text, actions, rewards, etc.)"
+	},
+	"nightmare": {
+		"README": "Same estructure as a verse (text, actions, rewards, etc.)"
+	}
+}

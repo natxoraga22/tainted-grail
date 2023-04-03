@@ -1,3 +1,4 @@
+import Requirements from '@/components/requirements';
 import Rewards from '@/components/rewards';
 import EndExploration from '@/components/endExploration';
 import Verse from '@/components/verse';
@@ -60,66 +61,6 @@ export default function Action({ actionData, locationData, bookOfSecrets, first 
 					last={last}
 				/>
 			}
-		</>
-	);
-}
-
-
-export function Requirements({ requirementsData }) {
-	return (
-		<>
-			{requirementsData.map((requirementData, index) => {
-				const background = requirementData.not ? 'bg-danger' : 'bg-success';
-				return (
-					<span key={index}>
-						{/* Character */}
-						{requirementData.character &&
-							<span className={'badge ' + background + ' align-middle ms-1'}>
-								{requirementData.character}
-							</span>
-						}
-
-						{/* Attribute */}
-						{requirementData.attribute &&
-							<span className={'badge ' + background + ' align-middle ms-1'}>
-								{requirementData.attribute.level} {requirementData.attribute.name}
-							</span>
-						}
-
-						{/* Status */}
-						{requirementData.status &&
-							<span className={'badge ' + background + ' align-middle ms-1'}>
-								Estado «{requirementData.status.name}»
-								{requirementData.status.part && 
-									<span> {requirementData.status.part}</span>
-								}
-							</span>
-						}
-
-						{/* Secret */}
-						{requirementData.secret &&
-							<span className={'badge ' + background + ' align-middle ms-1'}>
-								Secreto «{requirementData.secret.name}» ({requirementData.secret.id})
-							</span>
-						}
-
-						{/* Chapter */}
-						{requirementData.chapter &&
-							<span className={'badge ' + background + ' align-middle ms-1'}>
-								Capítulo {requirementData.chapter.number}
-								{requirementData.chapter.min && ' o superior'}
-							</span>
-						}
-
-						{/* Custom */}
-						{requirementData.custom &&
-							<span className={'badge ' + background + ' align-middle ms-1'}>
-								{requirementData.custom}
-							</span>
-						}
-					</span>
-				);
-			})}
 		</>
 	);
 }
