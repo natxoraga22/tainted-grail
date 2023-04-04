@@ -26,6 +26,14 @@ export default function Rewards({ rewardsData }) {
 							</span>
 						}
 
+						{/* Item */}
+						{rewardData.item &&
+							<span>
+								Obtienes el Objeto
+								<strong> «{rewardData.item.name}»</strong>.
+							</span>
+						}
+
 						{/* Custom */}
 						{rewardData.custom &&
 							<span>{rewardData.custom}</span>

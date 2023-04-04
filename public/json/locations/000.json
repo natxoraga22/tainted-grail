@@ -16,6 +16,7 @@
 			"rewards": [
 				{ "status": "SAME AS actions.requirements.status" },
 				{ "secret": "SAME AS actions.requirements.secret" },
+				{ "item": { "name": "Item name" } },
 				{ "custom": "Just some text to display if no other reward structure applies" }
 			],
 			"endExploration": true,
