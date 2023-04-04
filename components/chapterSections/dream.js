@@ -1,5 +1,5 @@
-import Action from '@/components/action';
-import Verse from '@/components/verse';
+import Action from '@/components/chapterSections/action';
+import Verse from '@/components/chapterSections/verse';
 
 
 export default function Dream({ dreamType, dreamData, first = true }) {

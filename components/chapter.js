@@ -1,9 +1,9 @@
-import Quest from '@/components/quest';
-import Personal from '@/components/personal';
-import Location from '@/components/location';
-import Action from '@/components/action';
-import Verse from '@/components/verse';
-import Dream from '@/components/dream';
+import Quest from '@/components/chapterSections/quest';
+import Personal from '@/components/chapterSections/personal';
+import Location from '@/components/chapterSections/location';
+import Action from '@/components/chapterSections/action';
+import Verse from '@/components/chapterSections/verse';
+import Dream from '@/components/chapterSections/dream';
 
 
 export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {

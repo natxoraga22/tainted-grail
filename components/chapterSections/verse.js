@@ -1,5 +1,5 @@
-import Rewards from '@/components/rewards';
-import EndExploration from '@/components/endExploration';
+import Rewards from '@/components/chapterSections/rewards';
+import EndExploration from '@/components/chapterSections/endExploration';
 import styles from '@/styles/Verse.module.css';
 
 

@@ -1,7 +1,7 @@
-import Requirements from '@/components/requirements';
-import Rewards from '@/components/rewards';
-import EndExploration from '@/components/endExploration';
-import Verse from '@/components/verse';
+import Requirements from '@/components/chapterSections/requirements';
+import Rewards from '@/components/chapterSections/rewards';
+import EndExploration from '@/components/chapterSections/endExploration';
+import Verse from '@/components/chapterSections/verse';
 
 import styles from '@/styles/Action.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
