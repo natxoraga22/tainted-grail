@@ -1,7 +1,8 @@
-import { getChaptersIds, getChapter, getQuests, getLocations, getBookOfSecrets } from "@/lib/backend";
+import { getChaptersIds, getChapter, getQuests, getLocations, getBookOfSecrets, getStatusSheet } from "@/lib/backend";
 
 import TableOfContents from "@/components/tableOfContents";
 import Chapter from "@/components/chapter";
+import StatusSheet from "@/components/statusSheet";
 
 
 export async function getStaticPaths() {
@@ -17,17 +18,19 @@ export async function getStaticProps({ params }) {
 	const quests = getQuests();
 	const locations = getLocations();
 	const bookOfSecrets = getBookOfSecrets();
+	const statusSheet = getStatusSheet();
 	return {
 		props: {
 			chapter,
 			quests,
 			locations,
-			bookOfSecrets
+			bookOfSecrets,
+			statusSheet
 		}
 	};
 }
 
-export default function ChapterPage({ chapter, quests, locations, bookOfSecrets }) {
+export default function ChapterPage({ chapter, quests, locations, bookOfSecrets, statusSheet }) {
 	return (
 		<div className="container">
 			<div className="row gx-5">
@@ -44,6 +47,9 @@ export default function ChapterPage({ chapter, quests, locations, bookOfSecrets 
 						quests={quests} 
 						locations={locations} 
 						bookOfSecrets={bookOfSecrets}
+					/>
+					<StatusSheet
+						statusSheet={statusSheet}
 					/>
 				</div>
 			</div>
