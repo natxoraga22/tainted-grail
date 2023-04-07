@@ -52,9 +52,10 @@
 			"rewards": [
 				{ "status": { "name": "Sueños y profecías", "parts": [5] } },
 				{ "secret": { "id": 11, "name": "Rituales de Menhir" } },
-				{ "custom": "<strong>¡ENHORABUENA!</strong> Has cumplido tu primera misión." }
+				{ "custom": "<strong>¡ENHORABUENA!</strong> Has cumplido tu primera Misión." }
 			],
-			"task": "Ve a una Localización con un icono de Menhir y actívalo antes de que el tiempo se agote."
+			"task": "Ve a una Localización con un icono de Menhir y actívalo antes de que el tiempo se agote.",
+			"endExploration": true
 		},
 		"3": {
 			"actions": [

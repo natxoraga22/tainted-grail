@@ -1,6 +1,8 @@
 {
+	"status": "DONE",
+	
 	"name": "Túmulos de los Primeros Moradores",
-	"introduction": "<p>Los túmulos cubiertos de niebla resuenan con el sonido de las palas y los picos. Hace tiempo, solo los cazadores de tesoros más locos trabajaban aquí. Pero, a medida que emergía más y más oro de la tierra, estos cementerios se convirtieron en una mina corriente. O «casi» corriente: la gente aún desaparece o se vuelve loca al venir aquí.</p>",
+	"introduction": "Los túmulos cubiertos de niebla resuenan con el sonido de las palas y los picos. Hace tiempo, solo los cazadores de tesoros más locos trabajaban aquí. Pero, a medida que emergía más y más oro de la tierra, estos cementerios se convirtieron en una mina corriente. O «casi» corriente: la gente aún desaparece o se vuelve loca al venir aquí.",
 	"actions": [
 		{
 			"action": "Exploras las profundidades",
@@ -13,7 +15,7 @@
 	],
 	"verses": {
 		"1": {
-			"text": "<p>Nunca nadie ha sido capaz de contar los túmulos y los mineros más experimentados afirman que siguen apareciendo nuevos, aunque nadie puede explicar cómo. ¿Hasta dónde te atreves a aventurarte?</p>",
+			"text": "Nunca nadie ha sido capaz de contar los túmulos y los mineros más experimentados afirman que siguen apareciendo nuevos, aunque nadie puede explicar cómo. ¿Hasta dónde te atreves a aventurarte?",
 			"actions": [
 				{
 					"action": "Solo vas a lugares donde trabajan los mineros",
@@ -32,12 +34,12 @@
 		"2": {
 			"text": "<p>Te detienes y escuchas la historia de un minero.</p><p>«Dicen que un joven aprendiz de capataz encontró una vez a una pálida y triste chica entre los túmulos que huyó sin decir palabra. Durante las semanas siguientes, se escabullía de su trabajo para vagar en su busca, entre los túmulos. La vio dos veces más, pero nunca logró atraparla. Un día se dio cuenta de que la chica corría hacia un túmulo abierto de los Primeros Moradores. Decidió seguirla.</p><p>El lugar estaba oscuro y repleto de extraños poderes. El aprendiz siguió avanzando, aunque unas voces lo retaban y se reían de él. Tras horas de búsqueda sin éxito, salió. Al hacerlo, vio que su cuerpo y su constitución habían cambiado: ahora era una chica joven y pálida. Antes de poder superar la conmoción, un rudo aprendiz de capataz la vio.</p><p>Horrorizada y avergonzada, huyó y vagó por los túmulos durante días, hasta que volvió a encontrar una tumba abierta. Esta vez, había un ataúd vació dentro. La chica estaba tan cansada que se acostó dentro y se quedó dormida.</p><p>Despertó en una cómoda cama, convertida en un niño de seis años que todavía se estremecía por un intenso sueño. Nunca pudo olvidarlo y esto le hizo abandonar su pueblo a los quince años, para intentar ser aprendiz de capataz en los túmulos».</p><p>El hombre que te cuenta esta historia tiene los ojos hundidos, tristes y llenos de miedo y añoranza. Le das las gracias por su tiempo y te alejas con discreción.</p>",
 			"rewards": [
-				{ "status": { "name": "Misterio insondable", "part": 2 } }
+				{ "status": { "name": "Misterio insondable", "parts": [2] } }
 			],
 			"endExploration": true
 		},
 		"3": {
-			"text": "<p>Un túmulo más alto que todos los demás emerge de la niebla frente a  ti, con su portón principal brillando con el mismo fulgor que los objetos hechos de viejoacero. Te sientes incómodo. Este no es un buen lugar para un mortal como tú.</p>",
+			"text": "Un túmulo más alto que todos los demás emerge de la niebla frente a  ti, con su portón principal brillando con el mismo fulgor que los objetos hechos de viejoacero. Te sientes incómodo. Este no es un buen lugar para un mortal como tú.",
 			"actions": [
 				{
 					"action": "Cavas en el túmulo",
@@ -62,6 +64,9 @@
 					"endExploration": true
 				}
 			]
+		},
+		"4": {
+			"endExploration": true
 		},
 		"8": {
 			"testResults": {
@@ -90,6 +95,40 @@
 					"goToVerse": "3"
 				}
 			}
+		},
+		"9": {
+			"text": "Tras un minuto de agotador esfuerzo, oyes un sonido escalofriante cerca de ti. Tu trabajo ha atraído algo que preferirías evitar...",
+			"actions": [
+				{
+					"action": "Intentas entrar por el portón",
+					"requirements": [
+						{ "secret": { "id": 27, "name": "Martillo de Viejoacero" } }
+					],
+					"goToVerse": "10"
+				},
+				{
+					"action": "Intentas entrar por el portón",
+					"requirements": [
+						{ "attribute": { "name": "Agresividad", "level": 2 } }
+					],
+					"goToVerse": "10"
+				},
+				{
+					"action": "Te vas",
+					"endExploration": true
+				}
+			]
+		},
+		"10": {
+			"text": "<p>Al golpear el portón, un desgarrador sonido te estremece. Te pones dos trozos de tela en los oídos y continúas. Poco después, aparece una grieta en la superficie del portón. Y después, otra. Finalmente, el metal se desmorona, dejando escapar un espeluznante chirrido que hace que te sangren los oídos.</p><p>Dentro, hallas un laberinto de habitaciones y pasillos interconectados llenos de objetos indescriptibles. Sales horas después, aturdido y confundido. Ni siquiera te has acordado de coger algo para vender, pero el conocimiento que ha penetrado en tu cabeza es muy valioso.</p>",
+			"rewards": [
+				{ "secret": { "id": 11, "name": "Rituales de Menhir" } },
+				{ "custom": "<strong>¡ENHORABUENA!</strong> Has cumplido tu primera Misión." }
+			],
+			"endExploration": true
 		}
+	},
+	"nightmare": {
+		"text": "<p>Te despiertas solo, en una espesa niebla que parece cubrirlo todo. El sol, la luna y las estrellas han desaparecido, dejando solamente una blanquecina nada.</p><p>Pasas horas vagando a ciegas. ¡No queda nada! Tu mundo ha regresado al vacío. Te despiertas con un fuerte pinchazo en el corazón y la espalda sudorosa.</p>"
 	}
 }

@@ -42,6 +42,13 @@ export function Requirement({ requirementData }) {
 				</Badge>
 			}
 
+			{/* Resource */}
+			{requirementData.resource &&
+				<Badge not={requirementData.not}>
+					{requirementData.resource.amount} {requirementData.resource.type}
+				</Badge>
+			}
+
 			{/* Status */}
 			{requirementData.status &&
 				<Badge not={requirementData.not}>

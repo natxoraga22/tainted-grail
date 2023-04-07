@@ -1,4 +1,131 @@
 {
+	"status": "DONE",
+
 	"name": "Cónclave Calcinado",
-	"introduction": "<p>No te lleva mucho tiempo encontrarlo; solo tienes que usar tu olfato. Los restos de un enorme hombre de mimbre se arrodillan en la base de un pequeño valle. Estuviste aquí cuando le prendieron fuego, años atrás. Era un día húmedo. El hombre de mimbre ardió, pero no se quemó. Sus víctimas, decenas de druidas agolpados, siguen dentro; sus rostros derretidos y sus barbas carbonizadas apretadas contra los barrotes, mirando hacia el cielo gris y silencioso. Apenas perceptibles, incesantes susurros parecen llenar el aire.</p>"
+	"introduction": "No te lleva mucho tiempo encontrarlo; solo tienes que usar tu olfato. Los restos de un enorme hombre de mimbre se arrodillan en la base de un pequeño valle. Estuviste aquí cuando le prendieron fuego, años atrás. Era un día húmedo. El hombre de mimbre ardió, pero no se quemó. Sus víctimas, decenas de druidas agolpados, siguen dentro; sus rostros derretidos y sus barbas carbonizadas apretadas contra los barrotes, mirando hacia el cielo gris y silencioso. Apenas perceptibles, incesantes susurros parecen llenar el aire.",
+	"actions": [
+		{
+			"requirements": [
+				{ "character": "Gusano" }
+			],
+			"goToVerse": "10"
+		},
+		{
+			"action": "Te quedas un rato y escuchas",
+			"goToVerse": "1"
+		},
+		{
+			"action": "Rebuscas entre los restos",
+			"goToVerse": "2"
+		}
+	],
+	"verses": {
+		"1": {
+			"text": "<p>Te quedas de pie un rato, preguntándote si esta masacre estaba justificada. Se culpó a los druidas del regreso de la Muerte Roja, pero, sin ellos, la epidemia ha seguido extendiéndose y los menhires se han debilitado.</p><p>Los susurros en el viento se vuelven más fuertes a cada minuto. Aún queda algo de vida entre los esqueletos quemados. Te preguntas qué conocimientos o locuras puedes obtener de ellos.</p>",
+			"actions": [
+				{
+					"action": "Dejas que el cónclave te transmita su conocimiento",
+					"goToVerse": "10"
+				},
+				{
+					"action": "Te vas",
+					"endExploration": true
+				}
+			]
+		},
+		"2": {
+			"text": "Tarareas una canción alegre para ahogar los susurros y te pones a trabajar. Separar los cuerpos semiderretidos es un trabajo desagradable y nauseabundo, pero encuentras algunos objetos de valor que llevaban encima los desafortunados druidas al ser encerrados.",
+			"rewards": [
+				{ "status": { "name": "Saqueador", "parts": [1] } }
+			],
+			"endExploration": true
+		},
+		"4": {
+			"text": "Rompes algunos de los barrotes y entras, ahogándote con el fétido olor. «¡MÁS CERCA!», dice una voz en tu cabeza. Te tumbas entre los cadáveres carbonizados y sientes sus brazos envolviéndote. «¡MÁS CERCA!», repite la voz, mientras las manos te arrastran hacia ellos.",
+			"actions": [
+				{
+					"action": "Intentas liberarte",
+					"goToVerse": "8"
+				},
+				{
+					"action": "Te quedas tumbado",
+					"goToVerse": "4a"
+				}
+			]
+		},
+		"4a": {
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Conocimiento calcinado" } }
+					],
+					"goToVerse": "5"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Conocimiento calcinado" }, "not": true }
+					],
+					"goToBosVerse": "111"
+				}
+			]
+		},
+		"5": {
+			"text": "Al cabo de un tiempo, empiezas a distinguir las diferentes voces de la desquiciante cacofonía de los susurros. Varios te amenazan o lanzan maldiciones por lo que tu raza le ha hecho a los druidas. Algunos gritan por el agonizante dolor. Uno entona una invocación secreta y un ritual olvidado.",
+			"actions": [
+				{
+					"requirements": [
+						{ "resource": { "type": "Magia", "amount": 3 } }
+					],
+					"goToVerse": "7"
+				},
+				{
+					"requirements": [
+						{ "resource": { "type": "Magia", "amount": 3 }, "not": true }
+					],
+					"endExploration": true
+				}
+			]
+		},
+		"7": {
+			"text": "Ya no te queda nada que aprender aquí.",
+			"endExploration": true
+		},
+		"8": {
+			"text": "Supone un gran esfuerzo, pero te las arreglas para liberarte, cubierto de pequeños cortes y marcas de mordeduras.",
+			"endExploration": true
+		},
+		"10": {
+			"text": "Las bocas sin labios se burlan de ti. Los dedos derretidos parecen hacerte señas y llamarte. Un encolerizado susurro crece como el sonido del mar. Finalmente, te das cuenta de que quieren que vayas DENTRO y que traspases los carbonizados barrotes para que sus brazos negros y sus dedos derretidos puedan ceñirse alrededor tuya; que entres en un lugar donde tu vida debería haber terminado con la de ellos.",
+			"actions": [
+				{
+					"action": "Entras",
+					"requirements": [
+						{ "character": "Gusano" }
+					],
+					"goToVerse": "4"
+				},
+				{
+					"action": "Entras",
+					"requirements": [
+						{ "attribute": { "name": "Espiritualidad", "value": 1 } }
+					],
+					"goToVerse": "4"
+				},
+				{
+					"action": "Acercas la oreja a los barrotes e intentas entender lo que puedas",
+					"goToVerse": "5"
+				},
+				{
+					"action": "Te vas",
+					"endExploration": true
+				}
+			]
+		}
+	},
+	"dream": {
+		"text": "<p>En tu sueño, huyes de una ondulante ola de oscuridad que consume lentamente la tierra detrás de ti. Tratas de escoger cuidadosamente tu ruta, asegurándote de recoger provisiones suficientes a lo largo del camino y de reactivar los menhires que te encuentras. Al cabo de un tiempo, la ola te alcanza y te traga entero.</p><p>Vuelves al principio del sueño. Esta vez huyes tan rápido como puedes, pero el hambre, los callejones sin salida y las bestias de esta tierra terminan con tu vida rápidamente.</p>"
+	},
+	"nightmare": {
+		"text": "<p>Tiras desesperadamente de los barrotes de la jaula, tratando de soltar uno de ellos. Las demás personas se agolpan a tu alrededor, aterrorizados. Tus pulmones y boca comienzan a llenarse de espeso y aceitoso humo, que se eleva desde los que están debajo tuya. Sus gritos ya no parecen humanos.</p><p>Finalmente, las llamas llegan a tu cuerpo, ampollando tu piel y derritiendo tu carne. Un momento de agonía y terror. Y, luego, vuelves a estar en la jaula, en otro lugar, reviviendo la ejecución una vez más. Y otra vez. Y otra. Desde doscientas perspectivas diferentes. El sueño parece durar para siempre y te deja completamente traumatizado y conmovido.</p>"
+	}
 }

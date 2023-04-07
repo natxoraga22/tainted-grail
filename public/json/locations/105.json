@@ -1,4 +1,6 @@
 {
+	"status": "DONE",
+
 	"name": "Espadas Olvidadas",
 	"introduction": "Descansas un rato a la sombra de las titánicas espadas, y su olor oxidado te provoca un cosquilleo en la nariz. A unos cien metros, un viejo herrero trabaja duro, rompiendo el filo dentado de una gigantesca arma. El martillo que utiliza para quebrar este acero ancestral parece muy extraño, al igual que el sonido que hace.",
 	"actions": [
@@ -133,6 +135,7 @@
 					"goToVerse": "3"
 				},
 				"6+": {
+					"text": "Lo logras",
 					"rewards": [
 						{ "secret": { "id": 27, "name": "Martillo de Viejoacero" } }
 					],
@@ -141,14 +144,57 @@
 			}
 		},
 		"5": {
-			"text": "Caes en un ligero sueño.",
-			"goToVerse": "dream"
+			"text": "Caes en un ligero sueño."
 		},
 		"6": {
 			"goToBosVerse": "427"
 		},
 		"8": {
-
+			"testResults": {
+				"1": {
+					"text": "¡Eso es un insulto!",
+					"testResults": {
+						"1-4": {
+							"endExploration": true
+						},
+						"5+": {
+							"goToVerse": "3"
+						}
+					}
+				},
+				"2": {
+					"text": "El herrero te dice secamente que te largues.",
+					"testResults": {
+						"1-7": {
+							"endExploration": true
+						},
+						"8+": {
+							"goToVerse": "3"
+						}
+					}
+				},
+				"3": {
+					"text": "El herrero considera tu oferta.",
+					"testResults": {
+						"1-3": {
+							"endExploration": true
+						},
+						"4+": {
+							"rewards": [
+								{ "secret": { "id": 27, "name": "Martillo de Viejoacero" } }
+							],
+							"endExploration": true
+						}
+					}
+				},
+				"4+": {
+					"text": "El herrero suspira. Llevaba tiempo pensando en jubilarse.",
+					"rewards": [
+						{ "secret": { "id": 27, "name": "Martillo de Viejoacero" } }
+					],
+					"endExploration": true
+				}
+			}
 		},
 		"10": {
 			"testResults": {

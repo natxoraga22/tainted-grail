@@ -29,7 +29,7 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets, che
 
 						{/* Location */}
 						{chapterSection.location &&
-							<Location locationData={locationData}>
+							<Location locationData={locationData} visitCount={chapterSection.location.visitCount}>
 								{chapterSection.location.actions &&
 								chapterSection.location.actions.map((locationAction, index) => {
 									const lastAction = index === chapterSection.location.actions.length - 1;

@@ -5,9 +5,12 @@ export default function TableOfContents({ chapter, quests, locations, bookOfSecr
 	return (
 		<div id="tableOfContents" className={`${styles.tableOfContents} list-group list-group-flush sticky-top`}>
 			{chapter.sections.map((chapterSection, index) => {
-				let questData, locationData;
+				let questData, locationData, locationVisitCount = 1;
 				if (chapterSection.quest) questData = quests.find(quest => quest.id === chapterSection.quest);
-				if (chapterSection.location) locationData = locations.find(location => location.id === chapterSection.location.id);
+				if (chapterSection.location) {
+					locationData = locations.find(location => location.id === chapterSection.location.id);
+					if (chapterSection.location.visitCount) locationVisitCount = chapterSection.location.visitCount;
+				}
 
 				return (
 					<>
@@ -20,8 +23,10 @@ export default function TableOfContents({ chapter, quests, locations, bookOfSecr
 
 						{/* Location */}
 						{chapterSection.location &&
-							<a href={`#location_${locationData.id}`} className={`${styles.section} list-group-item list-group-item-action ps-4`}>
+							<a href={`#location_${locationData.id}_${locationVisitCount}`}
+							   className={`${styles.section} list-group-item list-group-item-action ps-4`}>
 								Exploración de {locationData.name} ({locationData.id})
+								{locationVisitCount > 1 && <span> - {locationVisitCount}ª visita</span>}
 							</a>
 						}
 					</>
