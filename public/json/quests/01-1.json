@@ -1,6 +1,6 @@
 {
     "title": "Capítulo 1 - Parte 1: Conocimiento antiguo",
     "description": "¡El tiempo apremia! El menhir guardián que ha protegido tu pueblo desde tiempos inmemoriales está a punto de apagarse. Se rumorea que cierto ritual druídico secreto podría reactivar los menhires. ¡Explora las Localizaciones que rodean Cuanacht para encontrarlo!",
-    "quest": "Obtén la carta de Secreto «Rituales de Menhir» (11); tendrás que explorar las Localizaciones que rodean Cuanacht (101).",
+    "quest": "<strong>MISIÓN:</strong> Obtén la carta de Secreto «Rituales de Menhir» (11); tendrás que explorar las Localizaciones que rodean Cuanacht (101).",
     "success": "Tan pronto como tengas «Rituales de Menhir» (11), resuelve la carta del Capítulo 1: Parte 5 del mazo de Eventos y descarta esta carta. Recuerda no alterar la estructura del resto del mazo."
 }

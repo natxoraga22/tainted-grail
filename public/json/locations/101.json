@@ -1,6 +1,8 @@
 {
+	"status": "DONE",
+
 	"name": "Cuanacht",
-	"introduction": "<p>Un profundo sentimiento de pérdida invade todo Cuanacht, desde los asentamientos en ruinas hasta los ojos hundidos de los que han permanecido en la ciudad. El menhir del mercado casi se ha apagado y todo aquel lo suficientemente valiente o ingenioso se ha marchado para encontrar una solución.</p>",
+	"introduction": "Un profundo sentimiento de pérdida invade todo Cuanacht, desde los asentamientos en ruinas hasta los ojos hundidos de los que han permanecido en la ciudad. El menhir del mercado casi se ha apagado y todo aquel lo suficientemente valiente o ingenioso se ha marchado para encontrar una solución.",
 	"actions": [
 		{
 			"requirements": [
@@ -37,7 +39,7 @@
 	],
 	"verses": {
 		"1": {
-			"text": "<p>En este largo invierno, casi todos aquí han perdido a un amigo o a un miembro de la familia. Primero, por la falta de comida. Luego, por enfermedad. Y, por último, los cinco pilares restantes de la comunidad, los únicos héroes que esta tierra había conocido jamás, se marcharon de repente. Ahora, al mirar a los distantes ojos de los últimos residentes, te das cuenta de que quieren olvidar.</p>",
+			"text": "En este largo invierno, casi todos aquí han perdido a un amigo o a un miembro de la familia. Primero, por la falta de comida. Luego, por enfermedad. Y, por último, los cinco pilares restantes de la comunidad, los únicos héroes que esta tierra había conocido jamás, se marcharon de repente. Ahora, al mirar a los distantes ojos de los últimos residentes, te das cuenta de que quieren olvidar.",
 			"actions": [
 				{
 					"action": "Haces que hablen con hidromiel",
@@ -54,18 +56,18 @@
 			]
 		},
 		"2": {
-			"text": "<p>Se necesita tiempo para romper el silencio de la gente afligida, pero, una vez conseguido, las historias de separaciones y partidas te inundan como una lluvia torrencial. Tratas de recordar cada detalle. El color del caballo palafrén que la sacerdotisa del pueblo, Neante, montaba. El adorno en la cota de malla que el joven Lord Yvain llevaba. El extraño cuerno para beber que Erfyr, el herrero, solía llevar a todas partes. La marca de nacimiento de Fael, el maestro cazador. La capa bordada de Aubert, el experimentado viajero que había visto todas las partes de la isla. ¿Quién sabe qué detalle puede ayudarte por el camino?</p>",
+			"text": "Se necesita tiempo para romper el silencio de la gente afligida, pero, una vez conseguido, las historias de separaciones y partidas te inundan como una lluvia torrencial. Tratas de recordar cada detalle. El color del caballo palafrén que la sacerdotisa del pueblo, Neante, montaba. El adorno en la cota de malla que el joven Lord Yvain llevaba. El extraño cuerno para beber que Erfyr, el herrero, solía llevar a todas partes. La marca de nacimiento de Fael, el maestro cazador. La capa bordada de Aubert, el experimentado viajero que había visto todas las partes de la isla. ¿Quién sabe qué detalle puede ayudarte por el camino?",
 			"rewards": [
-				{ "status": { "name": "El destino de la expedición", "part": 1 } }
+				{ "status": { "name": "El destino de la expedición", "parts": [1] } }
 			],
 			"endExploration": true
 		},
 		"3": {
-			"text": "<p>Aunque les queda poco, comparten contigo las últimas provisiones que les quedan. De algún modo, esto parece indigno de un héroe, pero ahora que todos los verdaderos héroes han caído, ¿quién se atreverá a cuestionar tus métodos?</p>",
+			"text": "Aunque les queda poco, comparten contigo las últimas provisiones que les quedan. De algún modo, esto parece indigno de un héroe, pero ahora que todos los verdaderos héroes han caído, ¿quién se atreverá a cuestionar tus métodos?",
 			"endExploration": true
 		},
 		"4": {
-			"text": "<p>Algunas personas de Cuanacht no se lo toman muy bien.</p>",
+			"text": "Algunas personas de Cuanacht no se lo toman muy bien.",
 			"testResults": {
 				"1-3": {
 					"text": "Los palos y las piedras duelen, pero que tu propia gente se haya vuelto en tu contra es aún más doloroso.",
@@ -82,13 +84,13 @@
 			}
 		},
 		"5": {
-			"text": "<p>Muchos se negarían a llamar «hogar» a este sitio, pero el entorno familiar te brinda la serenidad que tanto necesitas. Mientras descansas en tu cama, no puedes evitar preguntarte si es la última noche que pasarás bajo este techo.</p>",
+			"text": "Muchos se negarían a llamar «hogar» a este sitio, pero el entorno familiar te brinda la serenidad que tanto necesitas. Mientras descansas en tu cama, no puedes evitar preguntarte si es la última noche que pasarás bajo este techo.",
 			"endExploration": true
 		},
 		"6": {
 			"text": "<p>Tres mujeres lloran frente a una larga sala. Una de ellas ha perdido recientemente a su hija de ocho años, descuartizada como un animal en las colinas a las afueras de Cuanacht.</p><p>Sientes cómo tus piernas se debilitan. Los vagos recuerdos de la cacería nocturna te queman ahora la mente como hierro candente. Te tropiezas, tratando de no mirar las caras de los que visten el luto.</p>",
 			"rewards": [
-				{ "status": { "name": "Canción de luto", "part": 1 } }
+				{ "status": { "name": "Canción de luto", "parts": [1] } }
 			],
 			"actions": [
 				{ 
@@ -131,7 +133,7 @@
 		}
 	},
 	"dream": {
-		"text": "<p>En tu inquieto sueño, una pálida dama emerge del agua, sus ojos del colores de la leche y la piel dañada por la podredumbre. Te susurra algo al oído. Su aliento huele a sal, a alga marina y a pescado podrido. Apenas recuerdas las palabras. Dijo algo sobre tres enigmas, uno escondido bajo la isla de los muertos, otro preso por manos y brazos quemados y otro enterrado en un túmulo cubierto de niebla. Pero, ¿qué podría significar?</p>"
+		"text": "En tu inquieto sueño, una pálida dama emerge del agua, sus ojos del colores de la leche y la piel dañada por la podredumbre. Te susurra algo al oído. Su aliento huele a sal, a alga marina y a pescado podrido. Apenas recuerdas las palabras. Dijo algo sobre tres enigmas, uno escondido bajo la isla de los muertos, otro preso por manos y brazos quemados y otro enterrado en un túmulo cubierto de niebla. Pero, ¿qué podría significar?"
 	},
 	"nightmare": {
 		"text": "<p>En tu sueño, una sierpe del tamaño de una montaña se eleva desde el oeste, con la piel brillando con todos los colores del arcoíris. Se acerca, abriendo sus mandíbulas como si estuviera a punto de tragarse el asentamiento entero. Extrañamente, la gente en las calles de Cuanacht ni siquiera mira a la criatura. Te están mirando A TI, con tristeza y desilusión.</p><p>«Nos dijiste que todo iría bien...», llora una niña pequeña.</p><p>Te despiertas y no logras volver a dormirte hasta el amanecer.</p>"

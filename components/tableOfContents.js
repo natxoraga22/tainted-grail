@@ -27,6 +27,11 @@ export default function TableOfContents({ chapter, quests, locations, bookOfSecr
 					</>
 				);
 			})}
+
+			{/* Status sheet */}
+			<a href={`#statusSheet`} className={`${styles.section} list-group-item list-group-item-action`}>
+				Estados
+			</a>
 		</div>
 	);
 }

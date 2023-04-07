@@ -9,6 +9,7 @@
 				{ "chapter": { "numbers": [1, 2, 3] }, "min": true },
 				{ "character": "Character name (Arev)" },
 				{ "attribute": { "name": "Attribute name (Empatía)", "level": 2 } },
+				{ "resource": { "type": "Resource type (Magia)", "amount": 1 } },
 				{ "status": { "name": "Status name (Matricida)", "parts": [1, 2, 3] } },
 				{ "secret": { "id": 66, "name": "Secret name" } },
 				{ "custom": "Just some text to display if no other requirement structure applies" }

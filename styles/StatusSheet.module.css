@@ -1,7 +1,33 @@
 
+.statusSheet {
+	margin-bottom: 20pt;
+	font-family: Palatino;
+	font-size: 11pt;
+}
+
+.statusSheet h1 {
+	padding-top: calc(20pt + 56px);
+	margin-top: -56px;
+}
+
+.statusName {
+	border-bottom: 1px dotted rgba(0, 0, 0, 0.5);
+	line-height: 12pt;
+}
+
 .statusPart {
-	width: 20px;
-	height: 20px;
+	width: 24px;
+	height: 24px;
+	padding-top: 2px;
 	border: 1px solid black;
+
 	text-align: center;
+	font-size: 10pt;
+}
+
+.statusPartChecked {
+	position: absolute;
+	margin-top: -4px;
+	font-size: 33pt;
+	color: darkblue;
 }

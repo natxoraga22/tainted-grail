@@ -1,5 +1,5 @@
 {
-	"status": "IN PROGRESS",
+	"status": "DONE",
 
 	"name": "Lago del Espejo Desecado",
     "introduction": "<p>Durante siglos, la gente de toda la isla peregrinó al Lago del Espejo, rogándole a la Dama Pálida sanación, favores o simplemente consuelo. Ahora, las reflectantes aguas han desaparecido, absorbidas por el suelo agrietado.</p><p>Esta es la consecuencia más grave y desafortunada de los problemas que Ávalon ha experimentado hasta ahora. Lo más inquietante es que la falta de agua ha revelado un secreto escondido bajo el Lago del Espejo desde al antigüedad: una solitaria torre de rarapiedra, cuya cúspide formaba hasta ahora la isla en medio del lago.</p>",
@@ -122,7 +122,7 @@
         "5": {
 			"text": "«Hace ya tiempo, un hombre cubierto de cicatrices acudió a mí. Dijo que las heridas eran un recuerdo de la Muerte Roja. No pude ayudarlo, así que se instaló en un lugar apartado al norte, lejos de la gente que todavía lo trataba como una amenaza. Creo que se fue al Mar Verde».",
 			"rewards": [
-				{ "status": { "name": "Caldero negro", "part": 1 } }
+				{ "status": { "name": "Caldero negro", "parts": [1] } }
 			]
 		},
         "6": {
@@ -135,7 +135,7 @@
         "8": {
 			"text": "<p>«Hay algunos lugares a lo largo de la costa en los que la Rareza nunca ha tenido mucho poder», dice. «El lugar donde Arturo desembarcó hace seis siglos es uno, pero hay otros».</p><p>Con cierta reticencia, habla de la estatua gigante que los hombres llaman el Rostro Sereno. Fue creada por Primeros Moradores adoradores de la muerte, que pretendían abrir las puertas del más allá, donde los Primeros Moradores difuntos viven como seres inferiores. Se descubrió el culto y sus planes se frustraron, pero el propio Rostro era demasiado bello como para que el pueblo de la Dama Pálida lo destruyera. En vez de eso, acabaron con el verdadero poder de este lugar y colocaron sobre él un poderoso encantamiento que repele a los Primeros Moradores.</p><p>«Podrías usarlo a tu favor. Si consigues penetrar en el núcleo del Rostro, te protegerá de la Rareza. Ninguno de los míos podrá seguirte hasta allí, aunque, por desgracia, esto me incluye a mí. Debes romper el encantamiento tú mismo y, para ello, te servirá saber algo sobre el raroacero y tener las herramientas adecuadas».",
 			"rewards": [
-				{ "status": { "name": "Sueños y profecías", "part": 1 } }
+				{ "status": { "name": "Sueños y profecías", "parts": [1] } }
 			],
 			"task": "Convierte Rostro Sereno en un refugio para los humanos."
 		},
@@ -163,7 +163,7 @@
         "11": {
 			"text": "<p>Abordas a la Dama, mostrándole tanto el talismán que encontraste en el cadáver desecado como el que descubriste en el cuerpo de Lord Yvain.</p><p>Se hace una larga pausa. Con una tristeza penetrante en su voz, la Dama dice: «Sí, tienes razón. Tuve muchos campeones a lo largo de los años, todos fueron a Tuathán y casi todos murieron. Cada día me arrepiento de ello, cada día sus rostros y nombres vuelven a mí, pero no había otra manera... Tus amigos fueron los primeros en lograrlo. Encontraron la forma de entrar en Tuathán y regresaron con el Grial, pero ahora, sabiendo el mal uso que se ha hecho de la copa y la sangre que ha derramado, creo que sería mejor que siguiera estando oculta. Tú aún puedes hacer lo que ellos no pudieron: salvar a la gente de esta tierra».</p><p>Luego, te obsequia con un regalo.</p>",
 			"rewards": [
-				{ "status": { "name": "El destino de la expedición", "part": 5 } },
+				{ "status": { "name": "El destino de la expedición", "parts": [5] } },
 				{ "item": { "name": "Espada Rúnica" }}
 			],
 			"endExploration": true

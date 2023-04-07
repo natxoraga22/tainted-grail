@@ -6,7 +6,7 @@ import Verse from '@/components/chapterSections/verse';
 import Dream from '@/components/chapterSections/dream';
 
 
-export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
+export default function Chapter({ chapter, quests, locations, bookOfSecrets, checkStatus }) {
 	return (
 		<div>
 			{chapter.sections.map((chapterSection, index) => {
@@ -44,6 +44,7 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 												dreamType={dreamType}
 												dreamData={dreamData}
 												first={locationAction.first}
+												checkStatus={(statusData) => checkStatus(statusData)}
 											/>
 										);
 									}
@@ -57,6 +58,7 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 												bookOfSecrets={bookOfSecrets}
 												testResult={locationAction.testResult}
 												last={lastAction}
+												checkStatus={(statusData) => checkStatus(statusData)}
 											/>
 										);
 									}
@@ -79,6 +81,7 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets }) {
 												bookOfSecrets={bookOfSecrets}
 												first={!locationAction.verse && !locationAction.bosVerse}
 												last={lastAction}
+												checkStatus={(statusData) => checkStatus(statusData)}
 											/>
 										);
 									}

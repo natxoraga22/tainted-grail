@@ -1,4 +1,6 @@
 {
+	"status": "DONE",
+
 	"name": "Asilo de la Isla",
 	"introduction": "<p>Las olas rompen contra el casco. Un silencioso hombre encapuchado te conduce en su barco a una isla apartada. El pequeño y oscuro bosque de sauces está rodeado por una antigua necrópolis excavada en la ladera de la montaña.</p><p>Sabes que tienen a los enfermos en profundas y oscuras cuevas, y aun así te sientes temeroso al pisar la orilla. Unos monjes sombríos, los guardianes de este lugar, inspeccionan tu cuerpo a pesar de tu oposición. Solo entonces acceden a escucharte.</p>",
 	"actions": [
@@ -33,22 +35,22 @@
 			"actions": [
 				{
 					"requirements": [
-						{ "status": { "name": "Mano amiga", "part": 1 } }
+						{ "status": { "name": "Mano amiga", "parts": [1] } }
 					],
 					"goToVerse": "7"
 				},
 				{
 					"requirements": [
-						{ "status": { "name": "Mano amiga", "part": 1 }, "not": true }
+						{ "status": { "name": "Mano amiga", "parts": [1] }, "not": true }
 					],
 					"goToVerse": "10"
 				}
 			]
 		},
 		"2": {
-			"text": "<p>«¡Escúchame!», dice el druida. «Deberíamos dejaros morir a todos por lo que nos hicisteis, asquerosos desagradecidos. Pero el conocimiento del Círculo no puede morir conmigo. Tienes que escuchar. ¡Tienes que recordar!».</p>",
+			"text": "«¡Escúchame!», dice el druida. «Deberíamos dejaros morir a todos por lo que nos hicisteis, asquerosos desagradecidos. Pero el conocimiento del Círculo no puede morir conmigo. Tienes que escuchar. ¡Tienes que recordar!».",
 			"rewards": [
-				{ "status": { "name": "Sueños y profecías", "part": 5 } },
+				{ "status": { "name": "Sueños y profecías", "parts": [5] } },
 				{ "secret": { "id": 11, "name": "Rituales de Menhir" } },
 				{ "custom": "<strong>¡ENHORABUENA!</strong> Has cumplido tu primera misión." }
 			],
@@ -58,20 +60,20 @@
 			"actions": [
 				{
 					"requirements": [
-						{ "status": { "name": "Sueños y profecías", "part": 5 } }
+						{ "status": { "name": "Sueños y profecías", "parts": [5] } }
 					],
 					"goToVerse": "8"
 				},
 				{
 					"requirements": [
-						{ "status": { "name": "Sueños y profecías", "part": 5 }, "not": true }
+						{ "status": { "name": "Sueños y profecías", "parts": [5] }, "not": true }
 					],
 					"goToVerse": "3a"
 				}
 			]
 		},
 		"3a": {
-			"text": "<p>El archidruida Wyrmtoe está en una de las celdas más profundas, sobreviviendo desesperadamente gracias a su magia. Las últimas tiras de piel que quedan en su cuerpo parecen las escamas de un pez medio despellejado, pero su mente parece estar en buena forma. No tarda mucho en darse cuenta de que eres un extraño y te mira duramente.</p>",
+			"text": "El archidruida Wyrmtoe está en una de las celdas más profundas, sobreviviendo desesperadamente gracias a su magia. Las últimas tiras de piel que quedan en su cuerpo parecen las escamas de un pez medio despellejado, pero su mente parece estar en buena forma. No tarda mucho en darse cuenta de que eres un extraño y te mira duramente.",
 			"actions": [
 				{
 					"requirements": [
@@ -100,21 +102,21 @@
 		"5": {
 			"testResults": {
 				"1-2": {
-					"text": "<p>Un grupo de pacientes locos te acorrala en un pasillo sin salida.</p>",
+					"text": "Un grupo de pacientes locos te acorrala en un pasillo sin salida.",
 					"goToBosVerse": "313"
 				},
 				"3-4": {
-					"text": "<p>Unos sacerdotes te pillan fisgoneando por los pasillos de los enfermos. Ahora no pueden dejarte salir de la isla...</p>",
+					"text": "Unos sacerdotes te pillan fisgoneando por los pasillos de los enfermos. Ahora no pueden dejarte salir de la isla...",
 					"goToVerse": "6"
 				},
 				"5+": {
-					"text": "<p>Logras penetrar desapercibido en los profundos pasillos.</p>",
+					"text": "Logras penetrar desapercibido en los profundos pasillos.",
 					"goToVerse": "3"
 				}
 			}
 		},
 		"6": {
-			"text": "<p>Ahora estás prisionero en el Asilo. Pasas los días escuchando a los demás agonizando y preguntándote cuándo llegará tu hora. Los reclusos te cuentan que a lo largo de los años algunos valientes lograron escapar de este lugar. La verdadera pregunta es: ¿debes hacer lo mismo y extender la epidemia?</p>",
+			"text": "Ahora estás prisionero en el Asilo. Pasas los días escuchando a los demás agonizando y preguntándote cuándo llegará tu hora. Los reclusos te cuentan que a lo largo de los años algunos valientes lograron escapar de este lugar. La verdadera pregunta es: ¿debes hacer lo mismo y extender la epidemia?",
 			"rewards": [
 				{ "secret": { "id": 66, "name": "Marca Roja" } }
 			],
@@ -150,7 +152,7 @@
 			]
 		},
 		"8": {
-			"text": "<p>Wyrmtoe está demasiado débil como para hablar o moverse. Un vistazo a su rojo, demacrado e hinchado despojo de cuerpo es suficiente para avivar tus pesadillas por mucho tiempo.</p>",
+			"text": "Wyrmtoe está demasiado débil como para hablar o moverse. Un vistazo a su rojo, demacrado e hinchado despojo de cuerpo es suficiente para avivar tus pesadillas por mucho tiempo.",
 			"endExploration": true
 		},
 		"9": {
@@ -158,13 +160,13 @@
 			"actions": [
 				{
 					"requirements": [
-						{ "chapter": { "number": 11, "min": true } }
+						{ "chapter": { "numbers": [11], "min": true } }
 					],
 					"goToVerse": "14"
 				},
 				{
 					"requirements": [
-						{ "chapter": { "number": 11, "min": true }, "not": true }
+						{ "chapter": { "numbers": [11], "min": true }, "not": true }
 					],
 					"goToVerse": "6"
 				}
@@ -209,7 +211,7 @@
 		"14": {
 			"text": "<p>¡Esos ingenous idiotas pensaban que podía encerrarte! A ti, que viajaste a Tuathán y regresaste. Al no conocer tu verdadero propósito, lo único que han conseguido ha sido acercarte a sus archivos.</p><p>Al llegar la noche, te escabulles de tu celda y te diriges a la biblioteca. Tras horas de búsqueda, encuentras finalmente algo esperanzador: hubo un hombre que decía haberse curado de la Muerte Roja. Sus heridas se cerraron y cicatrizaron, pero los monjes decidieron mantenerlo aislado de todos modos. Sin embargo, él escapó. Había unas notas que decían que había sido visto en algún lugar al norte de Falfuar, pero los monjes no tomaron ninguna medida para encontrarlo, debido a la falta de fondos y a la insuficiente mano de obra.</p><p>Con esta nueva información, escapas del Asilo.</p>",
 			"rewards": [
-				{ "status": { "name": "Caldero negro", "part": 1 } }
+				{ "status": { "name": "Caldero negro", "parts": [1] } }
 			],
 			"endExploration": true
 		}

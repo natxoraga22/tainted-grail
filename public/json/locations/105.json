@@ -1,7 +1,13 @@
 {
 	"name": "Espadas Olvidadas",
-	"introduction": "<p>Descansas un rato a la sombra de las titánicas espadas, y su olor oxidado te provoca un cosquilleo en la nariz. A unos cien metros, un viejo herrero trabaja duro, rompiendo el filo dentado de una gigantesca arma. El martillo que utiliza para quebrar este acero ancestral parece muy extraño, al igual que el sonido que hace.</p>",
+	"introduction": "Descansas un rato a la sombra de las titánicas espadas, y su olor oxidado te provoca un cosquilleo en la nariz. A unos cien metros, un viejo herrero trabaja duro, rompiendo el filo dentado de una gigantesca arma. El martillo que utiliza para quebrar este acero ancestral parece muy extraño, al igual que el sonido que hace.",
 	"actions": [
+		{
+			"requirements": [
+				{ "custom": "Ficha de Misión" }
+			],
+			"goToVerse": "14"
+		},
 		{
 			"action": "Intentas subirte a una de las espadas",
 			"description": "¿Es oro lo que ves arriba en su pomo?",
@@ -17,8 +23,36 @@
 		}
 	],
 	"verses": {
+		"1": {
+			"actions": [
+				{
+					"action": "Tratas de subir, confiando en tu fuerza y agilidad",
+					"requirements": [
+						{ "attribute": { "name": "Audacia", "level": 1 } }
+					],
+					"goToVerse": "10"
+				},
+				{
+					"action": "Estudias la superficie de la espada, buscas la mejor forma de escalar y subes lentamente",
+					"goToVerse": "10"
+				},
+				{
+					"action": "Preparas cuerdas y garfios y subes con extrema precaución",
+					"requirements": [
+						{ "attribute": { "name": "Cautela", "level": 1 } }
+					],
+					"goToVerse": "10"
+				}
+			]
+		},
 		"2": {
 			"actions": [
+				{
+					"requirements": [
+						{ "custom": "Dial" }
+					],
+					"goToVerse": "3"
+				},
 				{
 					"requirements": [
 						{ "character": "Beor" }
@@ -34,7 +68,7 @@
 			]
 		},
 		"2a": {
-			"text": "<p>Al herrero no le gustan los invitados inesperados ni la gente que quiere observar sus métodos. Solo logras vislumbrar el extraño y ornamentado martillo mientras lo esconde con cautela y te dice que te vayas en un tono nada amable.</p>",
+			"text": "Al herrero no le gustan los invitados inesperados ni la gente que quiere observar sus métodos. Solo logras vislumbrar el extraño y ornamentado martillo mientras lo esconde con cautela y te dice que te vayas en un tono nada amable.",
 			"actions": [
 				{
 					"action": "Lo tranquilizas",
@@ -53,11 +87,150 @@
 				}
 			]
 		},
+		"3": {
+			"text": "Hay demasiada tensión. Tanto tú como el herrero tenéis temperamento y comenzáis una violenta pelea a puñetazos.",
+			"testResults": {
+				"1-4": {
+					"text": "Te tumba de un golpe y te abandona en la frontera de sus tierras.",
+					"endExploration": true
+				},
+				"5+": {
+					"text": "Logras repeler su ataque y romperle algunos dientes.",
+					"endExploration": true
+				}
+			}
+		},
+		"4": {
+			"text": "<p>Te disculpas con el hombre educadamente y luego te quedas atrás, mirando. Cada golpe de su martillo contra la superficie de la espada produce un sonido agudo y vibrante.</p><p>«Este viejo acero no se moldeó con una herramienta, sino con una canción», explica el herrero al poco tiempo. «Se necesita la misma melodía para romperlo. Este martillo que tengo se acuerda de la música de los Primeros Moradores».</p><p>Transcurrido un tiempo, el herrero recoge unos lingotes oxidados de la hierba y te invita a su cabaña, donde te muestra el resto del proceso.</p>",
+			"rewards": [
+				{ "status": { "name": "El enigma del viejoacero" } }
+			],
+			"actions": [
+				{
+					"action": "Te vas",
+					"endExploration": true
+				},
+				{
+					"action": "Intentas comprar el martillo",
+					"requirements": [
+						{ "secret": { "id": 27, "name": "Martillo de Viejoacero" }, "not": true }
+					],
+					"goToVerse": "8"
+				},
+				{
+					"action": "Intentas robar el martillo",
+					"requirements": [
+						{ "secret": { "id": 27, "name": "Martillo de Viejoacero" }, "not": true }
+					],
+					"goToVerse": "4a"
+				}
+			]
+		},
+		"4a": {
+			"testResults": {
+				"1-5": {
+					"text": "El herrero te descubre",
+					"goToVerse": "3"
+				},
+				"6+": {
+					"rewards": [
+						{ "secret": { "id": 27, "name": "Martillo de Viejoacero" } }
+					],
+					"endExploration": true
+				}
+			}
+		},
 		"5": {
-			"text": "<p>Caes en un ligero sueño.</p>"
+			"text": "Caes en un ligero sueño.",
+			"goToVerse": "dream"
+		},
+		"6": {
+			"goToBosVerse": "427"
+		},
+		"8": {
+
+		},
+		"10": {
+			"testResults": {
+				"1-9": {
+					"text": "La superficie oxidada se desmorona en tus manos y caes al vacío.",
+					"endExploration": true
+				},
+				"10-13": {
+					"text": "Te resbalas varias veces, cortándote con los bordes afilados antes de llegar a la cima.",
+					"actions": [
+						{
+							"requirements": [
+								{ "custom": "Ficha de misión", "not": true }
+							],
+							"goToVerse": "14"
+						},
+						{
+							"requirements": [
+								{ "custom": "Ficha de misión" }
+							],
+							"goToVerse": "6"
+						}
+					]
+				},
+				"14+": {
+					"text": "¡Una escalada perfecta!",
+					"actions": [
+						{
+							"requirements": [
+								{ "custom": "Ficha de misión", "not": true }
+							],
+							"goToVerse": "14"
+						},
+						{
+							"requirements": [
+								{ "custom": "Ficha de misión" }
+							],
+							"goToVerse": "6"
+						}
+					]
+				}
+			}
+		},
+		"14": {
+			"text": "Sudoroso y cansado, ahora estás en un nicho estrecho que una vez fue la acanaladura central de la espada. Allí descansas un rato, deleitándote con las amplias vistas de la isla. Puedes ver dos menhires más, cerca de Cuanacht. Uno escondido entre los túmulos cubiertos de niebla de los Primeros Moradores. El otro, en las colinas cerca de un pueblo maldito conocido como Albura.",
+			"actions": [
+				{
+					"requirements": [
+						{ "resource": { "type": "Energía", "amount": 1 }, "not": true }
+					],
+					"goToVerse": "15"
+				},
+				{
+					"requirements": [
+						{ "resource": { "type": "Energía", "amount": 1 } }
+					],
+					"goToVerse": "14a"
+				}
+			]
+		},
+		"14a": {
+			"actions": [
+				{
+					"action": "Sigues escalando",
+					"description": "Miras arriba y ves a lo lejos la guarda de la espada, brillando",
+					"goToVerse": "1"
+				},
+				{
+					"action": "Desciendes",
+					"endExploration": true
+				}
+			]
+		},
+		"15": {
+			"text": "Pasar la noche en una estrecha grieta de acero no es agradable. La espada es fría como el hielo y los vientos que vienen del mar son aún más fríos. Amaneces exhausto y medio congelado.",
+			"endExploration": true
 		}
 	},
 	"dream": {
 		"text": "<p>El ejército de hombres formó una línea defensiva de espaldas al mar: un último y desesperado intento. Pero los Primeros Moradores no atacaron. Enviaron gigantes para que hicieran el trabajo sucio.</p><p>A medida que los titanes comenzaron a avanzar, los hombres se escondieron detrás de sus escudos y los caballos entraron en pánico. Solo Arturo mantuvo su posición. Sabía que los gigantes vendrían; contaba con ello. Solo, salió a su encuentro, extendiendo los brazos.</p><p>Media hora más tarde, los gigantes se arrodillaron ante el rey humano y clavaron profundamente sus armas en la colina, jurando que nunca las empuñarían contra los humanos.</p>"
+	},
+	"nightmare": {
+		"text": "Cansado de una dura escalada, tu reluciente recompensa está fuera de tu alcance por muy poco. Al agarrar la siguiente muesca de la espada, el metal se oxida y se desmenuza en tus manos. Caes hacia atrás; el mundo gira mientras te desplomas hacia el suelo. Tu caída te despierta, muy sobresaltado."
 	}
 }

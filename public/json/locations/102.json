@@ -1,4 +1,6 @@
 {
+	"status": "DONE",
+
 	"name": "Arboleda del Cazador",
 	"introduction": "<p>Aún sigue aquí, como siempre. Enormes y vacías cavidades oculares empiezan a observarte en cuanto desciendes a la cuenca cubierta de musgo. Los cuernos, tan anchos como un barco, son ahora el hogar de numerosas aves. En el interior del cráneo se encuentra un silencioso santuario iluminado por velas, con colchones de paja esparcidos.</p><p>Los cazadores locales llaman a esta antigua calavera «Ciervo Padre» y dejan amuletos y ofrendas a su alrededor. Cuenta la leyenda que se lleva a los soñadores que pasan allí la noche para que se unan a él en la Gran Cacería.</p>",
 	"actions": [
@@ -19,21 +21,21 @@
 		{
 			"action": "Destrozas el santuario y dejas una nota para otros cazadores",
 			"requirements": [
-				{ "status": { "name": "Canción de luto", "part": 1 } },
-				{ "status": { "name": "Canción de luto", "part": 2 }, "not": true }
+				{ "status": { "name": "Canción de luto", "parts": [1] } },
+				{ "status": { "name": "Canción de luto", "parts": [2] }, "not": true }
 			],
 			"goToVerse": "6"
 		}
 	],
 	"verses": {
 		"1": {
-			"text": "<p>Te acuestas sobre uno de los colchones de paja y observas que el interior del cráneo está marcado con bastas pinturas rojas que representan escenas de la cacería.</p>",
+			"text": "Te acuestas sobre uno de los colchones de paja y observas que el interior del cráneo está marcado con bastas pinturas rojas que representan escenas de la cacería.",
 			"endExploration": true
 		},
 		"2": {
 			"text": "<p>El enorme cráneo arde como una pira funeraria. Las aves del bosque escapan de sus nidos construidos en los enormes cuernos. Las llamas se extienden rápidamente, envolviendo la arboleda, mientras contemplas el incendio, de pie, sobre el cuerpo de una bestia derrotada.</p><p>Para bien o para mal, nadie más podrá unirse a la Gran Cacería.</p>",
 			"rewards": [
-				{ "status": { "name": "Canción de luto", "part": 2 } }
+				{ "status": { "name": "Canción de luto", "parts": [2] } }
 			],
 			"endExploration": true
 		},
@@ -53,9 +55,9 @@
 			]
 		},
 		"4": {
-			"text": "<p>Es evidente que, si dejaron sus monedas aquí, es que ya no las querían, ¿cierto?</p>",
+			"text": "Es evidente que, si dejaron sus monedas aquí, es que ya no las querían, ¿cierto?",
 			"rewards": [
-				{ "status": { "name": "Saqueador", "part": 5 } }
+				{ "status": { "name": "Saqueador", "parts": [5] } }
 			],
 			"endExploration": true
 		},
@@ -80,7 +82,7 @@
 	},
 	"dream": {
 		"requirements": [
-			{ "status": { "name": "Canción de luto", "part": 2 }, "not": true }
+			{ "status": { "name": "Canción de luto", "parts": [2] }, "not": true }
 		],
 		"text": "<p>Bajo esta constelación pintada de ocre, te adentras en un agitado sueño en el que persigues a un cervatillo en las colinas a las afueras de Cuanacht.</p><p>Te despiertas temprano, envuelto en un sudor frío y con varios cortes recientes. La boca te sabe a sangre. Junto a ti, ves trozos de carne cruda cuidadosamente envueltos en hojas.</p>",
 		"rewards": [
