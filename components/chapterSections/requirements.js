@@ -1,3 +1,5 @@
+import styles from '@/styles/Requirements.module.css';
+
 
 export default function Requirements({ requirementsData }) {
 	return (
@@ -21,7 +23,7 @@ export function Requirement({ requirementData }) {
 					Capítulo {requirementData.chapter.numbers.map((chapter, index) => {
 						let separator = ', ';
 						if (index == 0) separator = '';
-						if (index == requirementData.chapter.numbers.length - 1) separator = ' o ';
+						else if (index == requirementData.chapter.numbers.length - 1) separator = ' o ';
 						return (separator + chapter);
 					})}
 					{requirementData.chapter.min && ' o superior'}
@@ -31,7 +33,7 @@ export function Requirement({ requirementData }) {
 			{/* Character */}
 			{requirementData.character &&
 				<Badge not={requirementData.not}>
-					{requirementData.character}
+					{requirementData.character.name}
 				</Badge>
 			}
 
@@ -52,14 +54,20 @@ export function Requirement({ requirementData }) {
 			{/* Status */}
 			{requirementData.status &&
 				<Badge not={requirementData.not}>
-					Estado «{requirementData.status.name}»
+					<span>Estado «{requirementData.status.name}» </span>
 					{requirementData.status.parts && 
 						requirementData.status.parts.map((part, index) => {
 							let separator = ', ';
 							if (index == 0) separator = '';
-							if (index == requirementData.status.parts.length - 1) separator = ' y ';
+							else if (index == requirementData.status.parts.length - 1) separator = requirementData.or ? ' o ' : ' y ';
 							return (separator + part);
 						})
+					}
+					{requirementData.status.partsCount &&
+						<span>
+							<span> ({requirementData.status.partsCount}</span>
+							{requirementData.status.partsCount == 1 ? ' parte' : ' partes'})
+						</span>
 					}
 				</Badge>
 			}
@@ -83,8 +91,9 @@ export function Requirement({ requirementData }) {
 
 
 export function Badge({ not, children }) {
+	const bgClass = not ? 'bg-danger' : 'bg-success';
 	return (
-		<span className={'badge ' + (not ? 'bg-danger' : 'bg-success') + ' align-middle ms-1'}>
+		<span className={`${styles.requirement} badge ${bgClass} align-middle`}>
 			{children}
 		</span>
 	)

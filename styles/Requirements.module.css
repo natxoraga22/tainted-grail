@@ -1,0 +1,8 @@
+
+.requirement {
+	--bs-badge-font-size: 0.8em;
+}
+
+.requirement:not(:first-of-type) {
+	margin-left: 0.25rem;
+}

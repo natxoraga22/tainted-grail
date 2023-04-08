@@ -62,13 +62,13 @@
 			"actions": [
 				{
 					"requirements": [
-						{ "chapter": { "numbers": [5, 6, 7] } }
+						{ "chapter": { "numbers": ["5", "6", "7"] } }
 					],
 					"endExploration": true
 				},
 				{
 					"requirements": [
-						{ "chapter": { "numbers": [5, 6, 7] }, "not": true }
+						{ "chapter": { "numbers": ["5", "6", "7"] }, "not": true }
 					],
 					"goToVerse": "4a"
 				}
@@ -102,7 +102,7 @@
 				{
 					"action": "Le preguntas si hay algún lugar a salvo de la Rareza",
 					"requirements": [
-						{ "chapter": { "numbers": [13] } }
+						{ "chapter": { "numbers": ["13"] } }
 					],
 					"goToVerse": "8"
 				},

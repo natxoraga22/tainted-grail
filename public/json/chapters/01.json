@@ -108,13 +108,26 @@
 			}
 		},
 		{
+			"personal": "<p>Ailei podría haber intentado comprar el martillo, pero no sabía si la poca Riqueza de la que disponía sería suficiente.</p><p>El plan de Arev y Ailei era llevar el «Martillo de Viejoacero» a los túmulos para poder abrir el portón, pero Ailei ha conseguido 1 punto de espiritualidad gracias a la experiencia obtenida, por lo que deciden volver al Cónclave Calcinado en su lugar.</p>"
+		},
+		{
 			"location": {
 				"id": "104",
-				"visitCount": 2
+				"visitCount": 2,
+				"actions": [
+					{ "action": 1, "skipText": true },
+					{ "verse": "1", "action": 0, "skipText": true },
+					{ "verse": "10", "action": 1 },
+					{ "verse": "4", "action": 1 },
+					{ "verse": "4a", "action": 1 }
+				]
 			}
 		},
 		{
 			"quest": "01-5"
+		},
+		{
+			"personal": "<p>Arev y Ailei van corriendo a Albura, dispuestos a activar el Menhir de esa localización. Al llegar descubren que no pueden hacerlo, ya que no tienen los recursos necesarios. En un último esfuerzo, justo antes de que se apague el menhir de Cuanacht, viajan hasta los Túmulos de los Primeros Moradores y consiguen encender el Menhir situado allí.</p>"
 		},
 		{
 			"quest": "01-6"

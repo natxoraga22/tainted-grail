@@ -123,7 +123,7 @@
 			"text": "<p>Al golpear el portón, un desgarrador sonido te estremece. Te pones dos trozos de tela en los oídos y continúas. Poco después, aparece una grieta en la superficie del portón. Y después, otra. Finalmente, el metal se desmorona, dejando escapar un espeluznante chirrido que hace que te sangren los oídos.</p><p>Dentro, hallas un laberinto de habitaciones y pasillos interconectados llenos de objetos indescriptibles. Sales horas después, aturdido y confundido. Ni siquiera te has acordado de coger algo para vender, pero el conocimiento que ha penetrado en tu cabeza es muy valioso.</p>",
 			"rewards": [
 				{ "secret": { "id": 11, "name": "Rituales de Menhir" } },
-				{ "custom": "<strong>¡ENHORABUENA!</strong> Has cumplido tu primera Misión." }
+				{ "custom": "<div class='mt-4'><strong>¡ENHORABUENA!</strong> Has cumplido tu primera Misión.</div>" }
 			],
 			"endExploration": true
 		}

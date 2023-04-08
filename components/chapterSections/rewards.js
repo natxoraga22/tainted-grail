@@ -26,7 +26,7 @@ export function Reward({ rewardData, checkStatus }) {
 			{rewardData.item && <ItemReward itemData={rewardData.item}/>}
 
 			{/* Custom */}
-			{rewardData.custom && <div>{rewardData.custom}</div>}
+			{rewardData.custom && <div dangerouslySetInnerHTML={{ __html: rewardData.custom }}></div>}
 		</>
 	)
 }

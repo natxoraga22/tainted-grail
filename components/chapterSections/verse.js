@@ -3,16 +3,18 @@ import EndExploration from '@/components/chapterSections/endExploration';
 import styles from '@/styles/Verse.module.css';
 
 
-export default function Verse({ verseData, locationData, bookOfSecrets, bosVerseNumber, testResult, last = false, checkStatus }) {
+export default function Verse({ verseData, locationData, bookOfSecrets, bosVerseNumber, testResult, last = false, skipText = false, checkStatus }) {
 	let text = verseData.text;
 	if (testResult) {
 		verseData = verseData.testResults[testResult];
 		text = '<p><strong>' + testResult + '</strong> - ' + verseData.text + '</p>';
 	}
+	let showVerse = bosVerseNumber || text || verseData.encounters || verseData.rewards || verseData.task || verseData.endExploration;
+	if (skipText) showVerse = false;
 
 	return (
 		<>
-			{(bosVerseNumber || text || verseData.encounters || verseData.rewards || verseData.task || verseData.endExploration) &&
+			{showVerse &&
 				<div className={!verseData.testResults && styles.verseMargin}>
 					{/* Book of Secrets */}
 					{bosVerseNumber &&
@@ -67,6 +69,8 @@ export default function Verse({ verseData, locationData, bookOfSecrets, bosVerse
 					locationData={locationData}
 					bookOfSecrets={bookOfSecrets}
 					last={last}
+					skipText={skipText}
+					checkStatus={(statusData) => checkStatus(statusData)}
 				/>
 			}
 
@@ -78,6 +82,8 @@ export default function Verse({ verseData, locationData, bookOfSecrets, bosVerse
 					bookOfSecrets={bookOfSecrets}
 					bosVerseNumber={verseData.goToBosVerse}
 					last={last}
+					skipText={skipText}
+					checkStatus={(statusData) => checkStatus(statusData)}
 				/>
 			}
 		</>

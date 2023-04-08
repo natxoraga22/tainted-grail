@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle, faPlay } from '@fortawesome/free-solid-svg-icons';
 
 
-export default function Action({ actionData, locationData, bookOfSecrets, first = false, last = false, checkStatus }) {
+export default function Action({ actionData, locationData, bookOfSecrets, first = false, last = false, skipText = false, checkStatus }) {
 	return (
 		<>
 			<div className={styles.actionContainer}>
@@ -48,6 +48,7 @@ export default function Action({ actionData, locationData, bookOfSecrets, first 
 					locationData={locationData}
 					bookOfSecrets={bookOfSecrets}
 					last={last}
+					skipText={skipText}
 					checkStatus={(statusData) => checkStatus(statusData)}
 				/>
 			}
@@ -60,6 +61,7 @@ export default function Action({ actionData, locationData, bookOfSecrets, first 
 					bookOfSecrets={bookOfSecrets}
 					bosVerseNumber={actionData.goToBosVerse}
 					last={last}
+					skipText={skipText}
 					checkStatus={(statusData) => checkStatus(statusData)}
 				/>
 			}

@@ -50,9 +50,9 @@
 		"2": {
 			"text": "«¡Escúchame!», dice el druida. «Deberíamos dejaros morir a todos por lo que nos hicisteis, asquerosos desagradecidos. Pero el conocimiento del Círculo no puede morir conmigo. Tienes que escuchar. ¡Tienes que recordar!».",
 			"rewards": [
-				{ "status": { "name": "Sueños y profecías", "parts": [5] } },
 				{ "secret": { "id": 11, "name": "Rituales de Menhir" } },
-				{ "custom": "<strong>¡ENHORABUENA!</strong> Has cumplido tu primera Misión." }
+				{ "status": { "name": "Sueños y profecías", "parts": [5] } },
+				{ "custom": "<div class='mt-4'><strong>¡ENHORABUENA!</strong> Has cumplido tu primera Misión.</div>" }
 			],
 			"task": "Ve a una Localización con un icono de Menhir y actívalo antes de que el tiempo se agote.",
 			"endExploration": true
@@ -78,7 +78,7 @@
 			"actions": [
 				{
 					"requirements": [
-						{ "character": "Gusano" }
+						{ "character": { "name": "Gusano" } }
 					],
 					"goToVerse": "3b"
 				},
@@ -90,7 +90,7 @@
 				},
 				{
 					"requirements": [
-						{ "character": "Gusano", "not": true },
+						{ "character": { "name": "Gusano" }, "not": true },
 						{ "resource": { "type": "Magia", "amount": 1 } }
 					],
 					"goToVerse": "2"
@@ -161,13 +161,13 @@
 			"actions": [
 				{
 					"requirements": [
-						{ "chapter": { "numbers": [11], "min": true } }
+						{ "chapter": { "numbers": ["11"], "min": true } }
 					],
 					"goToVerse": "14"
 				},
 				{
 					"requirements": [
-						{ "chapter": { "numbers": [11], "min": true }, "not": true }
+						{ "chapter": { "numbers": ["11"], "min": true }, "not": true }
 					],
 					"goToVerse": "6"
 				}

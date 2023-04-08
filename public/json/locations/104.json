@@ -6,7 +6,7 @@
 	"actions": [
 		{
 			"requirements": [
-				{ "character": "Gusano" }
+				{ "character": { "name": "Gusano" } }
 			],
 			"goToVerse": "10"
 		},
@@ -100,14 +100,14 @@
 				{
 					"action": "Entras",
 					"requirements": [
-						{ "character": "Gusano" }
+						{ "character": { "name": "Gusano" } }
 					],
 					"goToVerse": "4"
 				},
 				{
 					"action": "Entras",
 					"requirements": [
-						{ "attribute": { "name": "Espiritualidad", "value": 1 } }
+						{ "attribute": { "name": "Espiritualidad", "level": 1 } }
 					],
 					"goToVerse": "4"
 				},

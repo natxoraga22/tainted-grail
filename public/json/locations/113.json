@@ -1,0 +1,192 @@
+{
+	"status": "DONE",
+
+	"name": "Lago del Espejo",
+	"introduction": "El cielo y la reflectante superficie de este sereno lago de las montañas se funde ante tus ojos. Te invade una sensación de serenidad. Te sientes tentado de tumbarte en la arenosa orilla y quedarte allí hasta el fin del mundo. Entonces, las historias del extraño ser que vive en las profundidades del lago resuenan en tu mente, haciéndote volver a la tierra.",
+	"actions": [
+		{
+			"action": "Invocas a la Dama",
+			"description": "¿Pero por qué iba a escucharte?",
+			"goToVerse": "1"
+		},
+		{
+			"action": "Nadas hasta la isla del lago",
+			"goToVerse": "2"
+		},
+		{
+			"action": "Cazas",
+			"description": "A juzgar por las marcas de la arena, aquí vienen muchos animales a beber",
+			"goToVerse": "6"
+		}
+	],
+	"verses": {
+		"1": {
+			"text": "Te detienes un rato frente a la superficie reflectante, haciendo varias súplicas amables, pero el viento se las lleva sin respuesta. Al cabo de un tiempo, empiezas a sentirte ridículo. ¿Por qué viniste aquí siquiera? ¿Un pobre infeliz intentado hablar con una leyenda que quizá ni exista?",
+			"actions": [
+				{
+					"requirements": [
+						{ "custom": "Ficha de Tiempo" }
+					],
+					"endExploration": true
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Misión Anillo de Luna" } }
+					],
+					"endExploration": true
+				},
+				{
+					"requirements": [
+						{ "secret": { "id": 13, "name": "¡Perseguido!" } }
+					],
+					"goToVerse": "9"
+				},
+				{
+					"requirements": [
+						{ "secret": { "id": 21, "name": "Talismán Deslucido" } },
+						{ "secret": { "id": 22, "name": "Talismán Brillante" } }
+					],
+					"goToVerse": "9"
+				},
+				{
+					"requirements": [
+						{ "secret": { "id": 8, "name": "Grial Corrompido" } },
+						{ "status": { "name": "La tarea de la dama" }, "not": true }
+					],
+					"goToVerse": "9"
+				},
+				{
+					"action": "No cumples ninguna condición",
+					"endExploration": true
+				}
+			]
+		},
+		"2": {
+			"text": "<p>La travesía se alarga mucho más de lo que esperabas. Para colmo, algo bajo el agua te roza las piernas mientras te diriges hacia la isla. Tu corazón se acelera. Vas tan rápido como puedes, con los pulmones a punto de estallar. Finalmente, subes a la orilla, exhausto.</p><p>No es una isla normal. Parece estar hecha del mismo material óseo con el que los Primeros Moradores construyeron su muro. Cuando estás descansando, preparándote para volver, encuentras en una grieta un viejo tubo de pergamino sellado.</p>",
+			"rewards": [
+				{ "item": { "name": "Pergamino de las Sombras" } }
+			],
+			"endExploration": true
+		},
+		"3": {
+			"text": "<p>La Dama del Lago te saluda, pero se detiene a mitad de la frase. Notas que está aterrorizada. «Él no descansará hasta que el recipiente regrese al corazón de Tuathán», dice. «¡Tienes que irte! ¡No debe encontrarme aquí!».</p><p>Justo después, se sumerge bajo la superficie rápidamente, dejándote solo y desconcertado.</p>",
+			"endExploration": true
+		},
+		"4": {
+			"goToBosVerse": "257"
+		},
+		"5": {
+			"text": "La caza está mal vista en los lugares sagrados, pero al menos no tienes que esperar mucho: en cuestión de minutos, un jabalí sale del bosque y empieza a beber algua del lago. Tu ataque lo sorprende, como sino esperara un depredador en este lugar. Poco después, mientras descuartizas el jabalí en la arena, sientes un repentino temor. Estás seguro de que algo te está observando bajo la superficie reflectante del agua. Y no le ha gustado nada lo que has hecho.",
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "El destino de la expedición", "parts": [6, 7], "or": true } },
+						{ "status": { "name": "El legado de Fael" }, "not": true }
+					],
+					"goToVerse": "11"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "El destino de la expedición", "parts": [6, 7] }, "not": true }
+					],
+					"endExploration": true
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "El legado de Fael" } }
+					],
+					"endExploration": true
+				}
+			]
+		},
+		"6": {
+			"actions": [
+				{
+					"requirements": [
+						{ "custom": "Ficha de Tiempo" }
+					],
+					"goToVerse": "10"
+				},
+				{
+					"requirements": [
+						{ "custom": "Ficha de Tiempo", "not": true }
+					],
+					"goToVerse": "5"
+				}
+			]
+		},
+		"7": {
+			"text": "<p>Inquieres a la Dama, mostrándole el talismán que has encontrado en el cadáver y el que hallaste en el cuerpo de Lord Yvain.</p><p>Hay una larga pausa. Después, con una desgarradora y tirste voz, dice: «Sí, tienes razón. Conocí a muchos campeones a lo largo de los años. Todos fueron a Tuathán y casi todos han muerto. Me arrepiento cada día, cuando sus rostros y nombres vuelven a mí. Pero no había otra manera. Debes saber que tus amigos fueron los primeros en lograrlo. Encontraron un modo de entrar en Tuathán y regresaron con algo muy valioso. Puede que aún puedas ayudarlos. Por favor, toma esto».</p><p>Su mano emerge del agua, ofreciéndote un obsequio.</p>",
+			"rewards": [
+				{ "item": { "name": "Espada Rúnica" } },
+				{ "status": { "name": "El destino de la expedición", "parts": [5] }}
+			],
+			"endExploration": true
+		},
+		"9": {
+			"text": "<p>La Dama emerge del agua y das un paso atrás. Creías estar preparado para verla, pero su inhumana figura, sus cuatro delgados brazos con dos codos cada uno y su demacrado rostro rodeado de algas y pelo enredado te hacen retroceder de golpe.</p><p>Se acerca, deslizándose por el aire, sus pies apenas tocan el agua y su toga rasgada ondea al viento. Sus labios azules no se mueven, pero algo te llena la mente: un lenguaje que rompe las reglas de cada idioma que hayas escuchado; cada palabra es un fluctuante torrente que contiene todos los significados y sonidos posibles, solidificándose después en un solo átomo de habla.</p>",
+			"actions": [
+				{
+					"requirements": [
+						{ "secret": { "id": 8, "name": "Grial Corrompido" } }
+					],
+					"goToVerse": "4"
+				},
+				{
+					"requirements": [
+						{ "secret": { "id": 21, "name": "Talismán Deslucido" } },
+						{ "secret": { "id": 22, "name": "Talismán Brillante" } }
+					],
+					"goToVerse": "7"
+				},
+				{
+					"requirements": [
+						{ "secret": { "id": 13, "name": "¡Perseguido!" } }
+					],
+					"goToVerse": "3"
+				}
+			]
+		},
+		"10": {
+			"text": "Esperas durante horas, escondido en la orilla. Ni siquiera el animas más pequeño se acerca, como si algo les advirtiera de tu proximidad.",
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "El destino de la expedición", "parts": [6, 7], "or": true } },
+						{ "status": { "name": "El legado de Fael" }, "not": true }
+					],
+					"goToVerse": "11"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "El destino de la expedición", "parts": [6, 7] }, "not": true }
+					],
+					"endExploration": true
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "El legado de Fael" } }
+					],
+					"endExploration": true
+				}
+			]
+		},
+		"11": {
+			"text": "Al regresar de la cacería, encuentras un conjunto de huellas que van hacia el este. Una extraña criatura persiguió al grupo de tres viajeros humanos. Sus pesadas botas dejaron huellas demasiado grandes como para un ser humano, pero muy pequeñas para tratarse de un gigante; con la suela surcada por líneas en espiral, como una enorme huella dactilar.",
+			"rewards": [
+				{ "status": { "name": "Información perturbadora", "parts": [1] } }
+			],
+			"task": "Explora Raízespesa (114), hacia el este, e intenta encontrar más huellas como esas.",
+			"endExploration": true
+		}
+	},
+	"dream": {
+		"text": "Ves a cuatro peregrinos, aún consternados por la pérdida de su compañero, entrando en la brumosa extensión de Tuathán. Deambulan entre sus calles en constante cambio y sus imposibles construcciones. Encuentran algo que lleva mucho tiempo escondido. Apenas escapan con vida y ahora les sigue un quinto. Tu sueño termina cuando entrar en una extensa zona marcada con gigantescos y níveos sigilos.",
+		"rewards": [
+			{ "status": { "name": "Sueños y profecías", "parts": [1] } }
+		]
+	},
+	"nightmare": {
+		"text": "Te encuentras en una ruina sumergida. El frío del agua parece absorber tu energía vital. Flotas por vastos salones y pasillos, poblados solo por peces y recuerdos de una gloria perdida hace mucho. Te despiertas triste, débil y desanimado."
+	}
+}

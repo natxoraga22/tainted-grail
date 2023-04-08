@@ -1,0 +1,214 @@
+{
+	"status": "IN PROGRESS",
+
+	"name": "Vallelejano",
+	"introduction": "<p>Ocupando una franja de tierra entre los impenetrables muros de Tuathán y el mar, Vallelejano ha sido siempre un importante epicentro comercial y la más próspera de las aldeas. Creyendo que la Madre de Todos es la responsable de su suerte, los habitantes de Vallelejano construyeron su ciudad a la sombra de su sagrado dolmen.</p><p>Al acercarte al pueblo, observas patrullas armadas, vigilancias dobles y un largo estandarte de guerra, ondeando sobre el Gran Salón en la parte superior del pueblo.</p>",
+	"actions": [
+		{
+			"requirements": [
+				{ "status": { "name": "Caído y perdido", "parts": [3] } }
+			],
+			"goToVerse": "13"
+		},
+		{
+			"action": "Visitas el Gran Salón",
+			"goToVerse": "1"
+		},
+		{
+			"action": "Recorres el mercado",
+			"goToVerse": "3"
+		},
+		{
+			"action": "Assciendes al dolmen",
+			"goToVerse": "6"
+		},
+		{
+			"action": "Derrumbas el dolmen",
+			"requirements": [
+				{ "secret": { "id": 16, "name": "Cabeza de Morrigan" } },
+				{ "status": { "name": "Guerra por Ávalon", "parts": [3] } }
+			],
+			"goToVerse": "10"
+		},
+		{
+			"action": "Haces llegar un mensaje diplomático",
+			"requirements": [
+				{ "chapter": { "numbers": ["4B"] } },
+				{ "status": { "name": "Diplomático", "partsCount": 1 } }
+			],
+			"goToVerse": "11"
+		}
+	],
+	"verses": {
+		"1": {
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Enemigos de Ávalon", "parts": [1] }, "not": true },
+						{ "chapter": { "numbers": ["2", "3"] } }
+					],
+					"goToVerse": "17"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Aliados de Ávalon", "parts": [3] } },
+						{ "chapter": { "numbers": ["10", "11"] } }
+					],
+					"goToVerse": "14"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Enfrentamientos finales", "parts": [2] } },
+						{ "chapter": { "numbers": ["12"] } }
+					],
+					"goToVerse": "16"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Enfrentamientos finales", "parts": [2] } },
+						{ "chapter": { "numbers": ["13", "14", "15"] } }
+					],
+					"goToVerse": "15"
+				},
+				{
+					"action": "No cumples ninguna condición",
+					"endExploration": true
+				}
+			]
+		},
+		"2": {
+			"text": "Atraída por el brillo de una moneda de tu mano, una vieja encorvada te agarra y te pide que visites su «pequeña tienda de curiosidades». Luego intenta arrastrarte a un callejón oscuro.",
+			"actions": [
+				{
+					"action": "La sigues",
+					"goToVerse": "4"
+				},
+				{
+					"action": "Te zafas de ella",
+					"endExploration": true
+				}
+			]
+		},
+		"3": {
+			"text": "Paseas por los puestos de la parte baja del pueblo y ves mercancías de toda la isla. Hay herreros, sastres, zapateros, boticarios; incluso el famoso fabricante de juguetes Dobromir, conocido por sus elaboradas creaciones, se instaló aquí. Por desgracia, los precios se han triplicado desde la última vez que estuviste aquí. Con toda la incertidumbre que hay en la isla, la gente acumula todo lo que puede y los comerciantes huelen el dinero fácil...",
+			"actions": [
+				{
+					"action": "Te vas del mercado",
+					"goToVerse": "2"
+				}
+			]
+		},
+		"4": {
+			"text": "La vieja te lleva a una choza apestosa en uno de los callejones traseros y te muestra una entrada con una cortina manchada que pende del marco de la puerta. Esperando una emboscada, entras con cuidado. El hedor de este lugar te repugna. La tienda está llena de basura, arcilla rota, animales muertos y artículos desechados. Dudas encontrar algo útil.",
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "El enigma del viejoacero" } }
+					],
+					"goToBosVerse": "385"
+				},
+				{
+					"requirements": [
+						{ "chapter": { "numbers": ["10", "11", "12", "13", "14", "15"] } }
+					],
+					"goToBosVerse": "385"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "El enigma del viejoacero" }, "not": true },
+						{ "chapter": { "numbers": ["10", "11", "12", "13", "14", "15"] }, "not": true }
+					],
+					"endExploration": true
+				}
+			]
+		},
+		"5": {
+			"text": "<p>Lady Kincaid está sentada en un trono de madera al fondo del Gran Salón, con un consejero druida a un lado y su sombrío guardaespaldas al otro. Sus tres hijas adolescentes están cerca y observan, preparándose para tomar un día el lugar de su madre.</p><p>Te diriges cortésmente a la dama y le dices que Lord Yvain de Cuanacht recientemente dejó sus tierras y que lo estás buscando. Para tu sorpresa, Lady Kincaid ya lo sabía.</p><p>«Hace menos de dos semanas, ese idiota de Yvain intentó pasar por el Valle de los Guardianes y entrar en Tuathán por el norte», dice Lady Kincaid. «Fracasó y perdió a uno de sus compañeros. En su paso hacia el sur, se encontraron con nuestro asedio de Altomuro y se unieron al combate. Hasta que, por alguna razón, me traicionó y se coló en la ciudad».</p><p>«Dile a la gente de Cuanacht que han perdido a su señor. Pero no deben desesperar. Tengo planes para vuestro pueblo...».</p>",
+			"rewards": [
+				{ "status": { "name": "El destino de la expedición", "parts": [4] } }
+			]
+		},
+		"6": {
+			"text": "<p>Los guardias de arriba, aunque aburridos, están contentos con su deber. Podrían haber sido enviados al norte con el resto de las fuerzas de Vallelejano para luchar en la guerra sin cuartel...</p>",
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Vientos de Rareza" } }
+					],
+					"endExploration": true
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Vientos de Rareza" }, "not": true }
+					],
+					"goToVerse": "6a"
+				}
+			]
+		},
+		"6a": {
+			"text": "<p>Charlas con los guardias brevemente y te fijas en las vistas. Al norte, la muralla de los Primeros Moradores corta el paisaje por la mitad. Detrás está la antigua capital, Tuathán, en constante cambio, sumergida en Rareza. Las nubes de Rareza también se acercan desde el oeste, lo que quizá debería preocupar a los habitantes de Vallelejano. Al noreste, se ve un lejano resplandor del legendario Lago del Espejo, hogar de la Dama Pálida. Aún más al este, se eleva un altiplano. Sabes que Nueva Camelot está allí, en algún lugar. Por último, al sur puedes ver una llanura cubierta de símbolos sagrados.</p><p>Mientras disfrutas de las vistas, escuchas a dos guardias hablando de algo extraño que han visto al sur. Hace un par de noches tuvo lugar una pequeña batalla allí. Se vieron destellos de magia y sonidos extraños y estruendosos que se escuchaban incluso en Vallelejano.</p>",
+			"task": "Explora las llanuras sagradas del sur para investigar los avistamientos.",
+			"endExploration": true
+		},
+		"7": {
+			"text": "<p>Con todo lo que ha ocurrido en el norte últimamente, Lady Kincaid está buscando a alguien que cumpla una tarea casi imposible.</p><p>«Si has llegado hasta aquí desde Cuanacht por tu cuenta, puede que seas la persona que estoy buscando», dice, mientras sus tres hijas te juzgan en silencio. «Como ya sabes», continúa Lady Kincaid, «ninguno de los feudos pudo ganar la reciente batalla. Pero tengo un plan. La gente de Nido del Cuervo podría ayudarme a conquistar Altomuro, pero convencerlos requerirá un esfuerzo extra. Tráeme la cabeza de Morrigan, su reliquia más sagrada, escondida en su templo subterráneo. Eso les obligará a negociar».</p>",
+			"actions": [
+				{
+					"action": "Te niegas",
+					"description": "No ves por qué deberías apoyarla en sus planes de conquista. ADemás, ¿quién sabe lo que tienen que ofrecer Altomuro y Nido del Cuervo?",
+					"endExploration": true
+				},
+				{
+					"action": "Aceptas",
+					"description": "La guerra debe acabar para que la gente de la isla sobreviva. Además, Lady Kincaid te ayudará sin duda a equiparte para tu viaje",
+					"goToBosVerse": "112"
+				}
+			]
+		},
+		"8": {
+			"text": "<p>En cuanto presentas al chico, los cortesanos lloran incrédulos y sus hermanas corren a abrazarlo. Lady Kincaid no parece muy impresionada.</p><p>«Es... muy bienvenido», dice, pero su rostro le traiciona y deja ver que sus palabras no son sinceras. «Tener de vuelta a mi hijo y heredero legítimo de Vallelejano fortalecerá a nuestra familia», continúa Lady Kincaid, «y tú has demostrado ser un aliado muy ingenioso. Te presagio un gran futuro».</p><p>Solo tras unos instantes empiezas a entender su frialdad. El chico tiene catorce años. Esto significa que a Lady Kincaid solo le queda un año de gobierno antes de verse obligada a entregar el trono a su hijo. Esto la volverá aún más tenaz.</p>",
+			"rewards": [
+				{ "status": { "name": "Aliados de Ávalon", "parts": [3] } },
+				{ "status": { "name": "Enemigos de Ávalon", "parts": [2] } },
+				{ "secret": { "id": 12, "name": "Prisionero Famélico" }, "lost": true }
+			],
+			"goToVerse": "9"
+		},
+		"9": {
+			"text": "<p>«Gracias por tu servicio», dice Lady Kincaid. «Pero no podemos malgastar nuestra ventaja. Ahora que nuestro enemigo ha perdido su carta más importante, tenemos que presionarlo para negociar. Lo estás haciendo muy bien ahí fuera, aun sin la luz de los menhires para guiarte. No se me ocurre nadie mejor que tú para llevar a cabo esta nueva tarea».</p><p>Sus tres hijas te miran con odio. Escuchar que los elogios de su madre se dirigen a otra persona las incomoda notablemente.</p>",
+			"rewards": [
+				{ "status": { "name": "Diplomático", "parts": [3] } },
+				{ "custom": "<div class='mt-4'><strong>¡ENHORABUENA!</strong> Has completado el Capítulo actual.</div>"}
+			],
+			"endExploration": true
+		},
+		"10": {
+			"text": "<p></p>",
+			"rewards": [
+				{ "secret": { "id": 16, "name": "Cabeza de Morrigan" }, "lost": true }
+			],
+			"goToBosVerse": "265"
+		},
+		"11": {
+			
+		},
+		"12": {
+
+		},
+		"13": {
+
+		},
+		"14": {
+
+		},
+		"15": {
+
+		}
+	},
+	"dream": {
+		
+	},
+	"nightmare": {
+		
+	}
+}

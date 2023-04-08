@@ -6,17 +6,17 @@
 			"action": "Bold text, the text of the action",
 			"description": "Italic text, the text giving more context to the action",
 			"requirements": [
-				{ "chapter": { "numbers": [1, 2, 3] }, "min": true },
-				{ "character": "Character name (Arev)" },
+				{ "chapter": { "numbers": ["1", "2", "3"] }, "min": true },
+				{ "character": { "name": "Character name (Arev)" } },
 				{ "attribute": { "name": "Attribute name (Empatía)", "level": 2 } },
 				{ "resource": { "type": "Resource type (Magia)", "amount": 1 } },
-				{ "status": { "name": "Status name (Matricida)", "parts": [1, 2, 3] } },
+				{ "status": { "name": "Status name (Matricida)", "parts": [1, 2, 3], "or": false } },
 				{ "secret": { "id": 66, "name": "Secret name" } },
 				{ "custom": "Just some text to display if no other requirement structure applies" }
 			],
 			"rewards": [
 				{ "status": "SAME AS actions.requirements.status" },
-				{ "secret": "SAME AS actions.requirements.secret" },
+				{ "secret": "SAME AS actions.requirements.secret", "lost": false },
 				{ "item": { "name": "Item name" } },
 				{ "custom": "Just some text to display if no other reward structure applies" }
 			],
