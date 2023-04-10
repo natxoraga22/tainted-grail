@@ -1,0 +1,170 @@
+{
+	"status": "IN PROGRESS",
+
+	"name": "Estampida",
+	"introduction": "<p>La mayor llanura de la isla ha servido desde hace mucho como una forma de honrar a los dioses. Fue el propio Merlín, uno de los legendarios archidruidas, quien ayudó a cavar la extensa red de zanjas llenas de caliza blanca, creando signos sagrados visibles solo desde el cielo.</p><p>La llanura solía ser un lugar sagrado, pero ahora tiene ecos de sonidos de animales asustados y lamentos humanos. Los supervivientes del borde occidental de Ávalon huyen cruzando la llanura, hacia Vallelejano, Cuanacht o Nueva Camelot.</p>",
+	"actions": [
+		{
+			"action": "Te acercas a los refugiados",
+			"goToVerse": "4"
+		},
+		{
+			"action": "Exploras la llanura",
+			"goToVerse": "6"
+		}
+	],
+	"verses": {
+		"1": {
+			"text": ""
+		},
+		"3": {
+			"text": ""
+		},
+		"4": {
+			"text": "Los viajeros están asustados y cansados de huir. Los niños lloran, acurrucados en carros abarrotados. Las mujeres y los hombres están serios, sin expresión. Reconoces los tartanes y símbolos de varios asentamientos occidentales: Finisterra, Punta Gorrión, Dungale. Lugares caídos en el olvido.",
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Encuentros extraños", "parts": [2] }, "not": true }
+					],
+					"goToVerse": "5"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Encuentros extraños", "parts": [2] } }
+					],
+					"endExploration": true
+				}
+			]
+		},
+		"5": {
+			"text": "<p>Una mujer se acerca a ti con dos niñas agarradas a su vestido.</p><p>«Te lo ruego, dinos: ¿queda algún lugar seguro? ¿A dónde deberíamos ir?». Otros carros se detienen y todos se fijan de repente en ti. Debes pensarlo bien antes de responderle.</p>",
+			"actions": [
+				{
+					"action": "Les dices que vayan a Nueva Camelot. La Mesa Redonda siempre ha protegido a su gente",
+					"goToVerse": "1"
+				},
+				{
+					"action": "Les dices que vayan a Cuanacht. Su menhir debería poder ofrecerles protección",
+					"goToVerse": "3"
+				},
+				{
+					"action": "Les dices que vayan a Vallelejano. A fin de cuentas, sobrevivió al borde de la Rareza durante muchos siglos",
+					"goToVerse": "7"
+				},
+				{
+					"action": "Les dices que vayan a Altomuro. Sus grandes murallas deberían protegerlos",
+					"goToVerse": "7"
+				},
+				{
+					"action": "Les dices que ningún lugar es seguro",
+					"requirements": [
+						{ "status": { "name": "Guerra por Ávalon", "partsCount": 1 } }
+					],
+					"goToVerse": "10"
+				},
+				{
+					"action": "No respondes. Les ignoras y continúas tu camino",
+					"endExploration": true
+				}
+			]
+		},
+		"6": {
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Cosuil", "parts": [4] } },
+						{ "status": { "name": "Cosuil", "parts": [5] }, "not": true }
+					],
+					"goToBosVerse": "515"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Cosuil", "parts": [4] }, "not": true }
+					],
+					"goToVerse": "6a"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Cosuil", "parts": [5] } }
+					],
+					"goToVerse": "6a"
+				}
+			]
+		},
+		"6a": {
+			"text": "<p>Deambulas entre la líneas blancas de los símbolos sagrados, perdido como una hormiga en un gigantesco tapiz. De pronto, te sientes recuperado, como si un extraño poder se filtrase desde el interior de la tierra. Revitalizado, caminas hasta descubrir un pequeño montículo que llama tu atención y que rompe la línea perfecta del horizonte.</p><p>Te acercas al montículo: es una tumba reciente. Jirones de tela cuelgan de un símbolo de madera de la Madre de Todos y hay una espada rota semienterrada. La tumba es tosca, como si la hubieran cavado a toda prisa. Las huellas conducen al noreste.</p>",
+			"task": "Sigue las huellas para descubrir qué le ha ocurrido al resto del grupo.",
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "El destino de la expedición", "parts": [1] } }
+					],
+					"goToVerse": "8"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Sueños y profecías", "parts": [1] } }
+					],
+					"goToVerse": "8"
+				},
+				{
+					"requirements": [
+						{ "character": { "name": "Beor" } }
+					],
+					"goToVerse": "8"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "El destino de la expedición", "parts": [1] }, "not": true },
+						{ "status": { "name": "Sueños y profecías", "parts": [1] }, "not": true },
+						{ "character": { "name": "Beor" }, "not": true }
+					],
+					"endExploration": true
+				}
+			]
+		},
+		"7": {
+			"text": "Les indicas el camino y asienten, desesperados por cualquier consejo que puedas ofrecerles. Enseguida, se ponen en camino en la dirección que elegiste. Otros grupos se quedan atrás. Notas un nudo en la garganta. ¿Tomaste la decisión correcta?",
+			"rewards": [
+				{ "status": { "name": "Encuentros extraños", "parts": [2] } }
+			],
+			"endExploration": true
+		},
+		"8": {
+			"text": "Reconoces inmediatamente el escudo de Lord Yvain en la tela y en el pomo de la espada. Sientes un repentino pavor. Así que su búsqueda terminó aquí, en las llanuras sagradas, lejos de cualquier vestigio de civilización. ¿Que hacía aquí? ¿Qué pasó con el resto del grupo? Puede que solo haya una manera de averiguarlo y te preguntas si tienes las agallas para hacerlo.",
+			"actions": [
+				{
+					"requirements": [
+						{ "character": { "name": "Gusano" } },
+						{ "status": { "name": "Lección final", "parts": [4] }, "not": true }
+					],
+					"goToVerse": "11"
+				},
+				{
+					"action": "Rindes tus respetos y te vas",
+					"endExploration": true
+				},
+				{
+					"action": "Desentierras la tumba",
+					"requirements": [
+						{ "status": { "name": "Saqueador", "parts": [2] }, "not": true }
+					],
+					"goToBosVerse": "264"
+				}
+			]
+		},
+		"10": {
+			
+		},
+		"11": {
+			
+		}
+	},
+	"dream": {
+		"text": "El suelo se agita mientras los gigantes amontonan más y más tierra en un agujero. El miedo y el sudor marcan sus rostros y todos murmuran las mismas palabras al trabajar, como un hechizo de protección. El suelo no se calma hasta que colocan las grandes piedras de un dolmen sobre el lugar. Sus arcanas palabras siguen resonando en tu mente al despertar."
+	},
+	"nightmare": {
+		"text": "Las defensas han caído. El suelo se agrieta y el dolmen se derrumba como una avalancha. La cosa enterrada se libera, infectando la mente de la población. Se clavan los dedos en los ojos, intentando arrancárselos, y les sale sangre de los oídos. Se vuelven unos contra otros, mordiéndose y arañándose. Aquellos atrapados bajo las enormes piedras no son rescatados, sino saqueados; sus dedos y orejas mordidos para conseguir sus joyas. Te despiertas, jadeante, incapaz de sacar de tu mente los gritos y esas caóticas imágenes."
+	}
+}

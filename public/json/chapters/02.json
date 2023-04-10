@@ -25,7 +25,30 @@
 					{ "verse": "2", "action": 0 },
 					{ "verse": "4", "action": 0 },
 					{ "action": 1 },
-					{ "verse": "1", "action": 0 }
+					{ "verse": "1", "action": 0 },
+					{ "verse": "17", "action": 0 },
+					{ "verse": "17", "action": 4 },
+					{ "action": "dream" }
+				]
+			}
+		},
+		{
+			"personal": "Arev y Ailei se dirigen al sur para explorar los avistamientos en las llanuras sagradas."
+		},
+		{
+			"location": {
+				"id": "118",
+				"actions": [
+					{ "action": 0 },
+					{ "verse": "4", "action": 0 },
+					{ "verse": "5", "action": 2 },
+					{ "action": 1 },
+					{ "verse": "6", "action": 1 },
+					{ "verse": "6a", "action": 0 },
+					{ "verse": "8", "action": 2 },
+					{ "bosVerse": "264", "action": 0 },
+					{ "bosVerse": "301", "action": 0 },
+					{ "bosVerse": "174", "action": 1 }
 				]
 			}
 		}

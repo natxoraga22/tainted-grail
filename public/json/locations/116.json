@@ -1,5 +1,5 @@
 {
-	"status": "IN PROGRESS",
+	"status": "DONE",
 
 	"name": "Vallelejano",
 	"introduction": "<p>Ocupando una franja de tierra entre los impenetrables muros de Tuathán y el mar, Vallelejano ha sido siempre un importante epicentro comercial y la más próspera de las aldeas. Creyendo que la Madre de Todos es la responsable de su suerte, los habitantes de Vallelejano construyeron su ciudad a la sombra de su sagrado dolmen.</p><p>Al acercarte al pueblo, observas patrullas armadas, vigilancias dobles y un largo estandarte de guerra, ondeando sobre el Gran Salón en la parte superior del pueblo.</p>",
@@ -183,32 +183,128 @@
 			"endExploration": true
 		},
 		"10": {
-			"text": "<p></p>",
+			"text": "<p>Entras en la ciudad y te escondes durante el día, tal como te indica la cabeza. Juntos, salís a las calles vacías poco después de medianoche. La cabeza te lleva a una plaza en la parte baja de la ciudad, lejos del dolmen y de cualquier mirada curiosa.</p><p>Morrigan comienza a cantar. Es la primera vez que escuchas música así: hechizante, inarmónica, alienígena. Más antigua que el propio dolmen. Miras a tu alrededor, consternado. Este lamento atraerá la atención.</p><p>De pronto, el suelo comienza a vibrar y moverse con su canto. Te invade el miedo cuando te das cuenta de que Morrian no quería mover el dolmen por sí misma. En vez de eso, alteró algo bajo el suelo y eso lo desplazó. La primera piedra, mayor que tu pueblo natal entero, se agrieta y se derrumba sobre la ciudad con un ensordecedor estruendo. El impacto te derriba y sueltas a Morrigan, que se ríe cacareando como una bruja loca al caer. Tratas de levantarte, pero una nube de polvo y escombros te golpea como un toro cargando contra ti.</p><p>Huyes junto a una multitud de gente aterrorizada, demasiado asustado por lo que verás cuando se asiente el polvo. Has perdido a Morrigan en el caos, pero sospechas que sabrá cuidar de sí misma.</p>",
 			"rewards": [
 				{ "secret": { "id": 16, "name": "Cabeza de Morrigan" }, "lost": true }
 			],
 			"goToBosVerse": "265"
 		},
 		"11": {
-			
+			"text": "Te aseguras de que el mensaje sobre la reunión le llegue a Lady Kincaid y a sus hijas. Teniendo en cuenta lo que acaba de pasar, no dudas de que negociarán.",
+			"rewards": [
+				{ "status": { "name": "Diplomático", "parts": [3] } }
+			],
+			"endExploration": true
 		},
 		"12": {
-
+			"text": "La cabeza sisea y maldice a gritos cuando se la muestras a Lady Kincaid. La gobernante de Vallelejano se muestra impasible. «Tapaos los oídos», le grita a sus hijas. «Y en cuanto a ti», se dirige a la cabeza de la diosa, «hay un grueso cofre de roble en las profundidades de este palacio que me gustaría presentarte».",
+			"rewards": [
+				{ "status": { "name": "Aliados de Ávalon", "parts": [3] } },
+				{ "status": { "name": "Enemigos de Ávalon", "parts": [3] } },
+				{ "secret": { "id": 16, "name": "Cabeza de Morrigan" }, "lost": true }
+			],
+			"goToVerse": "9"
 		},
 		"13": {
-
+			"text": "Incluso desde lejos, puedes ver que Vallelejano ha caído… literalmente. Los enemigos no solo tomaron la ciudad, sino que consiguieron derrumbar la parte superior del dolmen, enterrando distritos enteros bajo la gigantesca roca.",
+			"endExploration": true
 		},
 		"14": {
-
+			"text": "<p>En cuanto entras en el Gran Salón, te das cuenta de que ha cambiado tanto como las tierras por las que acabas de viajar. Largas mortajas negras penden del techo. Lady Kincaid lleva un vestido de luto. No te hace falta preguntar para saber el porqué: de las tres sillas situadas junto a su trono, solo dos están ocupadas. Los rostros solemnes e inexpresivos de las dos hijas restantes no muestran si están afligidas o aliviadas de que su hermana mayor no esté.</p><p>Lady Kincaid te da los detalles. Preparándose para la tormenta de Rareza que se aproxima, mandó grupos de asalto para reunir gente y provisiones. Unos bandidos desesperados de Cuanacht atacaron y aniquilaron a uno de estos grupos, dirigido por su hija Siobhan. Lady Kincaid quiere las cabezas de los responsables para asegurarse de que nadie vuelva a alzar armas contra lo que queda de su familia. Por desgracia, la Rareza es demasiado densa como para que sus soldados lleguen a Cuanacht. Te pide que lo hagas tú.</p><p>Empiezas a sudar. La idea de perseguir a la gente de tu pueblo natal te llena de pavor, pero parece que ya no puedes serle leal a más de un bando.</p>",
+			"rewards": [
+				{ "status": { "name": "Explorador", "parts": [2] } }
+			],
+			"task": "Investiga el ataque en tu pueblo natal, Cuanacht (121) y decide si ayudar a tu aliada, Lady Kincaid.",
+			"endExploration": true
 		},
 		"15": {
-
+			"text": "La oferta de Kincaid sigue en pie. Hay un lugar esperándote en su corte.",
+			"actions": [
+				{
+					"action": "Quizás en otro momento",
+					"description": "Aún hay cosas que quieres hacer y lugares que quieres ver",
+					"endExploration": true
+				},
+				{
+					"action": "Aceptas y te instalas en Vallelejano",
+					"goToVerse": "18"
+				}
+			]
+		},
+		"16": {
+			"actions": [
+				{
+					"requirements": [
+						{ "chapter": { "numbers": ["13", "14", "15"] } }
+					],
+					"goToVerse": "15"
+				},
+				{
+					"requirements": [
+						{ "chapter": { "numbers": ["13", "14", "15"] }, "not": true }
+					],
+					"goToVerse": "16a"
+				}
+			]
+		},
+		"16a": {
+			"text": "Lady Kincaid se acerca a ti, te coge la mano y te agradece tu último acto de servicio, y que le hayas sido leal solo a ella. Entonces, la gobernante de Vallelejano te revela que está a punto de cerrar las puertas de Vallelejano para siempre, confiando en que el antiguo dolmen ayude a su pueblo a sobrevivir a la caída de Ávalon. Si colocas tu tosco menhir a la entrada del Gran Salón, te hará su asesor de confianza.",
+			"actions": [
+				{
+					"action": "Aceptas y te instalas en Vallelejano",
+					"goToVerse": "18"
+				},
+				{
+					"action": "Rehúsas y te vas a ayudar a otras comunidades",
+					"goToBosVerse": "777"
+				}
+			]
+		},
+		"17": {
+			"text": "<p>Ves el Gran Salón en la parte más alta de la ciudad, pero las calles son tan estrechas y retorcidas que no es fácil llegar allí. Pides a algunos lugareños que te muestren el camino, pero se muestran desconfiados y hostiles. Lady Kincaid parece ser popular, a pesar del baño de sangre que, según dicen, ha causado en el norte.</p><p>Hasta hace poco, la actual gobernante de Vallelejano estaba a la sombra de su marido como esposa obediente y sin opiniones políticas. Lord Kincaid fue convocado a Nueva Camelot con su único hijo y se le pidió que ayudara a la Mesa Redonda a llevar el Estado de Derecho al distrito a las afueras del castillo. Fueron asesinados en una revuelta contra los caballeros.</p><p>Una mujer más débil habría quedado destrozada, pero Lady Kincaid juró que nunca más dejaría que algo así le sucediera a su familia. Se convirtió en la gobernante más despiadada y pragmática que jamás había tenido Vallelejano.</p>",
+			"actions": [
+				{
+					"action": "Le preguntas por la primera expedición",
+					"description": "Si Lord Yvain estuvo aquí, Lady Kincaid debe saberlo",
+					"goToVerse": "5"
+				},
+				{
+					"action": "Le preguntas si puedes ayudarle en algo",
+					"description": "Ávalon requiere una mano firme que lo salve y ella parece ser la persona adecuada para esto",
+					"requirements": [
+						{ "status": { "name": "Guerra por Ávalon", "parts": [1] } },
+						{ "status": { "name": "Guerra por Ávalon", "parts": [2] }, "not": true }
+					],
+					"goToVerse": "7"
+				},
+				{
+					"action": "Entregas al prisionero",
+					"requirements": [
+						{ "secret": { "id": 12, "name": "Prisionero Famélico" } }
+					],
+					"goToVerse": "8"
+				},
+				{
+					"action": "Le entregas la cabeza",
+					"requirements": [
+						{ "secret": { "id": 16, "name": "Cabeza de Morrigan" } }
+					],
+					"goToVerse": "12"
+				},
+				{
+					"action": "Te vas",
+					"endExploration": true
+				}
+			]
+		},
+		"18": {
+			"goToBosVerse": "715"
 		}
 	},
 	"dream": {
-		
+		"text": "El suelo se agita mientras los gigantes amontonan más y más tierra en un agujero. El miedo y el sudor marcan sus rostros y todos murmuran las mismas palabras al trabajar, como un hechizo de protección. El suelo no se calma hasta que colocan las grandes piedras de un dolmen sobre el lugar. Sus arcanas palabras siguen resonando en tu mente al despertar."
 	},
 	"nightmare": {
-		
+		"text": "Las defensas han caído. El suelo se agrieta y el dolmen se derrumba como una avalancha. La cosa enterrada se libera, infectando la mente de la población. Se clavan los dedos en los ojos, intentando arrancárselos, y les sale sangre de los oídos. Se vuelven unos contra otros, mordiéndose y arañándose. Aquellos atrapados bajo las enormes piedras no son rescatados, sino saqueados; sus dedos y orejas mordidos para conseguir sus joyas. Te despiertas, jadeante, incapaz de sacar de tu mente los gritos y esas caóticas imágenes."
 	}
 }
