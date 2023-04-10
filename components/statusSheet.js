@@ -31,7 +31,7 @@ export function Status({ status }) {
 	let statusParts = [];
 	for (let i = 0; i < status.parts; i++) {
 		let checked = false;
-		if (status.numbered && status.checkedParts && status.checkedParts.includes(i + 1)) checked = true;
+		if (status.numbered && status.checkedParts && status.checkedParts.has(i + 1)) checked = true;
 		if (!status.numbered && status.checkedCount && i < status.checkedCount) checked = true;
 		statusParts.push(<StatusPart key={i} number={status.numbered && i + 1} checked={checked}/>);
 	}

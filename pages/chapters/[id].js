@@ -1,6 +1,6 @@
 import { getChaptersIds, getChapter, getQuests, getLocations, getBookOfSecrets, getStatusSheet } from "@/lib/backend";
 
-import React from "react";
+import React, { useEffect } from "react";
 import TableOfContents from "@/components/tableOfContents";
 import Chapter from "@/components/chapter";
 import StatusSheet from "@/components/statusSheet";
@@ -35,22 +35,24 @@ export default function ChapterPage({ chapter, quests, locations, bookOfSecrets,
 	const [statusSheet, setStatusSheet] = React.useState(emptyStatusSheet);
 
 	function checkStatus(statusData) {
-		statusSheet.map((status) => {
-			if (status.name == statusData.name) {
-				// Check status
-				if (statusData.parts) {
-					if (status.checkedParts) status.checkedParts.push(statusData.parts);
-					else status.checkedParts = statusData.parts;
+		useEffect(() => {
+			const newStatusSheet = statusSheet.map((status) => {
+				if (status.name == statusData.name) {
+					// Check status
+					if (statusData.parts) {
+						if (status.checkedParts) statusData.parts.forEach(part => status.checkedParts.add(part));
+						else status.checkedParts = new Set(statusData.parts);
+					}
+					else if (statusData.count) {
+						if (status.checkedCount) status.checkedCount += statusData.count;
+						else status.checkedCount = statusData.count;
+					}
+					else status.checkedCount = 1;
 				}
-				else if (statusData.count) {
-					if (status.checkedCount) status.checkedCount += statusData.count;
-					else status.checkedCount = statusData.count;
-				}
-				else status.checkedCount = 1;
-			}
-			else return status;
-		});
-		setStatusSheet(statusSheet);
+				return status;
+			});
+			setStatusSheet(newStatusSheet);
+		}, []);
 	}
 
 	return (
