@@ -19,13 +19,15 @@ export default function Action({ actionData, locationData, bookOfSecrets, first 
 				{actionData.action &&
 					<span className={styles.action}>{actionData.action}</span>
 				}
-				{actionData.description && 
-					<span className={styles.description}> - {actionData.description}</span>
-				}
 				
 				{/* Requirements */}
 				{actionData.requirements && 
 					<Requirements requirementsData={actionData.requirements}/>
+				}
+
+				{/* Description */}
+				{actionData.description && 
+					<span className={styles.description}> - {actionData.description}</span>
 				}
 
 				:
@@ -33,7 +35,7 @@ export default function Action({ actionData, locationData, bookOfSecrets, first 
 
 			{/* Rewards */}
 			{actionData.rewards && 
-				<Rewards rewardsData={actionData.rewards}/>
+				<Rewards rewardsData={actionData.rewards} checkStatus={(rewardData) => checkStatus(rewardData)}/>
 			}
 
 			{/* End exploration */}

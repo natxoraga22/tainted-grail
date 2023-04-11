@@ -1,5 +1,5 @@
 {
-	"status": "IN PROGRESS",
+	"status": "DONE",
 
 	"name": "Estampida",
 	"introduction": "<p>La mayor llanura de la isla ha servido desde hace mucho como una forma de honrar a los dioses. Fue el propio Merlín, uno de los legendarios archidruidas, quien ayudó a cavar la extensa red de zanjas llenas de caliza blanca, creando signos sagrados visibles solo desde el cielo.</p><p>La llanura solía ser un lugar sagrado, pero ahora tiene ecos de sonidos de animales asustados y lamentos humanos. Los supervivientes del borde occidental de Ávalon huyen cruzando la llanura, hacia Vallelejano, Cuanacht o Nueva Camelot.</p>",
@@ -15,10 +15,18 @@
 	],
 	"verses": {
 		"1": {
-			"text": ""
+			"text": "Les indicas el camino y asienten, desesperados por cualquier consejo que puedas ofrecerles. Enseguida, se ponen en camino en la dirección que elegiste. Otros grupos se quedan atrás. Notas un nudo en la garganta. ¿Tomaste la decisión correcta?",
+			"rewards": [
+				{ "status": { "name": "Encuentros extraños", "parts": [2] } }
+			],
+			"endExploration": true
 		},
 		"3": {
-			"text": ""
+			"text": "Les indicas el camino y asienten, desesperados por cualquier consejo que puedas ofrecerles. Enseguida, se ponen en camino en la dirección que elegiste. Otros grupos se quedan atrás. Notas un nudo en la garganta. ¿Tomaste la decisión correcta?",
+			"rewards": [
+				{ "status": { "name": "Encuentros extraños", "parts": [2] } }
+			],
+			"endExploration": true
 		},
 		"4": {
 			"text": "Los viajeros están asustados y cansados de huir. Los niños lloran, acurrucados en carros abarrotados. Las mujeres y los hombres están serios, sin expresión. Reconoces los tartanes y símbolos de varios asentamientos occidentales: Finisterra, Punta Gorrión, Dungale. Lugares caídos en el olvido.",
@@ -155,16 +163,23 @@
 			]
 		},
 		"10": {
-			
+			"text": "<p>Les explicas pacientemente que no hay una solución fácil. La tierra segura que esperaban está en peligro por la Rareza. Los asentamientos están en guerra. Nueva Camelot está fracasando.</p><p>Eso no es lo que querían oír. Reaccionan co nasombro e incredulidad y los niños empiezan a llorar. Al rato, se reúnen para discutir sus planes: quieren dividirse, cada pequeño grupo buscará suerte por su cuenta. Esperas que al menos alguno de ellos lo logre.</p>",
+			"rewards": [
+				{ "status": { "name": "Encuentros extraños", "parts": [2] } }
+			],
+			"endExploration": true
 		},
 		"11": {
-			
+			"text": "Lord Yvain está muerto. Lo odiabas tanto como él a ti y te sorprendiste cuando, de entre toda la gente de Cuanacht, decidió perdirte ayuda a ti. Ahora descubres que estaba dispuesto a pagar el precio más caro para salvar a su pueblo: su vida. Si un hombre así podía hacer grandes obras, ¿tal vez tú también puedas?",
+			"rewards": [
+				{ "status": { "name": "Lección final", "parts": [4] } }
+			]
 		}
 	},
 	"dream": {
-		"text": "El suelo se agita mientras los gigantes amontonan más y más tierra en un agujero. El miedo y el sudor marcan sus rostros y todos murmuran las mismas palabras al trabajar, como un hechizo de protección. El suelo no se calma hasta que colocan las grandes piedras de un dolmen sobre el lugar. Sus arcanas palabras siguen resonando en tu mente al despertar."
+		"text": "Sueñas que vuelas y es aún más asombroso por el mar de señales blancas que se extienden en las llanuras bajo tus pies. Ahora que las ves todas juntas, una idea se engendra en tu mente. ¡Ahora lo entiendes! ¡La verdad! ¡LA VERDAD!"
 	},
 	"nightmare": {
-		"text": "Las defensas han caído. El suelo se agrieta y el dolmen se derrumba como una avalancha. La cosa enterrada se libera, infectando la mente de la población. Se clavan los dedos en los ojos, intentando arrancárselos, y les sale sangre de los oídos. Se vuelven unos contra otros, mordiéndose y arañándose. Aquellos atrapados bajo las enormes piedras no son rescatados, sino saqueados; sus dedos y orejas mordidos para conseguir sus joyas. Te despiertas, jadeante, incapaz de sacar de tu mente los gritos y esas caóticas imágenes."
+		"text": "<p>Te despiertas solo en una densa niebla que parece cubrir el mundo entero. El sol, la luna y las estrellas han desaparecido, dejando solo una nívea nada.</p><p>Pasas horas vagando a ciegas. No queda nada. Todo tu mundo ha vuelto al vacío. Te despiertas con un fuerte dolor en el corazón, sudando a mares.</p>"
 	}
 }

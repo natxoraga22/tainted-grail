@@ -1,0 +1,125 @@
+{
+	"status": "IN PROGRESS",
+
+	"name": "Altomuro",
+	"introduction": "Con la espalda apoyada sobre la seguridad de una infranqueable fortificación de los Primeros Moradores, Altomuro se eleva tanto que es visible a kilómetros de distancia. La gente de esta ciudad se parece a su hogar: oportunista, orgullosa y aferrada a cualquier ventaja que pueda obtener en este brutal mundo.",
+	"actions": [
+		{
+			"action": "Desciendes a la mina",
+			"goToVerse": "2"
+		},
+		{
+			"action": "Investigas las viviendas",
+			"goToVerse": "1"
+		}
+	],
+	"verses": {
+		"1": {
+			"text": "La mayoría de los edificios en torno al complejo minero están viejos y semihundidos, pero hay una cabaña grande que parece estar casi nueva y relativamente intacta.",
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Sueños y profecías", "parts": [7] } }
+					],
+					"endExploration": true
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Sueños y profecías", "parts": [7] }, "not": true }
+					],
+					"goToVerse": "1a"
+				}
+			]
+		},
+		"1a": {
+			"text": "<p>Entras en el edificio, aparentemente vacío, y empiezas a buscar. Te da un vuelco el corazón al ver por el rabillo del ojo a un hombre con atuendo de minero. Está saliendo directamente de una pared: la parte superior del torso y la cabeza sobresalen de un complejo entramado de venas, nervios y tripas. Al verte, levanta despacio la cabeza. En ves de ojos, dos grupos de flores blancas inyectadas en sangre te miran. Entonces, te habla:</p><p>«Pobre criatura. Si tan solo pudieras saborear las infinitas capas de los sueños. Si pudieras oír el tiempo derramándose sobre los huesos de la historia. Si pudieras ver el color del abandono o la textura del anhelo».</p>",
+			"actions": [
+				{
+					"action": "Acabas con su miseria",
+					"description": "En su lugar, querrías que alguien hiciera lo mismo",
+					"goToVerse": "4"
+				},
+				{
+					"action": "Lo dejas estar"
+				},
+				{
+					"action": "Aprendes de él",
+					"description": "Escuchar a alguien que ha pasado décadas o incluso siglos sumergido en la Rareza es tan intrigante como peligroso",
+					"requirements": [
+						{ "attribute": { "name": "Empatía", "level": 1 } }
+					],
+					"goToVerse": "6"
+				}
+			]
+		},
+		"2": {
+			"text": "Entras en las sombras...",
+			"testResults": {
+				"1-5": {
+					"text": "Recorres los pasillos húmedos y cálidos, como si fueran las entrañas de una bestia colosal que intenta devorarte. Ruidos extraños afectan a tus sentidos y te ponen de los nervios.",
+					"goToVerse": "5"
+				},
+				"6": {
+					"text": "Los túneles están secos y tu garganta se reseca con solo respirar. De repente, el espacio se ensancha y el aire se vuelve más respirable. Hay un extraño altar hecho de huesos de animales, probablemente construido por los mineros. Hay algo sobre el altar. ¿Un corazón humano disecado?",
+					"goToVerse": "5"
+				},
+				"7": {
+					"text": "Este es un lugar peligroso. Los desafortunados aventureros, cuyos cuerpos acabas de encontrar, lo descubrieron por las malas. Al menos parte de su equipo aún parece útil...",
+					"rewards": [
+						{ "status": { "name": "Tesoros ocultos", "parts": [8] } }
+					],
+					"goToVerse": "5"
+				},
+				"8+": {
+					"text": "Los pasillos se retuercen cada vez más en las profundidades de la tierra. Finalmente, llegas a un lugar donde este antiguo pasaje minero se cruza con algo aún más antiguo.",
+					"actions": [
+						{
+							"requirements": [
+								{ "chapter": { "numbers": ["6", "7", "11", "12", "13", "14", "15"] } }
+							],
+							"goToVerse": "3"
+						},
+						{
+							"requirements": [
+								{ "chapter": { "numbers": ["10"] } }
+							],
+							"goToBosVerse": "158"
+						}
+					]
+				}
+			}
+		},
+		"3": {
+			"text": "Los retorcidos túneles en la estructura abandonada de los Primeros Moradores se abren ante ti. Deambulas durante horas, admirando los complejos entramados de Rareza entre enormes estalactitas y estalagmitas. Cada una es diferente, aunque al cabo de un tiempo descubres patrones repetitivos, como letras o palabras. ¿Esto es realmente una mina? ¿O más bien una biblioteca?",
+			"rewards": [
+				{ "status": { "name": "Misterio insondable", "parts": [9] } }
+			],
+			"endExploration": true
+		},
+		"4": {
+			"text": "Cortarle el cuerpo resulta inútil. Solo destruyes las partes expuestas de carne, mientras que el resto, convertido en vigas de roble y suelo de piedra, permanece a salvo y muy vivo. Al final, quemas la choza. Conforme te marchas, perseguido por el horrible chillido, sigues pensando que no debería tener ese aspecto.",
+			"rewards": [
+				{ "status": { "name": "Sueños y profecías", "parts": [7] } }
+			],
+			"endExploration": true
+		},
+		"5": {
+			"text": "Finalmente llegas a una de las entradas laterales que cubren este terreno devastado como toperas.",
+			"endExploration": true
+		},
+		"6": {
+			"text": "Lograr que te escuche y responda a tus preguntas es una tarea difícil en sí. Entender las respuestas es otro tema. Los minutos se transforman en horas, poco a poco vas comprendiendo secretos y misterios que no fueron creados para los humanos. El lenguaje de las estrellas. Reglas ocultas del destino. La conexión entre las almas de las criaturas vivientes y los huevos de las serpientes devoradoras del tiempo. Dejas de preguntar justo antes de llegar al precipicio de la locura.",
+			"rewards": [
+				{ "status": { "name": "Misterio insondable", "parts": [4] } },
+				{ "status": { "name": "Sueños y profecías", "parts": [7] } }
+			],
+			"endExploration": true
+		}		
+	},
+	"dream": {
+		"text": "<p>Una procesión sin precedentes desciende por pasillos subterráneos. Altas e inhumanas figuras, cubiertas de tela blanca de pies a cabeza, avanzan a través de la oscuridad, rodeadas de luces flotantes. Se ponen a trabajar en las entrañas de la isla. Con la ayuda de peculiares herramientas y una magia extraña, separan un bloque de rarapiedra y la llevan a la superficie. Después, una figura se tumba en el bloque. Su cuerpo se funde lentamente con la rarapiedra, mientras la piedra toma la forma de un cuerpo. Se funden en uno, creando una esencia sólida, ni muerta ni viva. Alrededor de la estatua, el paso entre los reinos de la vida y la muerte está permanentemente entreabierto. Colocan la figura de rarapiedra en los fríos páramos fuera de los muros de Tuathán.</p><p>Te despiertas, queriendo olvidar este extraño sueño. Sabes que Arturo levantó los menhires para proteger a su gente de la Rareza. ¡Todos lo saben! ¡Este lugar estará jugando con tu mente!</p>"
+	},
+	"nightmare": {
+		"text": "<p>Te despiertas en medio de la noche. Algo va mal: el suelo se dobla hacia arriba, oscureciendo el cielo nocturno. Corres en la dirección opuesta, huyendo de la anomalía. Luego, miras hacia arriba y ves tu campamento y a ti mismo muy por encima. De repente, no puedes moverte. Miras cómo tu doble, también paralizado, se prende fuego lentamente y se quema, con los ojos abiertos y llenos de dolor y terror.</p><p>Te despiertas, exhausto pero aliviado. Luego, el dolor punzante te avisa de que tu ropa está ardiendo.</p>"
+	}
+}

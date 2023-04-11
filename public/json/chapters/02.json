@@ -48,7 +48,59 @@
 					{ "verse": "8", "action": 2 },
 					{ "bosVerse": "264", "action": 0 },
 					{ "bosVerse": "301", "action": 0 },
-					{ "bosVerse": "174", "action": 1 }
+					{ "bosVerse": "174", "action": 1 },
+					{ "action": "dream" }
+				]
+			}
+		},
+		{
+			"personal": "<p>Las pisadas de la primera expedición se dirigen al noreste, pero Arev y Ailei no pueden ir en esa dirección, ya que tendrían que reactivar el menhir de los Túmulos de los Primeros Moradores. En su lugar, deciden ir al norte, en dirección a Altomuro.</p><p>Para llegar, deben pasar primero por el Pie de la Muralla.</p>"
+		},
+		{
+			"location": {
+				"id": "111",
+				"actions": [
+					{ "action": 0 },
+					{ "verse": "1", "action": 0 },
+					{ "verse": "2", "testResult": "5+" },
+					{ "verse": "2a", "action": 1 },
+					{ "verse": "8", "action": 1, "skipText": true },
+					{ "verse": "2", "testResult": "5+" },
+					{ "verse": "2a", "action": 0 },
+					{ "verse": "10", "action": 0 },
+					{ "action": 1 },
+					{ "verse": "3", "action": 0 },
+					{ "verse": "9", "action": 1 },
+					{ "action": 2 },
+					{ "verse": "7", "action": 0 },
+					{ "bosVerse": "435", "action": 1 },
+					{ "bosVerse": "410", "action": 1 },
+					{ "bosVerse": "342", "action": 1 }
+				]
+			}
+		},
+		{
+			"personal": "Arev y Ailei encienden el menhir de Pie de la Muralla, pero antes de visitar Altomuro se paran un momento al oeste de Vallelejano, en Devastación."
+		},
+		{
+			"location": {
+				"id": "139",
+				"actions": [
+					{ "action": 1 },
+					{ "verse": "1", "action": 1 },
+					{ "verse": "1a", "action": 2 },
+					{ "action": "dream" }
+				]
+			}
+		},
+		{
+			"personal": "Con Devastación ya explorado, Arev y Ailei siguen hacia el norte, a Altomuro."
+		},
+		{
+			"location": {
+				"id": "131",
+				"actions": [
+					
 				]
 			}
 		}

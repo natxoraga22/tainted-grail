@@ -7,17 +7,19 @@ export default function Verse({ verseData, locationData, bookOfSecrets, bosVerse
 	let text = verseData.text;
 	if (testResult) {
 		verseData = verseData.testResults[testResult];
-		text = '<p><strong>' + testResult + '</strong> - ' + verseData.text + '</p>';
+		text = '<p><strong>' + testResult + '</strong>' + (verseData.text ? ' - ' + verseData.text + '</p>' : '');
 	}
 	let showVerse = bosVerseNumber || text || verseData.encounters || verseData.rewards || verseData.task || verseData.endExploration;
 	if (skipText) showVerse = false;
+
+	const onlyDigits = /^[0-9]+$/;
 
 	return (
 		<>
 			{showVerse &&
 				<div className={!verseData.testResults && styles.verseMargin}>
 					{/* Book of Secrets */}
-					{bosVerseNumber &&
+					{(bosVerseNumber && onlyDigits.test(bosVerseNumber)) &&
 						<div className={styles.bosVerseNumber}>
 							L<small>DL</small>S - Versículo {bosVerseNumber}
 						</div>

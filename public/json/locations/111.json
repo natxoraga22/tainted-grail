@@ -1,0 +1,187 @@
+{
+	"status": "DONE",
+
+	"name": "Pie de la Muralla",
+	"introduction": "<p>El muro se eleva como una oscura nube sobre el bosque de árboles dispersos. Donde quiera que vayas, su perturbadora superficie sigue atrayendo tu mirada, con su textura de hueso deformado. Hay muchas aberturas en ella. ¿Podría alguna conducir hacia las legendarias riquezas de Tuathán?</p><p>Por suerte, a las criaturas salvajes no parece importarles su majestuosa presencia. Las arboledas y los claros están llenos de presas. A lo lejos, puedes ver un grupo de viajeros arrastrando trabajosamente sus carros por la maleza.</p>",
+	"actions": [
+		{
+			"action": "Exploras los recovecos de la muralla",
+			"goToVerse": "1"
+		},
+		{
+			"action": "Te acercas a los viajeros",
+			"goToVerse": "3"
+		},
+		{
+			"action": "Te sientas y admiras la muralla",
+			"goToVerse": "7"
+		}
+	],
+	"verses": {
+		"1": {
+			"text": "El muro de aspecto óseo tiene muchas aberturas, algunas lo suficientemente grandes como para entrar. Te armas de valor y te adentras en la estructura sobrenatural. Una fuerte sensación de vértigo te inunda a los pocos minutos. Es fácil perderse en este laberinto de pasillos bajos y rendijas estrechas.",
+			"actions": [
+				{
+					"action": "Sigues adentrándote",
+					"requirements": [
+						{ "attribute": { "name": "Audacia", "level": 1 } }
+					],
+					"goToVerse": "2"
+				},
+				{
+					"action": "Decides retirarte y salir",
+					"endExploration": true
+				}
+			]
+		},
+		"2": {
+			"text": "Adentrarse en sus profundidades es como gatear entre los restos esqueléticos de una gigantesca criatura, muerta hace mucho tiempo.",
+			"testResults": {
+				"1-4": {
+					"goToVerse": "4"
+				},
+				"5+": {
+					"goToVerse": "2a"
+				}
+			}
+		},
+		"2a": {
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Sueños y profecías", "parts": [3] } }
+					],
+					"goToVerse": "10"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Sueños y profecías", "parts": [3] }, "not": true }
+					],
+					"goToVerse": "8"
+				}
+			]
+		},
+		"3": {
+			"text": "Te acercas al grupo: un puñado de rudos mercenarios. Una de sus carretas, cargadas hasta arriba con piezas de madera de algo parecido a una catapulta gigante, tiene un eje roto. Viendo que te acercas, te piden amablemente que les ayudes a arreglarlo.",
+			"actions": [
+				{
+					"action": "Ayudas a los mercenarios",
+					"requirements": [
+						{ "attribute": { "name": "Lógica", "level": 1 } }
+					],
+					"goToVerse": "9"
+				},
+				{
+					"action": "Negocias con los mercenarios",
+					"description": "El largo viaje está agotando sus suministros, pero van cargados de botines de guerra",
+					"goToVerse": "11"
+				},
+				{
+					"action": "Te vas",
+					"endExploration": true
+				}
+			]
+		},
+		"4": {
+			"text": "Mientras te arrastras por uno de los conductos más pequeños de la pared, un habitante de este óseo laberinto te ataca repentinamente.",
+			"actions": [
+				{
+					"action": "Sales del laberinto",
+					"endExploration": true
+				},
+				{
+					"action": "Continúas tu recorrido",
+					"requirements": [
+						{ "attribute": { "name": "Audacia", "level": 1 } }
+					],
+					"goToVerse": "2"
+				}
+			]
+		},
+		"7": {
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Cosuil", "parts": [1] }, "not": true },
+						{ "status": { "name": "Cosuil", "parts": [5] }, "not": true }
+					],
+					"goToBosVerse": "435"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Cosuil", "parts": [1] } }
+					],
+					"goToVerse": "7a"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Cosuil", "parts": [5] } }
+					],
+					"goToVerse": "7a"
+				}
+			]
+		},
+		"7a": {
+			"text": "<p>El muro es tan alto como una montaña, más alto que las Espadas Olvidadas de los gigantes, cerca de tu pueblo natal. Algún día te gustaría orinar desde el borde de su cima...</p><p>Mientras te preparas para continuar, observas que una extraña criatura aparece en la cima del muro. Un escalofrío te recorre la espalda. ¿Está Tuathán realmente desierta?</p>",
+			"endExploration": true
+		},
+		"8": {
+			"text": "<p>Te topas con cinco cadáveres. Su carne disecada apenas se aferra a los huesos, que se han entremezclado con la pared.</p><p>Escudriñas los cadáveres. Por suerte, son demasiado antiguos como para pertenecer a los campeones de tu pueblo. Sin embargo, parte de su equipamiento podría ser útil. Encuentras un objeto brillante sujetado con delicadeza por una mano seca. Es un material extraño: ni metal ni madera. Esta joya no es de origen humano, pero los símbolos grabados en ella sin duda lo son.</p>",
+			"rewards": [
+				{ "secret": { "id": 21, "name": "Talismán Deslucido" } },
+				{ "status": { "name": "Sueños y profecías", "parts": [3] } }
+			],
+			"actions": [
+				{
+					"action": "Sales del laberinto",
+					"endExploration": true
+				},
+				{
+					"action": "Continúas tu recorrido",
+					"requirements": [
+						{ "attribute": { "name": "Audacia", "level": 1 } }
+					],
+					"goToVerse": "2"
+				}
+			]
+		},
+		"9": {
+			"text": "<p>Los mercenarios agradecen tu ayuda y te invitan a compartir una modesta cena. Sentados alrededor del fuego, te cuentan la historia completa del asedio de Altomuro.</p><p>Todo comenzó cuando Lady Kincaid, la reina viuda de Vallelejano, contactó con Ultan, el más rico e influyente de los comerciantes de Altomuro, con una proposición de matrimonio. Ultan no tuvo que pensárselo mucho. Vallelejano había dejado atrás su gloria y las arcas de Lady Kincaid estaban llenas de aire y telarañas, pero, con ella como esposa, uniría las dos ciudades más grandes de la isla bajo un mismo gobierno.</p><p>Su boda se celebró poco después, en Vallelejano. Al no estar tan familiarizado con las Antiguas Costumbres como la gente del sur, el pobre idiota de Ultan no sabía que el rito que se realizó era una «unión de manos» (un matrimonio provisional de un año, tradición que no se había llevado a cabo desde hacía siglos). Durante los doce meses siguientes, Lady Kincaid amplió el ejército y las fortificaciones de Vallelejano, utilizando la riqueza de su marido. Cuando hubo pasado un año, lo desterró. Poco después, el ejército de Vallelejano asedió Altomuro.</p><p>A medida que la historia continúa, descubres que este grupo de mercenarios ha conocido a los campeones de tu pubelo. Lord Yvain y el resto participaron en el asedio bajo la bandera de Kincaid, hasta que una noche cambiaron de improvisto de bando y cruzaron la frontera hacia Altomuro.</p><p>Te sorprende mucho. Como todos en Cuanacht, sabes que Yvain nunca faltaría a su palabra. Debió tener una buena razón.</p>",
+			"rewards": [
+				{ "status": { "name": "El destino de la expedición", "parts": [4] } }
+			],
+			"actions": [
+				{
+					"action": "Negocias con los mercenarios",
+					"description": "El largo viaje está agotando sus suministros, pero van cargados de botines de guerra",
+					"goToVerse": "11"
+				},
+				{
+					"action": "Os separáis",
+					"endExploration": true
+				}
+			]
+		},
+		"10": {
+			"text": "<p>Finalmente, tras lo que parece una semana arrastrándote por pasadizos estrechos, llegas a la cima del muro.</p><p>La vista es tan impresionante como te habías imaginado, con el Lago del Espejo brillando como un cuenco de plata al Este, no muy lejos, y los muros de Nueva Camelot más allá.</p>",
+			"actions": [
+				{
+					"action": "Orinas desde la cima del muro",
+					"description": "¡Ahora ya te sientes como un verdadero aventurero!",
+					"rewards": [
+						{ "status": { "name": "Encuentros extraños", "parts": [4] } }
+					],
+					"endExploration": true
+				},
+				{
+					"action": "Regresas a través del laberinto",
+					"endExploration": true
+				}
+			]
+		},
+		"11": {
+			"text": "El grupo está encantado de intercambiar parte de su botín por comida. Te muestran sus objetos: dientes de oro, algunos con manchas de sangre seca; trenzas de mujer aún adornadas con piedras preciosas; juguetes para niños y varios objetos sagrados. Está claro que sus anteriores dueños no los entregaron de buena gana.",
+			"endExploration": true
+		}
+	}
+}

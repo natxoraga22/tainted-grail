@@ -135,7 +135,6 @@
 					"goToVerse": "3"
 				},
 				"6+": {
-					"text": "Lo logras.",
 					"rewards": [
 						{ "secret": { "id": 27, "name": "Martillo de Viejoacero" } }
 					],
