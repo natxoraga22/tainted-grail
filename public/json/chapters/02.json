@@ -100,7 +100,21 @@
 			"location": {
 				"id": "131",
 				"actions": [
-					
+					{ "action": 1 },
+					{ "verse": "1", "action": 1 },
+					{ "verse": "21", "action": 0 },
+					{ "verse": "4", "action": 1 },
+					{ "verse": "7", "action": 0 },
+					{ "verse": "10", "action": 0 },
+					{ "bosVerse": "242", "action": 0 },
+					{ "bosVerse": "299", "action": 1 },
+
+					{ "verse": "7", "action": 1, "first": true },
+					{ "verse": "2", "action": 0 },
+
+					{ "verse": "7", "action": 2 },
+					{ "verse": "12", "action": 2 },
+					{ "verse": "14", "action": 0 }
 				]
 			}
 		}

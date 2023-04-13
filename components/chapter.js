@@ -79,7 +79,7 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets, che
 												actionData={actionData}
 												locationData={locationData}
 												bookOfSecrets={bookOfSecrets}
-												first={!locationAction.verse && !locationAction.bosVerse}
+												first={locationAction.first || (!locationAction.verse && !locationAction.bosVerse)}
 												last={lastAction}
 												skipText={locationAction.skipText}
 												checkStatus={(statusData) => checkStatus(statusData)}

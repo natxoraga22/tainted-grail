@@ -1,35 +1,39 @@
 
-.verseMargin:has(+ :not(.verseMargin)) {
-    margin-bottom: 20pt;
+.verseMarginBottom:has(+ .verseMarginTop) {
+	margin-bottom: 20pt;
+}
+
+.verseMarginBottom:has(+ :not(.verseMarginBottom)) {
+	margin-bottom: 20pt;
 }
 
 .bosVerseNumber {
-    margin-top: 10pt;
-    margin-bottom: 5pt;
-    font-family: Palatino;
-    font-weight: bold;
-    font-size: 11pt;
+	margin-top: 10pt;
+	margin-bottom: 5pt;
+	font-family: Palatino;
+	font-weight: bold;
+	font-size: 11pt;
 }
 
 .text {
-    margin-bottom: 10pt;
-    font-family: Palatino;
+	margin-bottom: 10pt;
+	font-family: Palatino;
 	font-style: italic;
 	font-size: 11pt;
 }
 
 .text p {
-    margin-bottom: 5pt;
+	margin-bottom: 5pt;
 }
 
 .encounter {
-    margin-bottom: 5pt;
-    font-family: Palatino;
-    font-size: 11pt;
+	margin-bottom: 5pt;
+	font-family: Palatino;
+	font-size: 11pt;
 }
 
 .task {
-    margin-bottom: 5pt;
-    font-family: Palatino;
-    font-size: 11pt;
+	margin-bottom: 5pt;
+	font-family: Palatino;
+	font-size: 11pt;
 }

@@ -13,13 +13,14 @@ export default function Verse({ verseData, locationData, bookOfSecrets, bosVerse
 	if (skipText) showVerse = false;
 
 	const onlyDigits = /^[0-9]+$/;
+	const bosVerseNumberOnlyDigits = bosVerseNumber && onlyDigits.test(bosVerseNumber);
 
 	return (
 		<>
 			{showVerse &&
-				<div className={!verseData.testResults && styles.verseMargin}>
+				<div className={(!verseData.testResults && styles.verseMarginBottom) + ' ' + (bosVerseNumberOnlyDigits && styles.verseMarginTop)}>
 					{/* Book of Secrets */}
-					{(bosVerseNumber && onlyDigits.test(bosVerseNumber)) &&
+					{bosVerseNumberOnlyDigits &&
 						<div className={styles.bosVerseNumber}>
 							L<small>DL</small>S - Versículo {bosVerseNumber}
 						</div>
