@@ -112,7 +112,7 @@
 					{ "verse": "7", "action": 1, "first": true },
 					{ "verse": "2", "action": 0 },
 
-					{ "verse": "7", "action": 2 },
+					{ "verse": "7", "action": 2, "first": true },
 					{ "verse": "12", "action": 2 },
 					{ "verse": "14", "action": 0 }
 				]

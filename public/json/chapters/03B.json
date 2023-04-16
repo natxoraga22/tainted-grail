@@ -29,9 +29,25 @@
 					{ "verse": "6a", "action": 0 },
 					{ "verse": "3", "testResult": "7+" },
 					{ "verse": "7", "action": 0 },
-					{ "verse": "9", "action": 1 }
+					{ "verse": "9", "action": 1 },
+					{ "bosVerse": "163", "action": 0 },
+					{ "bosVerse": "337", "action": 0 },
+					{ "bosVerse": "337", "action": 1 },
+					{ "bosVerse": "337", "action": 2 },
+					{ "bosVerse": "337", "action": 3 },
+					{ "bosVerse": "163", "action": 1 },
+					{ "bosVerse": "163", "action": 2 },
+					{ "bosVerse": "163", "action": 3 },
+					{ "bosVerse": "471", "action": 2 },
+					{ "bosVerse": "163", "action": 4 },
+					{ "verse": "7", "action": 3 },
+
+					{ "action": "dream" }
 				]
 			}
+		},
+		{
+			"personal": "Rostro Sereno ha dado para mucho, y con el menhir activado, Arev y Ailei ya se pueden dirigir a nuevas localizaciones para explorar."
 		},
 		{
 			"quest": "03B-2"
