@@ -1,7 +1,8 @@
+import Verse from '@/components/chapterSections/verse';
 import styles from '@/styles/Quest.module.css';
 
 
-export default function Quest({ questData }) {
+export default function Quest({ questData, bookOfSecrets }) {
 	const imageUrl = '/img/quests/' + questData.id + '.jpeg';
 
 	return (
@@ -31,6 +32,15 @@ export default function Quest({ questData }) {
 			{/* HTML */}
 			{questData.html && 
 				<div className={styles.html} dangerouslySetInnerHTML={{ __html: questData.html }}></div>
+			}
+
+			{/* Book of Secrets */}
+			{questData.goToBosVerse &&
+				<Verse
+					verseData={bookOfSecrets[questData.goToBosVerse]}
+					bookOfSecrets={bookOfSecrets}
+					bosVerseNumber={questData.goToBosVerse}
+				/>
 			}
 			
 			{/* Image */}

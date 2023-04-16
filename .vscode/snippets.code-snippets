@@ -1,0 +1,125 @@
+{
+	"location": {
+		"prefix": "location",
+		"body": [
+			"\"location\": {",
+			"\t\"id\": \"$1\",",
+			"\t\"actions\": [",
+			"\t\t$2",
+			"\t]",
+			"}"
+		]
+	},
+
+	"action": {
+		"prefix": "action",
+		"body": [
+			"{ \"action\": $1 }"
+		]
+	},
+
+	"verseAction": {
+		"prefix": "verseAction",
+		"body": [
+			"{ \"verse\": \"$1\", \"action\": $2 }"
+		]
+	},
+
+	"bosVerseAction": {
+		"prefix": "bosVerseAction",
+		"body": [
+			"{ \"bosVerse\": \"$1\", \"action\": $2 }"
+		]
+	},
+
+	"actions": {
+		"prefix": "actions",
+		"body": [
+			"\"actions\": [",
+			"\t{",
+			"\t\t$1",
+			"\t}",
+			"]"
+		]
+	},
+
+	"action-leaving": {
+		"prefix": "te vas",
+		"body": [
+			"\"action\": \"Te vas\",",
+			"\"endExploration\": true"
+		]
+	},
+
+	"requirements": {
+		"prefix": "requirements",
+		"body": [
+			"\"requirements\": [",
+			"\t$1",
+			"]"
+		]
+	},
+
+	"chapter": {
+		"prefix": "chapter",
+		"body": [
+			"{ \"chapter\": { \"numbers\": [\"$2\"] } }"
+		]
+	},
+
+	"character": {
+		"prefix": "character",
+		"body": [
+			"{ \"character\": { \"name\": \"$1\" } }"
+		]
+	},
+
+	"attribute": {
+		"prefix": "attribute",
+		"body": [
+			"{ \"attribute\": { \"name\": \"$1\", \"level\": $2 } }"
+		]
+	},
+
+	"status": {
+		"prefix": "status",
+		"body": [
+			"{ \"status\": { \"name\": \"$1\", \"parts\": [$2] } }"
+		]
+	},
+
+	"secret": {
+		"prefix": "secret",
+		"body": [
+			"{ \"secret\": { \"id\": $1, \"name\": \"$2\" } }"
+		]
+	},
+
+	"rewards": {
+		"prefix": "rewards",
+		"body": [
+			"\"rewards\": [",
+			"\t$1",
+			"]"
+		]
+	},
+
+	"endExploration": {
+		"prefix": "endExploration",
+		"body": [
+			"\"endExploration\": true"
+		]
+	},
+
+	"dream": {
+		"prefix": "dream",
+		"body": [
+			"\"dream\": {",
+			"\t\"text\": \"$1\"",
+			"},",
+			"\"nightmare\": {",
+			"\t\"text\": \"$2\"",
+			"}"
+		]
+	}
+}

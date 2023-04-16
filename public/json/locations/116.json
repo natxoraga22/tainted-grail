@@ -270,11 +270,11 @@
 				},
 				{
 					"action": "Le preguntas si puedes ayudarle en algo",
-					"description": "Ávalon requiere una mano firme que lo salve y ella parece ser la persona adecuada para esto",
 					"requirements": [
 						{ "status": { "name": "Guerra por Ávalon", "parts": [1] } },
 						{ "status": { "name": "Guerra por Ávalon", "parts": [2] }, "not": true }
 					],
+					"description": "Ávalon requiere una mano firme que lo salve y ella parece ser la persona adecuada para esto",
 					"goToVerse": "7"
 				},
 				{

@@ -1,5 +1,5 @@
 {
-	"status": "IN PROGRESS",
+	"status": "DONE",
 
 	"name": "Altomuro",
 	"introduction": "Con la espalda apoyada sobre la seguridad de una infranqueable fortificación de los Primeros Moradores, Altomuro se eleva tanto que es visible a kilómetros de distancia. La gente de esta ciudad se parece a su hogar: oportunista, orgullosa y aferrada a cualquier ventaja que pueda obtener en este brutal mundo.",
@@ -40,10 +40,10 @@
 					"goToVerse": "8"
 				},
 				{
-					"description": "Siendo un extraño, es difícil hacer que la gente confíe en ti y es fácil meterse en problemas",
 					"requirements": [
 						{ "attribute": { "name": "Empatía", "level": 1 }, "not": true }
 					],
+					"description": "Siendo un extraño, es difícil hacer que la gente confíe en ti y es fácil meterse en problemas",
 					"endExploration": true
 				}
 			]
@@ -292,7 +292,13 @@
 			"goToVerse": "14"
 		},
 		"13": {
-
+			"text": "<p>Ultan se marea de emoción cuando ve que le traes al chico.</p><p>«¡Sabía que podía contar contigo!», dice, entregándote el pago, mientras sus sirvientes sacan al prisionero de la habitación.</p>",
+			"rewards": [
+				{ "status": { "name": "Aliados de Ávalon", "parts": [4] } },
+				{ "status": { "name": "Enemigos de Ávalon", "parts": [1] } },
+				{ "secret": { "id": 12, "name": "Prisionero Famélico" }, "lost": true }
+			],
+			"goToBosVerse": "135"
 		},
 		"14": {
 			"text": "<p>Ultan te cuenta su historia: hace más de un año, la reina viuda de Vallelejano lo engañó para contraer un matrimonio diplomático con la intención de que su familia se hiciera con el monopolio del interior de Ávalon. Usaron una vieja y olvidada tradición para engañarlo y traicionarlo. Él perdió Vallelejano y su exesposa se quedó con una gran parte de su riqueza. Al no intervenir Nueva Camelot, Ultan pidió ayuda a Nido del Cuervo a cambio de un prometedor botín, que no logró reunir tras una sangrienta e inconclusa batalla en un valle cercano.</p><p>Ahora, en compañía del resto de su ejército, está sitiado por sus antiguos aliados y busca alguien que le ayude a salir de esta difícil situación.</p><p>«Lady Kincaid se cree la mujer más inteligente de toda la maldita isla. Pero hay algo que esa bruja no sabe: ¡su precioso cachorrito sigue vivo! No murió con su padre en la revuelta en el distrito de Nueva Camelot. Fue capturado por los revolucionarios y está preso en un broch al norte de la ciudad. Si pudieras rescatarlo, eso haría mis negociaciones con Vallelejano mucho más fáciles. ¡Y serás recompensado debidamente!».</p>",
@@ -304,6 +310,115 @@
 				{
 					"action": "Te niegas",
 					"goToVerse": "15"
+				}
+			]
+		},
+		"15": {
+			"text": "<p>«Una pena. Ahora que conoces mis planes, entiendes que no pueda liberarte, ¿verdad? ¡Guardias!».</p><p>Su grito resuena bajo el alto techo de la sala y, antes de que puedas reaccionar, un grupo de sombríos guardias irrumpe por la puerta.</p>",
+			"rewards": [
+				{ "status": { "name": "Enemigos de Ávalon", "parts": [2] } }
+			],
+			"encounters": [
+				{ "name": "Compañía Guerrera", "color": "gris", "level": 4 }
+			],
+			"actions": [
+				{
+					"action": "Si pierdes",
+					"goToVerse": "16"
+				},
+				{
+					"action": "Si ganas o escapas",
+					"endExploration": true
+				}
+			]
+		},
+		"16": {
+			"text": "Destrozado y manchado de sangre, caes al otro lado del muro. Chapoteas en el foso: su agua fría te devuelve algunos de tus sentidos y te arrastras hasta la orilla.",
+			"endExploration": true
+		},
+		"17": {
+			"text": "Te aseguras de que a Ultan le llegue el mensaje sobre la reunión. Teniendo en cuenta lo que acaba de pasar, no dudas de que aceptará negociar.",
+			"rewards": [
+				{ "status": { "name": "Diplomático", "parts": [2] } }
+			],
+			"endExploration": true
+		},
+		"18": {
+			"text": "La puerta hacia la Sala del Rey está abierta de par en par. Oyes la risa penetrante de Ultan desde dentro. Al entrar, te rodea el rico olor de la comida, el parloteo de la gente del pueblo y los ruidos de dos luchadores batallando. La ciudad sigue celebrando la reciente victoria.",
+			"actions": [
+				{
+					"action": "Hablas con Ultan",
+					"goToVerse": "28"
+				},
+				{
+					"action": "Buscas el pasaje oculto, aprovechando el caos de este lugar",
+					"requirements": [
+						{ "chapter": { "numbers": ["6", "7"] } }
+					],
+					"goToVerse": "19"
+				},
+				{
+					"action": "Sigues las pistas de Orrin",
+					"requirements": [
+						{ "chapter": { "numbers": ["7-2"] } }
+					],
+					"goToVerse": "22"
+				},
+				{
+					"action": "Comes y te vas",
+					"requirements": [
+						{ "custom": "Ficha de Tiempo", "not": true }
+					],
+					"endExploration": true
+				}
+			]
+		},
+		"19": {
+			"testResults": {
+				"1-6": {
+					"text": "Los guardias te atrapan husmeando cerca del trono y te dirigen con firmeza de vuelta a la fiesta.",
+					"endExploration": true
+				},
+				"7+": {
+					"goToVerse": "22"
+				}
+			}
+		},
+		"20": {
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Vientos de Rareza" } }
+					],
+					"goToVerse": "24"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Vientos de Rareza" }, "not": true }
+					],
+					"goToVerse": "20a"
+				}
+			]
+		},
+		"20a": {
+			"text": "La ciudad se impuso sobre sus enemigos y sus ciudadanos lo celebran en las calles",
+			"actions": [
+				{
+					"action": "Visitas la zona comercial",
+					"goToVerse": "10"
+				},
+				{
+					"action": "Preguntas por la primera expedición",
+					"goToVerse": "2"
+				},
+				{
+					"action:": "Intentas entrar en la Sala del Rey",
+					"description": "La puerta parece estar abierta y se oye ruido de celebración",
+					"goToVerse": "18"
+				},
+				{
+					"action": "Te vas de la ciudad",
+					"endExploration": true
 				}
 			]
 		},
@@ -327,12 +442,135 @@
 					"endExploration": true
 				}
 			]
+		},
+		"22": {
+			"text": "Te escabulles detrás del enorme trono y examinas el tapiz. Luego, encuentras un trozo de tela suelta y, cuando la levantas, ves una oquedad en la pared tras la cual solo se ve oscuridad. ¿Podría ser un camino hacia Tuathán?",
+			"actions": [
+				{
+					"action": "Vuelves a la fiesta",
+					"goToVerse": "18"
+				},
+				{
+					"action": "Emprendes el camino",
+					"goToBosVerse": "531"
+				}
+			]
+		},
+		"23": {
+			"goToBosVerse": "715"
+		},
+		"24": {
+			"text": "Los festejos concluyen, pero un temor se apodera de los ciudadanos victoriosos de Altomuro cuando se dan cuenta de que ahora están solos: son el último reducto de humanidad al oeste de Nueva Camelot.",
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Enfrentamientos finales", "parts": [3] } }
+					],
+					"goToVerse": "26"
+				},
+				{
+					"action": "Visitas la zona comercial",
+					"goToVerse": "10"
+				},
+				{
+					"action": "Vas a ver a Ultan",
+					"requirements": [
+						{ "chapter": { "numbers": ["11"] } }
+					],
+					"goToVerse": "25"
+				},
+				{
+					"action": "Te vas de la ciudad",
+					"endExploration": true
+				}
+			]
+		},
+		"25": {
+			"text": "<p>Te diriges a lo más alto de la ciudad y encuentras a Ultan en su hogar, tan nervioso como siempre. Celebra tu regreso, pero vuelve a sus asuntos rápidamente, como buen comerciante. Para sobrevivir a lo que se avecina, su ciudad necesita más armas y suministros, y solo pueden conseguirlos en Nueva Camelot. Mandó a sus discípulos a asaltar el arsenal y los graneros de Nueva Camelot, pero el castillo está bien custodiado y hay más Rareza que nunca cortando la mayoría de las rutas que cruzan la isla. Sus tropas necesitan un viajero experimentado que los guíe y abra la puerta desde dentro.</p><p>La idea de ayudar a tu aliado a saquear Nueva Camelot, el faro de esperanza de la humanidad, te pone los pelos de punta. Pero, en los días en que los últimos pueblos del territorio se vuelven unos contra otros, ya no puedes ser leal a más de uno.</p>",
+			"rewards": [
+				{ "status": { "name": "Explorador", "parts": [3] } }
+			],
+			"task": "Ayuda a las tropas de Ultan a saquear las tiendas de <strong>Nueva Camelot Asediada (195)</strong> <strong>O BIEN</strong> ayuda a alguna de las otras potencias que aún permanecen en Ávalon.",
+			"endExploration": true
+		},
+		"26": {
+			"actions": [
+				{
+					"requirements": [
+						{ "chapter": { "numbers": ["13", "14", "15"] } }
+					],
+					"goToVerse": "27"
+				},
+				{
+					"requirements": [
+						{ "chapter": { "numbers": ["13", "14", "15"] }, "not": true }
+					],
+					"goToVerse": "26a"
+				}
+			]
+		},
+		"26a": {
+			"text": "<p>Ultan, flanqueado por los demás nobles de Altomuro, te recibe en cuanto entras. Por las miradas en las caras de la gente, entiendes inmediatamente que este saqueo no ha sido solo por los suministros: Ultan ha consolidado su reputación como líder capaz de cualquier cosa, siempre y cuando beneficie a su ciudad.</p><p>Con una amplia sonrisa, te da una palmada en la espalda tan fuerte que casi te tropiezas.</p><p>«Vamos a mi salón, tenemos mucho de lo que hablar», dice. En la silenciosa calidez de su habitación, te hace su oferta final: un asiento en su consejo, un título de nobleza, una de las salas más magníficas de Altomuro. A cambio, quiere una cosa: que te asientes en Altomuro para siempre y coloques tu tosco menhir al lado de la Sala del Rey.</p>",
+			"actions": [
+				{
+					"action": "Aceptas y te asientas en Altomuro",
+					"goToVerse": "23"
+				},
+				{
+					"action": "Rechazas su oferta y te vas para ayudas a otras comunidades",
+					"goToBosVerse": "777"
+				}
+			]
+		},
+		"27": {
+			"text": "La oferta de Ultan sigue en pie: hay un lugar para ti en su corte.",
+			"actions": [
+				{
+					"action": "Quizás en otro momento",
+					"description": "Aún hay cosas que quieres hacer y lugares que quieres ver",
+					"endExploration": true
+				},
+				{
+					"action": "Aceptas y te asientas en Altomuro",
+					"goToVerse": "23"
+				}
+			]
+		},
+		"28": {
+			"text": "Hay mucho ruido y Ultan está demasiado borracho como para tener una conversación cuerda.",
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Encuentros afortunados", "parts": [4] } }
+					],
+					"endExploration": true
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Encuentros afortunados", "parts": [4] }, "not": true }
+					],
+					"goToVerse": "28a"
+				}
+			]
+		},
+		"28a": {
+			"text": "Murmurando, Ultan te presenta a los otros mercaderes de la ciudad. Te da golpes en la espalda, casi derribándote; luego le arranca un broche dorado a alguien y te lo entrega como regalo. Al dueño del broche no le hace gracia.",
+			"actions": [
+				{
+					"action": "Le devuelves discretamente el broche a su dueño",
+					"rewards": [
+						{ "status": { "name": "Encuentros afortunados", "parts": [4] } }
+					],
+					"goToVerse": "18"
+				},
+				{
+					"action": "Aceptas el regalo",
+					"rewards": [
+						{ "status": { "name": "Encuentros afortunados", "parts": [4] } }
+					],
+					"goToVerse": "18"
+				}
+			]
 		}
-	},
-	"dream": {
-		"text": ""
-	},
-	"nightmare": {
-		"text": ""
 	}
 }

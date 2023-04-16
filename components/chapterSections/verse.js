@@ -54,7 +54,7 @@ export default function Verse({ verseData, locationData, bookOfSecrets, bosVerse
 					{/* Task */}
 					{verseData.task &&
 						<div className={styles.task}>
-							<strong>TAREA:</strong> {verseData.task}
+							<strong>TAREA:</strong> <span dangerouslySetInnerHTML={{ __html: verseData.task }}></span>
 						</div>
 					}
 

@@ -1,5 +1,43 @@
 {
 	"sections": [
-		
+		{
+			"quest": "03B-1"
+		},
+		{
+			"personal": "Arev y Ailei no están muy seguros de inmiscuirse en la guerra por Ávalon, pero deciden mantener la mente abierta mientras siguen explorando en busca de más indicios sobre la primera expedición. Tal y como les han indicado en Altomuro, se dirigen al este."
+		},
+		{
+			"location": {
+				"id": "132",
+				"actions": [
+					{ "action": 0 },
+					{ "action": 1 },
+					{ "verse": "2", "action": 0 },
+					
+					{ "action": 1, "skipText": true },
+					{ "verse": "2", "action": 1 },
+					{ "verse": "5", "action": 0 },
+					{ "verse": "6", "action": 1 },
+					{ "verse": "6a", "action": 1 },
+					{ "bosVerse": "142", "action": 1 },
+					{ "bosVerse": "114", "action": 0 },
+
+					{ "action": 1, "skipText": true },
+					{ "verse": "2", "action": 1, "skipText": true },
+					{ "verse": "5", "action": 0, "skipText": true },
+					{ "verse": "6", "action": 1, "skipText": true },
+					{ "verse": "6a", "action": 0 },
+					{ "verse": "3", "testResult": "7+" },
+					{ "verse": "7", "action": 0 },
+					{ "verse": "9", "action": 1 }
+				]
+			}
+		},
+		{
+			"quest": "03B-2"
+		},
+		{
+			"personal": "Arev y Ailei creen que ir a Nueva Camelot es más importante para ellos que la guerra (Morgana tendrá información sobre los héroes de su pueblo), pero deciden ir hacia allí explorando Ávalon todo lo posible, ya que no saben cuando podrán volver a esta parte de la isla."
+		}
 	]
 }

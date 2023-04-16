@@ -19,7 +19,10 @@ export default function Chapter({ chapter, quests, locations, bookOfSecrets, che
 					<div key={index}>
 						{/* Quest */}
 						{chapterSection.quest &&
-							<Quest questData={quests.find(quest => quest.id === chapterSection.quest)}/>
+							<Quest
+								questData={quests.find(quest => quest.id === chapterSection.quest)}
+								bookOfSecrets={bookOfSecrets}
+							/>
 						}
 
 						{/* Personal */}

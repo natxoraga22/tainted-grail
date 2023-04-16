@@ -99,7 +99,7 @@
 				"id": "105",
 				"visitCount": 2,
 				"actions": [
-					{ "action": 2 },
+					{ "action": 2, "skipText": true },
 					{ "verse": "2", "action": 2, "skipText": true },
 					{ "verse": "2a", "action": 0 },
 					{ "verse": "4", "action": 2 },

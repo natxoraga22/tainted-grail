@@ -1,0 +1,240 @@
+{
+	"status": "DONE",
+
+	"name": "Rostro Sereno",
+	"introduction": "<p>La estatua ya estaba enterrada cuando los humanos llegaron por primera vez a esta parte de la isla. Nadie conoce su verdadero propósito. Algunos dicen que es solo una cabeza, otros dicen que también hay un cuerpo bajo tierra, con las piernas llegando incluso hasta Tuathán. Nadie lo sabe con certeza.</p><p>Los peregrinos vienen aquí en busca de paz o revelación en las calmadas aguas que llenan los ojos de la estatua. Algunos incluso entran en su oreja y vagan durante horas en el laberinto, saliendo con un extraño brillo en los ojos.</p>",
+	"actions": [
+		{
+			"action": "Intentas localizar un menhir",
+			"goToVerse": "1"
+		},
+		{
+			"action": "Visitas el Rostro",
+			"goToVerse": "2"
+		}
+	],
+	"verses": {
+		"1": {
+			"text": "No logras localizar un menhir, aunque el hecho de que no haya signos de Rareza parece indicar que debe haber uno cerca. Miras hacia el rostro gigante; su mirada está clavada en el cielo. ¿Podría el menhir estar dentro?"
+		},
+		"2": {
+			"text": "<p>Te acercas a la cabeza, esculpida en una piedra arenisca rojiza y oscura que no has visto en ningún otro lugar. Pones la mano en la superficie y notas el calor. ¿Es solo por el sol? ¿O es algo más?</p><p>Un pequeño sendero conduce al costado y sube hasta la oreja expuesta de la estatua. También podrías subir al rostro fácilmente.</p>",
+			"actions": [
+				{
+					"action": "Te subes a la cabeza",
+					"goToVerse": "8"
+				},
+				{
+					"action": "Entras en la oreja",
+					"goToVerse": "5"
+				},
+				{
+					"action": "Usas el Secreto 33",
+					"requirements": [
+						{ "secret": { "id": 33, "name": "???" } },
+						{ "status": { "name": "El último refugio", "parts": [5] } }
+					]
+				},
+				{
+					"action": "Te vas",
+					"endExploration": true
+				}
+			]
+		},
+		"3": {
+			"text": "No estás seguro de si las grietas en las paredes son entradas a pasillos laterales o una forma natural de la piedra. No sabes cómo elegir tu camino: tendrás que confiar en tu intuición.",
+			"testResults": {
+				"1-2": {
+					"text": "Las paredes parecen cerrarse en torno a ti y te sientes sofocado. Empiezas a correr hacia la entrada pero te pierdes en el laberinto. Cuando sales, agitado y sudoroso, ya está anocheciendo.",
+					"endExploration": true
+				},
+				"3-4": {
+					"text": "Te pierdes en los interminables y sinuosos pasillos. Te pones nervioso y pierdes tiempo.",
+					"endExploration": true
+				},
+				"5-6": {
+					"text": "Caminando, al final sales a la luz del día, sintiendo un nuevo y profundo conocimiento que no puedes explicar.",
+					"endExploration": true
+				},
+				"7+": {
+					"text": "Sales a un espacio vacío y enorme.",
+					"goToVerse": "7"
+				}
+			}
+		},
+		"5": {
+			"actions": [
+				{
+					"requirements": [
+						{ "chapter": { "numbers": ["1", "2"] }, "not": true }
+					],
+					"goToVerse": "6"
+				},
+				{
+					"requirements": [
+						{ "chapter": { "numbers": ["1", "2"] } }
+					],
+					"goToVerse": "3"
+				}
+			]
+		},
+		"6": {
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Vestigios", "parts": [5] } }
+					],
+					"goToVerse": "11"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Vestigios", "parts": [5] }, "not": true }
+					],
+					"goToVerse": "6a"
+				}
+			]
+		},
+		"6a": {
+			"text": "¡Alguien ha estado aquí! Hay una cuerda de cáñamo en el suelo, como una serpiente gorda en la oscuridad, y flechas hechas con tiza en las paredes del laberinto. Alguien se esforzó mucho para intentar encontrar algo aquí...",
+			"actions": [
+				{
+					"action": "Buscas tu propio camino en el laberinto",
+					"goToVerse": "3"
+				},
+				{
+					"action": "Sigues el camino",
+					"goToVerse": "12"
+				}
+			]
+		},
+		"7": {
+			"text": "<p>De los confines de los pasillos retorcidos, sales a un vació oscuro que te quita el aliento. Las estrellas brillan y parpadean encima tuya. Tropiezas, estupefacto.</p><p>Tardas un momento en darte cuenta de que has llegado al interior del cráneo de la estatua y las estrellas son una cúpula llena de piedras preciosas.</p>",
+			"actions": [
+				{
+					"action": "Te adentras en un trance meditativo",
+					"requirements": [
+						{ "character": { "name": "Ailei" } }
+					],
+					"goToVerse": "9"
+				},
+				{
+					"action": "Te adentras en un trance meditativo",
+					"requirements": [
+						{ "attribute": { "name": "Empatía", "level": 2 } }
+					],
+					"goToVerse": "9"
+				},
+				{
+					"action": "Buscas rastros del encantamiento de los Primeros Moradores",
+					"requirements": [
+						{ "status": { "name": "El último refugio", "parts": [5] }, "not": true },
+						{ "status": { "name": "Sueños y profecías", "parts": [6] } }
+					],
+					"goToVerse": "13"
+				},
+				{
+					"action": "Duermes bajo la cúpula",
+					"endExploration": true
+				}
+			]
+		},
+		"8": {
+			"text": "La gruesa piedra roja tiene muchos puntos de apoyo y tienes la sensación de que te está absorbiendo, como el gran norte atrae las agujas magnéticas. Pronto estás en la cima, disfrutando de las preciosas vistas. Al norte, una orgullosa atalaya humana está frente a la boca neblinosa y premonitoria de Tuathán. Lejos, al noreste, se ve Nido del Cuervo en el horizonte, aferrado a arcos de piedra desafiando a las olas. Por último, hacia el este se ven los círculos de piedra gris de Anillo de Luna, sede de los archidruidas. Por desgracia, largas hebras y nubes ondulantes de Rareza cubren la tierra entre donde estás y todos los destinos. ¡Debe haber una manera de poder seguir!",
+			"task": "Averigua cómo colocar un Menhir en esta Localización",
+			"endExploration": true
+		},
+		"9": {
+			"text": "Te envuelve una extraña calma. Tus sentidos se adormecen, aunque de forma agradable. Te acuestas bajo la cúpula y experimentas una profunda conexión con el entorno; de pronto, te percatas de cada grieta en la piedra y de cada gema sobre tu cabeza. Luego, sientes que la tierra fría te aplasta lentamente durante una eternidad, el agua se acumula en tus tres ojos y algo brillante arde en tu cráneo. Tus raíces llegan a partes lejanas de la isla. Ahora eres consciente de cosas que no deberías siquiera saber. ¿Están tus sentidos en sintonía con esta colosal estatua?",
+			"actions": [
+				{
+					"action": "Te retiras. No quieres perder el control sobre ti mismo",
+					"goToVerse": "7"
+				},
+				{
+					"action": "Te sumerges en esta experiencia",
+					"goToBosVerse": "163"
+				}
+			]
+		},
+		"10": {
+			"actions": [
+				{
+					"requirements": [
+						{ "status": { "name": "Vestigios", "parts": [5] } }
+					],
+					"endExploration": true
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Vestigios", "parts": [5] }, "not": true }
+					],
+					"goToVerse": "10a"
+				}
+			]
+		},
+		"10a": {
+			"text": "El Rostro fue un arma de destrucción masiva, empuñada por un grupo de Primeros Moradores contra otro. Ahora será un hogar para tu gente. Desciendes a las profundas cavernas bajo el rostro de tres ojos, rodeado de paredes rocosas ligeramente brillantes y cálidas. La gente tardará en adaptarse a este lugar, pero parece que comparten la serena sensación de seguridad que tuviste al entrar por primera vez en este monumento.",
+			"rewards": [
+				{ "status": { "name": "Vestigios", "parts": [5] } },
+				{ "secret": { "id": 33, "name": "???" }, "lost": true }
+			],
+			"actions": [
+				{
+					"action": "Te vas",
+					"description": "Aún hay cosas que quieres hacer y lugares que quieres ver",
+					"endExploration": true
+				},
+				{
+					"action": "Terminas tu viaje y te asientas aquí",
+					"goToBossVerse": "715"
+				}
+			]
+		},
+		"11": {
+			"text": "Los colonos extrañan el sol y su ganado tiene dificultades para adaptarse a las cuevas. Pero se sienten seguros y extrañamente tranquilos.",
+			"actions": [
+				{
+					"action": "Te vas",
+					"endExploration": true
+				},
+				{
+					"action": "Accedes al Rostro",
+					"goToVerse": "12"
+				},
+				{
+					"action": "Terminas tu viaje y te asientas aquí",
+					"goToBosVerse": "715"
+				}
+			]
+		},
+		"12": {
+			"goToBosVerse": "142"
+		},
+		"13": {
+			"text": "Llegas a la sala más profunda y te pones a trabajar, guiado por las instrucciones de la Dama Pálida. Los misteriosos encantamientos absorben la magia como la tierra seca absorbe el agua. Tus intentos causan poco efecto. Te preguntas si algún mortal tiene suficiente poder como para acabar esta tarea.",
+			"actions": [
+				{
+					"action": "Te vas",
+					"endExploration": true
+				},
+				{
+					"action": "Deshaces los encantamientos",
+					"requirements": [
+						{ "status": { "name": "El enigma del viejoacero" } }
+					],
+					"description": "Sigues hasta que deshaces el último encantamiento. Las paredes de rarapiedra y el techo brillan y resuenan",
+					"rewards": [
+						{ "status": { "name": "El último refugio", "parts": [5] } }
+					],
+					"endExploration": true
+				}
+			]
+		}
+	},
+	"dream": {
+		"text": "Las estrellas giran en un vals perenne. Solo quien las ha observado toda una eternidad puede comprender el alcance de su divino plan. Las criaturas se afanan alrededor de ti, creando imperios que decaerán tan inevitablemente como la helada que da paso al verano en su interminable ciclo. Desde la perspectiva del cosmos, las preocupaciones y las luchas parecen insignificantes. Todo lo que queda por observar es la calma y la serenidad."
+	},
+	"nightmare": {
+		"text": "<p>Emerges de la Rareza. Al mirar a tu alrededor, saludas a los otros fieles. Te pones a trabajar, esculpiendo la estatua gigante a partir de una sola roca roja.</p><p>Después de un tiempo, otro grupo se acerca a ti, con los tres ojos muy abiertos y horrorizados. Reprenden a tu grupo, diciendo que la estatua traerá la ruina sobre su especie. Su líder levanta un pico sobre su cabeza, listo para romper la estatua, antes de caer de rodillas, llorando, incapaz de arruinar su belleza.</p>"
+	}
+}

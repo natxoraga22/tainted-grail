@@ -44,10 +44,10 @@
 				},
 				{
 					"action": "Aprendes de él",
-					"description": "Escuchar a alguien que ha pasado décadas o incluso siglos sumergido en la Rareza es tan intrigante como peligroso",
 					"requirements": [
 						{ "attribute": { "name": "Empatía", "level": 1 } }
 					],
+					"description": "Escuchar a alguien que ha pasado décadas o incluso siglos sumergido en la Rareza es tan intrigante como peligroso",
 					"goToVerse": "6"
 				}
 			]
