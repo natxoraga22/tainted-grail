@@ -24,7 +24,7 @@ export default function TableOfContents({ chapter, quests, locations, bookOfSecr
 						{/* Location */}
 						{chapterSection.location &&
 							<a href={`#location_${locationData.id}_${locationVisitCount}`}
-							   className={`${styles.section} list-group-item list-group-item-action ps-4`}>
+							   className={`${styles.section} ${styles.locationSection} list-group-item list-group-item-action`}>
 								Exploración de {locationData.name} ({locationData.id})
 								{locationVisitCount > 1 && <span> - {locationVisitCount}ª visita</span>}
 							</a>

@@ -1,0 +1,159 @@
+{
+	"status": "IN PROGRESS",
+
+	"name": "Anillo de Luna",
+	"introduction": "<p>Antaño, este lugar estuvo lleno de druidas jóvenes y ancianos, y la gente viajaba aquí desde todas partes de la isla buscando sabiduría, consejos o curaciones. Por la noche, las hogueras se veían a kilómetros y las canciones resonaban entre las titánicas piedras del círculo sagrado, a veces interrumpidas por el grito de un sacrificio humano.</p><p>Al acercarte, solo ves un par de ancianos descansando junto a una de las chozas de piedra junto al círculo. ¿Se habrán ido los otros druidas, o solo quedan unos pocos?</p>",
+	"actions": [
+		{
+			"action": "Ves a Amergin, el archidruida",
+			"goToVerse": "4"
+		},
+		{
+			"action": "Te acercas a las chozas",
+			"goToVerse": "1"
+		},
+		{
+			"action": "Entras en el círculo",
+			"goToVerse": "14"
+		},
+		{
+			"action": "Preguntas por el misterioso árbol junto a la flota abandonada",
+			"requirements": [
+				{ "status": { "name": "Explorador", "parts": [7] } }
+			],
+			"goToVerse": "7"
+		}
+	],
+	"verses": {
+		"1": {
+			"actions": [
+				{
+					"requirements": [
+						{ "character": { "name": "Gusano" } },
+						{ "status": { "name": "La redención de Gusano" }, "not": true }
+					],
+					"goToBosVerse": "211"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "Restaurando la Orden", "parts": [6] } }
+					],
+					"goToVerse": "4"
+				},
+				{
+					"requirements": [
+						{ "status": { "name": "El declive de los caballeros", "parts": [6] } }
+					],
+					"goToVerse": "4"
+				},
+				{
+					"action": "No cumples ninguna condición",
+					"goToVerse": "3"
+				}
+			]
+		},
+		"2": {
+			"text": "<p>Amergin te interroga en gran detalle por tu persecutor. Luego, consulta los pergaminos apilados casi hasta el techo de su cabaña. A juzgar por su ceño fruncido, no son buenas noticias.</p><p>«Se trata de un terrible enemigo: un cazador de la ciudad olvidada, un guerrero de la raza que antaño vivió aquí. Esta tierra no ha visto algo igual en siglos. Además, esta criatura parece actuar bajo los efectos de una maldición, pues no puede descansar ni morir hasta que cumpla su misión. Y lo más probable es que su misión sea matarte: Tuathán ve tu misión como una grave amenaza».</p><p>Tardas un momento en asimilar el horror de la situación. Le preguntas a Amergin si hay algún modo de derrotar al cazador.</p><p>«Aquí no... Su maldición lo protege en tierras humanas, pero puede que no funcione en el reino de la Rareza. Es una remota posibilidad».</p><p>Sabes lo que significa: tendrías que arrastrar a tu persecutor hasta Tuathán. Una tarea aún más imposible que derrotarlo.</p><p>«Pero podría haber algo más», dice Amergin después de un momento. «Como habrás notado, el cazador se siente atraído por tu esencia vital. Podría crear un señuelo para confundirlo. Si lo quieres, debes reunir almas de gran fortaleza».</p>",
+			"rewards": [
+				{ "secret": { "id": 65, "name": "En Busca de Poder" } }
+			],
+			"task": "Vuelve con Amergin cuando el valor del dial de Misión sea 5 o más.",
+			"endExploration": true
+		},
+		"3": {
+			"text": "<p>Una fuerte discusión proveniente de una de las chozas atrae tu atención. Un hombre joven y otro de mediana edad se gritan, rodeados por una pequeña multitud. Cuando preguntas por qué pelean, te enteras de que estos hombres optan al título del difunto caballero Geraint, cuyo sucesor es elegido tradicionalmente por los druidas.</p><p>Ambos tienen el mismo número de simpatizantes. Tu participación podría inclinar la balanza.</p>",
+			"actions": [
+				{
+					"action": "Hablas con los candidatos",
+					"goToVerse": "5"
+				},
+				{
+					"action": "Votas por el joven acólito",
+					"requirements": [
+						{ "status": { "name": "El sucesor de Geraint", "parts": [1] } }
+					],
+					"goToVerse": "11"
+				},
+				{
+					"action": "Votas por el herrero",
+					"requirements": [
+						{ "status": { "name": "El sucesor de Geraint", "parts": [1] } }
+					],
+					"goToVerse": "12"
+				},
+				{
+					"action": "Los convences de que ninguno está a la altura",
+					"requirements": [
+						{ "status": { "name": "El sucesor de Geraint", "partsCount": 3 } }
+					],
+					"description": "Esto hará que las audiencias y juicios se alarguen bastantes meses más"
+				},
+				{
+					"action": "Te niegas a elegir",
+					"endExploration": true
+				}
+			]
+		},
+		"4": {
+			"text": "<p>Dicen que cuando la madre de Amergin estaba a punto de dar a luz, le pidió a la Dama Pálida que predijera el destino de su hijo. La Dama dijo que si Amergin nacía en la noche del solsticio de invierno, se convertiría en el próximo archidruida de Ávalon.</p><p>Cuando rompió aguas dos días antes del solsticio la madre de Amergin se sentó en una piedra junto al río y se negó a moverse hasta que llegara el momento.</p><p>Como consecuencia, Amergin nació con la cabeza plana y sin demasiada brillantez, pero fue bendecido con una suerte increíble y unos poderes proféticos que lo llevaron a la cúspide de la Orden.</p>",
+			"actions": [
+				{
+					"action": "Le pides ayuda a Amergin para encontrar el Grial",
+					"requirements": [
+						{ "chapter": { "numbers": ["4B-4"] } }
+					],
+					"goToVerse": "8"
+				},
+				{
+					"action": "Le enseñas el Grial Corrompido a Amergin",
+					"requirements": [
+						{ "secret": { "id": 8, "name": "Grial Corrompido" } },
+						{ "status": { "name": "Misión Anillo de Luna" } }
+					],
+					"goToVerse": "10"
+				},
+				{
+					"action": "Le preguntas por el ser que te persigue",
+					"requirements": [
+						{ "secret": { "id": 13, "name": "¡Perseguido!" } }
+					],
+					"goToVerse": "2"
+				},
+				{
+					"action": "Le dices que ya tienes suficiente poder",
+					"requirements": [
+						{ "secret": { "id": 65, "name": "En Busca de Poder" } }
+					]
+				},
+				{
+					"action": "Te enfrentas con él acerca del inquietante ritual",
+					"requirements": [
+						{ "status": { "name": "Ritual del valle", "parts": [1] } },
+						{ "status": { "name": "Ritual del valle", "parts": [2] }, "not": true }
+					],
+					"goToVerse": "15"
+				},
+				{
+					"action": "Te vas"
+				}
+			]
+		},
+		"5": {
+			"text": "Pasas un rato hablando con el herrero, Morfran, y el acólito druida, Bréagach. El herrero presume del tiempo que pasó cerca de Broch Cruach, donde ayudó a la gente a escapar de la esclavitud. El joven druida afirma que estuvo muchos meses en Albura, cuidando a personas con una extraña enfermedad. Ambas hazañas parecen nobles. Al terminar, se acerca una mujer, prima del fallecido Geraint. No se fía de estos dos hombres y te pregunta si podrías investigar su pasado antes de tomar la decisión final.",
+			"rewards": [
+				{ "status": { "name": "El sucesor de Geraint", "parts": [1] } }
+			],
+			"task": "Elige a uno de los candidatos o pregunta por ellos en <strong>Broch Cruach (136)</strong y <strong>Albura (107)</strong>.",
+			"endExploration": true
+		},
+		"6": {
+			
+		}
+	},
+	"dream": {
+		"text": ""
+	},
+	"nightmare": {
+		"text": ""
+	}
+}
